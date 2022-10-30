@@ -1,0 +1,225 @@
+\section {Euler Equation}
+\subsection{Définition}
+
+Le système des équations d'Euler représente la partie "non-visqueuse" des équations de la mécanique des fluides, les équations de Navier-Stokes. La partie "visqueuse", associée aux dérivées secondes des variables de l'écoulement (composante de la vitesse, température,...) rend les équations de Navier-Stokes elliptiques dans les plans $\{x, y\},\{x, z\}$ et $\{y, z\}$, et paraboliques dans les plans $\{x, t\},\{y, t\}$ et $\{z, t\}$ dans le cas instationnaire. Néanmoins, les termes visqueux étant d'ordre $1 /$ Re, à grand nombre de Reynolds Re, la sous-caractéristique hyperbolique "Euler" est prédominante. La difficulté de résoudre numériquement les équations de Navier-Stokes compressibles est donc liée à celle de résoudre la partie Euler hyperbolique, la partie visqueuse ne posant pas de problème à grand Re et étant alors traitée par des schémas centrés comme (B.8) ou (B.10).
+
+On suppose le lecteur familier avec les bases théoriques de la dynamique des gaz (notations, thermodynamique...). On rappelle la formulation des équations d'Euler $1 \mathrm{D}$ instationnaires en termes de variables conservatives, primitives qui sont les variables physiques d'intérêt, et caractéristiques. On étudie ensuite l'hyperbolicité du système Euler.
+
+\subsection{Variable caracteristique et  champ vnl et ld}
+\begin{equation}
+\begin{array}{r}
+\qquad \frac{\partial \vec{U}}{\partial t}+\frac{\partial \vec{F}}{\partial x}=\overrightarrow{0}|\quad ; \quad \vec{U}=| \begin{array}{c}
+\rho=u_{1} \\
+\rho u=u_{2} \\
+\rho E=u_{3}
+\end{array} \\
+\vec{F}=\mid \begin{aligned}
+\rho u=F_{1}=u_{2} \\
+\rho u^{2}+p=F_{2}=u_{2}^{2} / u_{1}+(\gamma-1)\left(u_{3}-u_{2}^{2} / 2 u_{1}\right) \\
+(\rho E+p) u=\rho u H=F_{3}=u_{2} u_{3} / u_{1}+(\gamma-1)\left(u_{3}-u_{2}^{2} / 2 u_{1}\right) u_{2} / u_{1}
+\end{aligned}
+\end{array}
+\end{equation}
+
+où le vecteur $\vec{U}$ des variables conservatives est unique. $E=e+u^{2} / 2$ est l'énergie totale par unité de masse, et $H=E+p / \rho$ l'enthalpie totale par unité de masse. On ferme le système par la loi d'état. Pour un gaz parfait, $p=\rho r T$, et pour un gaz calorifiquement parfait (ou gaz de Laplace) pour lequel
+\begin{equation}
+C_{p}=\text { cste } \quad ; \quad C_{v}=C_{p}-r=\text { cste } \quad ; \quad \gamma=\frac{C_{p}}{C_{n}}=c s t e \quad ; \quad e=C_{v} T
+\end{equation}
+ce que l'on supposera dorenavant
+\begin{equation}
+p=\rho r T=\rho e(\gamma-1)
+\end{equation}
+
+La forme non-conservative, ou convective $(2.43)$ correspondante est
+$$
+\frac{\partial \vec{U}}{\partial t}+A(\vec{U}) \frac{\partial \vec{U}}{\partial x}=\overrightarrow{0}
+$$
+$A_{i j}=\frac{\partial F_{i}}{\partial U_{j}}$
+$A=\left[\begin{array}{ccc}
+0 & 1 & 0 \\
+(\gamma-3) u^{2} / 2 & (3-\gamma) u & \gamma-1 \\
+{\left[(\gamma-1) u^{2}-\gamma E\right] u} & -3(\gamma-1) u^{2} / 2+\gamma E & \gamma u
+\end{array}\right]$
+
+que l'on peut aussi exprimer en termes de variables conservatives :
+$$
+A=\left[\begin{array}{ccc}
+0 & 1 & 0 \\
+(\gamma-3)\left(u_{2} / u_{1}\right)^{2} / 2 & (3-\gamma) u_{2} / u_{1} & \gamma-1 \\
+(\gamma-1)\left(u_{2} / u_{1}\right)^{3}-\gamma u_{2} u_{3} / u_{1}^{2} & -3(\gamma-1)\left(u_{2} / u_{1}\right)^{2} / 2+\gamma u_{3} / u_{1} & \gamma u_{2} / u_{1}
+\end{array}\right]
+$$
+
+La matrice diagonale $\Lambda(2.49)$ des valeurs propres (classées par valeurs croissantes) est unique :
+$$
+\lambda^{(1)}=u-c
+$$
+$\lambda^{(2)}=u$
+$$
+\lambda^{(3)}=u+c
+$$
+
+$$c^{2}=\gamma r T=\gamma p / \rho$$
+ pour le jeu (rho,u,p)
+
+\begin{equation}
+L=\frac{1}{2 c^{2}}\left[\begin{array}{rrr}
+u c+(\gamma-1) u^{2} / 2 & -c-(\gamma-1) u & \gamma-1 \\
+2 c^{2}-(\gamma-1) u^{2} & 2(\gamma-1) u & -2(\gamma-1) \\
+-u c+(\gamma-1) u^{2} / 2 & c-(\gamma-1) u & \gamma-1
+\end{array}\right]
+\end{equation}
+
+\begin{equation}
+R=\left[\begin{array}{ccc}
+1 & 1 & 1 \\
+u-c & u & u+c \\
+H-c u & u^{2} / 2 & H+c u
+\end{array}\right]
+\end{equation}
+
+\begin{equation}
+H=E+\frac{p}{\rho}=\frac{c^{2}}{\gamma-1}+\frac{u^{2}}{2}
+\end{equation}
+
+Le 1-champ caractéristique associé à $\lambda^{(1)}=u-c$ est VNL
+2-champ caractéristique: $\lambda^{(2)}=u:$ on vérifie aisément $\vec{\nabla} \lambda^{(2)} \cdot \overrightarrow{\widetilde{R}}^{(2)}=0$
+Le 2-champ caractéristique associé à $\lambda^{(2)}=u$ est LD
+3 -champ caractéristique $\lambda^{(3)}=u+c: \quad \vec{\nabla} \lambda^{(3)} \cdot \overrightarrow{\widetilde{R}}^{(3)}=\frac{(\gamma+1)}{2} \frac{c}{\rho} \neq 0$
+Le 3-champ caractéristique associé à VNL
+
+\subsection{systeme Euler, Riemann probleme}
+Dans le cas du système Euler $1 \mathrm{D}$, la solution est constituée de 4 états constants séparés par des ondes. Le 1 -champ $\lambda^{(1)}=u-c$ et le 3 -champ $\lambda^{(3)}=u+c$ sont tous deux VNL : ils seront associés soit à un choc, soit à une détente selon l'état initial. En revanche, le 2 -champ $\lambda^{(2)}=u$ est LD. Ce sera toujours une discontinuité de contact (ddc) se propageant à vitesse
+u. On donc 4 cas possibles (symboles : trait gras $=$ choc, trait pointillé $=$ ddc, éventail = détente).
+\begin{figure}[H]
+\begin{center}
+        \includegraphics[width=0.6\textwidth]{solveur de Rieamman/photo/riemann.PNG}
+\caption{}
+\end{center}
+\end{figure}
+
+Il se peut qu'entre deux détentes, cas (d), il y ait apparition du vide, caractérisé par $\rho=0 .$ Ce cas particulier doit être traité séparément. Bien sur, les équations d'Euler basées sur l'hypothèse de milieu continu cessent alors d'être valides.
+Notons, sans préjuger de la nature des 1 -onde et 3 -onde (figure $4.7$ ) $\vec{V}_{L}=\left\{\rho_{L}, u_{L}, p_{L}\right\}^{T}:$ l'état des variables primitives à gauche de la 1 -onde $\vec{V}_{L}^{*}=\left\{\rho_{L}^{*}, u_{L}^{*}, p_{L}^{*}\right\}^{T}:$ l'état des variables primitives entre la 1 -onde et la $2-\mathrm{ddc}$ $\vec{V}_{R}^{*}=\left\{\rho_{R}^{*}, u_{R}^{*}, p_{R}^{*}\right\}^{T}:$ l'état des variables primitives entre la la 2 -ddc et la 3 -onde $\vec{V}_{R}^{n}=\left\{\rho_{R}, u_{R}, p_{R}\right\}^{T}:$ l'état des variables primitives à droite de la 3 -onde \\
+Selon (3.48), la pression et la vitesse sont constants à travers la 2 -ddc:
+$$u_{L}^{*}=u_{R}^{*}=u^{*} \quad ; \quad p_{L}^{*}=p_{R}^{*}=p^{*}$$
+La résolution du problème de Riemann revient à déterminer la valeur de $p^{*}$ en fonction des états connus $\vec{V}_{L}$ et $\vec{V}_{R}$. Les 3 autres inconnues $u^{*}, \rho_{R}^{*}$ et $\rho_{L}^{*}$ s'en déduiront avec les formules de la dynamique des gaz.
+\begin{figure}[H]
+\begin{center}
+        \includegraphics[width=0.6\textwidth]{solveur de Rieamman/photo/riemann.PNG}
+\caption{}
+\end{center}
+\end{figure}
+
+\section{Godunov}
+
+6.1 Bases of Godunov's Method
+Consider the general Initial-Boundary Value Problem (IBVP) for nonlinear systems of hyperbolic conservation laws
+$$
+\left.\begin{array}{l}
+\text { PDEs }: \mathbf{U}_{t}+\mathbf{F}(\mathbf{U})_{x}=\mathbf{0} \\
+\text { ICs }: \mathbf{U}(x, 0)=\mathbf{U}^{(0)}(x) \\
+\text { BCs }: \mathbf{U}(0, t)=\mathbf{U}_{1}(t), \mathbf{U}(L, t)=\mathbf{U}_{\mathrm{r}}(t)
+\end{array}\right\}
+$$
+E.F. Toro, Riemann Solvers and Numerical Methods for Fluid Dynamics, DOI $10.1007 / \mathrm{b} 7976-1-6, @$ Springer-Verlag Berlin Heidelberg 2009
+$214 \quad 6$ The Method of Godunov for Non-linear Systems
+Here, $\mathbf{U}(x, t)$ is the vector of conserved variables; $\mathbf{F}(\mathbf{U})$ is the vector of fluxes; $\mathbf{U}^{(0)}(x)$ is the initial data at time $t=0 ;[0, L]$ is the spatial domain and boundary conditions are, for the moment, assumed to be represented by the boundary functions $\mathbf{U}_{1}(t)$ and $\mathbf{U}_{\mathrm{r}}(t) .$ We make the assumption that the solution of IVBP (6.1) does exist.
+
+In order to admit discontinuous solutions we must use one of the integral forms of the conservation laws in (6.1). Here we adopt
+$$
+\left.\begin{array}{rl}
+\int_{x_{1}}^{x_{2}} \mathbf{U}\left(x, t_{2}\right) \mathrm{d} x= & \int_{x_{1}}^{x_{2}} \mathbf{U}\left(x, t_{1}\right) \mathrm{d} x+\int_{t_{1}}^{t_{2}} \mathbf{F}\left(\mathbf{U}\left(x_{1}, t\right)\right) \mathrm{d} t \\
+& -\int_{t_{1}}^{t_{2}} \mathbf{F}\left(\mathbf{U}\left(x_{2}, t\right)\right) \mathrm{d} t
+\end{array}\right\}
+$$
+
+for any control volume $\left[x_{1}, x_{2}\right] \times\left[t_{1}, t_{2}\right]$ in the domain of interest; see Sect. 2.4 .1 of Chap. 2 .
+
+We discretise the spatial domain $[0, L]$ into $M$ computing cells or finite volumes $I_{i}=\left[x_{i-\frac{1}{2}}, x_{i+\frac{1}{2}}\right]$ of regular size $\Delta x=x_{i+\frac{1}{2}}-x_{i-\frac{1}{2}}=L / M,$ with
+$i=1, \ldots, M .$ For a given cell $I_{i}$ the location of the cell centre $x_{i}$ and the cell boundaries $x_{i-\frac{1}{2}}, x_{i+\frac{1}{2}}$ are given by
+$$
+x_{i-\frac{1}{2}}=(i-1) \Delta x, x_{i}=\left(i-\frac{1}{2}\right) \Delta x, x_{i+\frac{1}{2}}=i \Delta x
+$$
+See Fig. 5.4 of Chap. $5 .$ We denote the temporal domain by $[0, T],$ where $T$ is some output time, not a boundary. The discretisation of the time interval $[0, T]$ is generally done in time steps $\Delta t$ of variable size; recall that for nonlinear systems wave speeds vary in space and time, and thus the choice of $\Delta t$ is carried out as marching in time proceeds. Given general initial data
+
+$\widetilde{\mathbf{U}}\left(x, t^{n}\right)$ for (6.1) at time $t=t^{n}$ say, in order to evolve the solution to a time $t^{n+1}=t^{n}+\Delta t,$ the Godunov method first assumes a piece-wise constant distribution of the data. Formally, this is realised by defining cell averages
+6.1 Bases of Godunov's Method
+$$
+\mathbf{U}_{i}^{n}=\frac{1}{\Delta x} \int_{x_{i-\frac{1}{2}}}^{x_{i+\frac{1}{2}}} \widetilde{\mathbf{U}}\left(x, t^{n}\right) \mathrm{d} x
+$$
+which produces the desired piecewise constant distribution $\mathbf{U}\left(x, t^{n}\right),$ with
+$\mathbf{U}\left(x, t^{n}\right)=\mathbf{U}_{i}^{n},$ for $x$ in each cell $I_{i}=\left[x_{i-\frac{1}{2}}, x_{i+\frac{1}{2}}\right],$
+
+as illustrated in Fig. 6.1 for a single component $\mathbf{U}_{k}$ of the vector of conserved variables. Data now consists of a set $\left\{\mathbf{U}_{i}^{n}\right\}$ of constant states. Naturally these are in terms of conserved variables, but other variables may be derived to proceed with the implementation of numerical methods. In particular, for the Godunov method we use the solution of the Riemann problem in terms of primitive variables, which for the Euler equations are $\mathbf{W}=(\rho, u, p)^{T} ; \rho$ is density, $u$ is velocity and $p$ is pressure.
+
+Once the piece-wise constant distribution of data has been established the next step in the Godunov method is to solve the Initial Value Problem (IVP) for the original conservation laws but with the modified initial data (6.5). Effectively, this generates local Riemann problems $R P\left(\mathbf{U}_{i}^{n}, \mathbf{U}_{i+1}^{n}\right)$ with data $\mathbf{U}_{i}$ (left side) and $\mathbf{U}_{i+1}^{n}$ (right side), centred at the intercell boundary positions $x_{i+\frac{1}{2}}$. As seen for the Euler equations in Chap. $4,$ the solution of $R P\left(\mathbf{U}_{i}^{n}, \mathbf{U}_{i+1}^{n}\right)$ is a similarity solution and depends on the ratio $\bar{x} / \bar{t},$ see (6.7) and the data states $\mathbf{U}_{i}^{n}, \mathbf{U}_{i+1}^{n} ;$ the solution is denoted by $\mathbf{U}_{i+\frac{1}{2}}(\bar{x} / \bar{t}),$ where $(\bar{x}, \bar{t})$ are the local coordinates for the local Riemann problem. Fig. 6.2 shows typical wave patterns emerging from intercell boundaries $x_{i-\frac{1}{2}}$ and $x_{i+\frac{1}{2}}$ when solving the two Riemann problems $R P\left(\mathbf{U}_{i-1}^{n}, \mathbf{U}_{i}^{n}\right)$ and $R P\left(\mathbf{U}_{i}^{n}, \mathbf{U}_{i+1}^{n}\right)$. For a
+time step $\Delta t$ that is sufficiently small, to avoid wave interaction, one can define a global solution $\widetilde{\mathbf{U}}(x, t)$ in the strip $0 \leq x \leq L, t^{n} \leq t \leq t^{n+1}$ in terms of the local solutions as follows
+$$
+\widetilde{\mathbf{U}}(x, t)=\mathbf{U}_{i+\frac{1}{2}}(\bar{x} / \bar{t}), x \in\left[x_{i}, x_{i+1}\right]
+$$
+where the correspondence between the global $(x, t)$ and local $(\bar{x}, \bar{t})$ coordinates is given by
+$216 \quad 6$ The Method of Godunov for Non-linear Systems
+$$
+\left.\begin{array}{ll}
+\bar{x}=x-x_{i+\frac{1}{2}}, & , \bar{t}=t-t^{n} \\
+x \in\left[x_{i}, x_{i+1}\right] & , t \in\left[t^{n}, t^{n+1}\right] \\
+\bar{x} \in\left[-\frac{\Delta x}{2}, \frac{\Delta x}{2}\right], & \bar{t} \in[0, \Delta t]
+\end{array}\right\}
+$$
+and is illustrated in Fig. $6.3 .$ Having found a solution $\widetilde{\mathrm{U}}(x, t)$ in terms of solu
+
+Fig. 6.3. Correspondence between the global (a) and local (b) frames of reference for the solution of the Riemann problem
+tions $\mathbf{U}_{i+\frac{1}{2}}(\bar{x} / \bar{t})$ to local Riemann problems, the Godunov method advances the solution to a time $t^{n+1}=t^{n}+\Delta t$ by defining a new set of average values $\left\{\mathbf{U}_{i}^{n+1}\right\},$ in a way to be described. We shall often use $(x, t)$ to mean the local frame of reference $(\bar{x}, \bar{t})$
+
+The first version of Godunov's method defines new average values $\mathbf{U}_{i}^{n+1}$ at time $t^{n+1}=t^{n}+\Delta t$ via the integrals
+$$
+\mathbf{U}_{i}^{n+1}=\frac{1}{\Delta x} \int_{x_{i-\frac{1}{2}}}^{x_{i+\frac{1}{2}}} \widetilde{\mathbf{U}}\left(x, t^{n+1}\right) \mathrm{d} x
+$$
+within each cell $I_{i}=\left[x_{i-\frac{1}{2}}, x_{i+\frac{1}{2}}\right]$. This averaging process is illustrated in Fig. 6.4
+Note first that in order to perform the averaging, we need to make the assumption that no wave interaction takes place within cell $I_{i},$ in the chosen time $\Delta t .$ This is satisfied by imposing the following restriction on the size of $\Delta t,$ namely
+$$
+\Delta t \leq \frac{\frac{1}{2} \Delta x}{S_{\max }^{n}}
+$$
+where $S_{\max }^{n}$ denotes the maximum wave velocity present throughout the domain at time $t^{n}$. A consequence of this restriction is that only two Riemann
+
+problem solutions affect cell $I_{i}$, namely the right travelling waves of $\mathbf{U}_{i-\frac{1}{2}}(x / t)$ and the left travelling waves of $\mathbf{U}_{i+\frac{1}{2}}(x / t),$ see Fig. 6.4 . Thus $\mathbf{U}_{i}^{n+1},$ given by (6.8), can be expressed as
+$$
+\mathbf{U}_{i}^{n+1}=\frac{1}{\Delta x} \int_{0}^{\frac{1}{2} \Delta x} \mathbf{U}_{i-\frac{1}{2}}\left(\frac{x}{\Delta t}\right) \mathrm{d} x+\frac{1}{\Delta x} \int_{-\frac{1}{2} \Delta x}^{0} \mathbf{U}_{i+\frac{1}{2}}\left(\frac{x}{\Delta t}\right) \mathrm{d} x
+$$
+after using (6.6) and $(6.8) .$ This version of Godunov's method can obviously be implemented as a practical computational scheme. We note however that it has two main drawbacks. First, the CFL-like condition (6.9) is computationally somewhat restrictive on $\Delta t$. Second, the evaluation of the integrals in (6.10) , although possible, could be involved. Rarefaction waves are bound to add to the complexity of the scheme. The second version of Godunov's method is more attractive and is given by the following statement.
+
+Proposition 6.1. The Godunov method can be written in conservative form
+$$
+\mathbf{U}_{i}^{n+1}=\mathbf{U}_{i}^{n}+\frac{\Delta t}{\Delta x}\left[\mathbf{F}_{i-\frac{1}{2}}-\mathbf{F}_{i+\frac{1}{2}}\right]
+$$
+with intercell numerical flux given by
+$$
+\mathbf{F}_{i+\frac{1}{2}}=\mathbf{F}\left(\mathbf{U}_{i+\frac{1}{2}}(0)\right)
+$$
+if the time step $\Delta t$ satisfies the condition
+$$
+\Delta t \leq \frac{\Delta x}{S_{\max }^{n}}
+$$
+Proof. The integrand $\widetilde{\mathbf{U}}(x, t)$ in (6.8) is an exact solution of the conservation laws, see equation (6.6). We can therefore apply the integral form (6.2) of the conservation laws to any control volume $\left[x_{1}, x_{2}\right] \times\left[t_{1}, t_{2}\right] .$ In particular, we can apply it to the case in which $x_{1}=x_{i-\frac{1}{2}}, x_{2}=x_{i+\frac{1}{2}}, t_{1}=t^{n}, t_{2}=t^{n+1}$
+From (6.4) we then have
+$$\left.\begin{array}{rl}
+\int_{x_{i-\frac{1}{2}}^{x_{i+\frac{1}{2}}}} \widetilde{\mathbf{U}}\left(x, t^{n+1}\right) \mathrm{d} x & =\int_{x_{i-\frac{1}{2}}^{x_{i+\frac{1}{2}}}} \widetilde{\mathbf{U}}\left(x, t^{n}\right) \mathrm{d} x \\
+& +\int_{0}^{\Delta t} \mathbf{F}\left[\widetilde{\mathbf{U}}\left(x_{i-\frac{1}{2}}, t\right)\right] \mathrm{d} t-\int_{0}^{\Delta t} \mathbf{F}\left[\widetilde{\mathbf{U}}\left(x_{i+\frac{1}{2}}, t\right)\right] \mathrm{d} t
+\end{array}\right\}
+$$
+In terms of local solutions, as in $(6.6),$ and assuming condition (6.13) we have
+$$
+\left.\begin{array}{l}
+\widetilde{\mathbf{U}}\left(x_{i-\frac{1}{2}}, t\right)=\mathbf{U}_{i-\frac{1}{2}}(0)=\text { constant } \\
+\widetilde{\mathbf{U}}\left(x_{i+\frac{1}{2}}, t\right)=\mathbf{U}_{i+\frac{1}{2}}(0)=\text { constant },
+\end{array}\right\}
+$$
+where $\mathbf{U}_{i+\frac{1}{2}}(0)$ is the solution of the Riemann problem $R P\left(\mathbf{U}_{i}^{n}, \mathbf{U}_{i+1}^{n}\right)$ along the ray $x / t=0,$ which is the t-axis in the local frame. Similarly, $\mathbf{U}_{i-\frac{1}{2}}(0)$ is the solution of $R P\left(\mathbf{U}_{i-1}^{n}, \mathbf{U}_{i}^{n}\right)$ along the t-axis. Division of (6.14) through by $\Delta x$ gives
+$$
+\left.\begin{array}{rl}
+\frac{1}{\Delta x} \int_{x_{i-\frac{1}{2}}^{x_{i+\frac{1}{2}}}} \tilde{\mathbf{U}}\left(x, t^{n+1}\right) \mathrm{d} x= & \frac{1}{\Delta x} \int_{x_{i-\frac{1}{2}}^{x_{i+\frac{1}{2}}}} \widetilde{\mathbf{U}}\left(x, t^{n}\right) \mathrm{d} x \\
+& +\frac{\Delta t}{\Delta x}\left[\mathbf{F}\left(\mathbf{U}_{i-\frac{1}{2}}(0)\right)-\mathbf{F}\left(\mathbf{U}_{i+\frac{1}{2}}(0)\right)\right],
+\end{array}\right\}
+$$
+which by virtue of (6.4) and (6.15) leads to the desired result $(6.11)-(6.12),$ and thus the proposition has been proved.
+The following remarks are in order:

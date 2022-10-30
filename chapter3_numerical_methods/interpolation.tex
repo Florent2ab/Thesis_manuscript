@@ -1,0 +1,170 @@
+\section{interpolation}
+\subsection{WENO 3}
+
+\begin{equation}
+q_{i \pm \frac{1}{2}}^{\mp}=\omega_{0}^{\mp} q_{i \pm \frac{1}{2}}^{(0 \mp)}+\omega_{1}^{\mp} q_{i \pm \frac{1}{2}}^{(1 \mp)}
+\end{equation}
+
+\begin{equation}
+\begin{array}{ll}
+q_{i+\frac{1}{2}}^{(0-)}  =-\frac{1}{2} Q_{i-1}+\frac{3}{2} Q_{i},\quad  q_{i-\frac{1}{2}}^{(0+)}=\frac{1}{2} Q_{i-1}+\frac{1}{2} Q_{i} \\
+q_{i+\frac{1}{2}}^{(1-)}  =\frac{1}{2} Q_{i}+\frac{1}{2} Q_{i+1}, \quad q_{i-\frac{1}{2}}^{(1+)}=\frac{3}{2} Q_{i}-\frac{1}{2} Q_{i+1} .
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{l}
+I S_{0}=\left(Q_{i}-Q_{i-1}\right)^{2} \\
+I S_{1}=\left(Q_{i+1}-Q_{i}\right)^{2}
+\end{array}
+\end{equation}
+
+with $\gamma_{0}^{-}=\gamma_{1}^{+}=\frac{1}{3}, \gamma_{1}^{-}=\gamma_{0}^{+}=\frac{2}{3}$ and $\tau_{3}=\left|I S_{0}-I S_{1}\right| .$ The $\epsilon$ is a
+small positive number used to avoid division by zero. We set $\epsilon=\Delta x^{4}$. The description is now complete. We refer to this reconstruction method as WENO-Z3.
+
+\subsection{WENO 5}
+
+\begin{equation}
+\begin{array}{ll}
+q_{i+\frac{1}{2}}^{(0-)}  =\frac{1}{3} Q_{i-2}-\frac{7}{6} Q_{i-1}+\frac{11}{6} Q_{i},\quad  q_{i+\frac{1}{2}}^{(0+)}=-\frac{1}{6} Q_{i-1}+\frac{5}{6} Q_{i}+\frac{1}{3} Q_{i+1} \\
+q_{i+\frac{1}{2}}^{(1-)}  =-\frac{1}{6} Q_{i-1}+\frac{5}{6} Q_{i}+\frac{1}{3} Q_{i+1}, \quad  q_{i+\frac{1}{2}}^{(1+)}=\frac{1}{3} Q_{i}+\frac{5}{6} Q_{i+1}-\frac{1}{6} Q_{i+2} \\
+q_{i+\frac{1}{2}}^{(2-)}  =\frac{1}{3} Q_{i}+\frac{5}{6} Q_{i+1}-\frac{1}{6} Q_{i+2}, \quad q_{i-\frac{1}{2}}^{(2+)}=\frac{11}{6} Q_{i+1}-\frac{7}{6} Q_{i+2}+\frac{1}{3} Q_{i+3}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{l}
+q_{i+\frac{1}{2}}^{-}=\omega_{0}^{-} q_{i+\frac{1}{2}}^{(1-)}+\omega_{1}^{-} q_{i+\frac{1}{2}}^{(2-)}+\omega_{2}^{-} q_{i+\frac{1}{2}}^{(3-)} \\
+q_{i+\frac{1}{2}}^{+}=\omega_{0}^{+} q_{i+\frac{1}{2}}^{(1+)}+\omega_{1}^{+} q_{i+\frac{1}{2}}^{(2+)}+\omega_{2}^{+} q_{i+\frac{1}{2}}^{(3+)}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{l}
+I S_{0}=\frac{13}{12}\left(Q_{i-2}-2 Q_{i-1}+Q_{i}\right)^{2}+\frac{1}{4}\left(Q_{i-2}-4 Q_{i-1}+3 Q_{i}\right)^{2} \\
+I S_{1}=\frac{13}{12}\left(Q_{i-1}-2 Q_{i}+Q_{i+1}\right)^{2}+\frac{1}{4}\left(Q_{i-1}+Q_{i+1}\right)^{2} \\
+I S_{2}=\frac{13}{12}\left(Q_{i}-2 Q_{i+1}+Q_{i+2}\right)^{2}+\frac{1}{4}\left(3 Q_{i}-4 Q_{i+1}+Q_{i+2}\right)^{2}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\omega_{k}^{\pm}=\frac{\bar{\omega}_{k}^{\pm}}{\tilde{\omega}_{0}^{\pm}+\tilde{\omega}_{1}^{\pm}+\tilde{\omega}_{2}^{\pm}}, \quad \tilde{\omega}_{k}^{\pm}=\frac{\gamma_{k}^{\pm}}{\left(\epsilon+I S_{k}\right)^{p}}, \quad k=0,1,2
+\end{equation}
+
+
+$$
+\omega_{k}^{\pm}=\frac{\tilde{\omega}_{k}^{\pm}}{\tilde{\omega}_{0}^{\pm}+\tilde{\omega}_{1}^{\pm}+\tilde{\omega}_{2}^{\pm}}, \quad \tilde{\omega}_{k}^{\pm}=\gamma_{k}^{\pm}\left(1+\left(\frac{\tau_{5}}{I S_{k}+\epsilon}\right)^{p}\right), \quad k=0,1,2
+$$
+with $\tau_{5}=\left|I S_{0}-I S_{2}\right|, \epsilon=\Delta x^{4}, p=2,$ and $\gamma_{k}^{\pm}$ as above.
+
+\subsection{WENO 7}
+
+\begin{equation}
+q_{i \pm \frac{1}{2}}^{(k \mp)}=\sum_{l=0}^{3} a_{k, l}^{\pm} Q_{i-3+k+l}
+\end{equation}
+
+\begin{equation}
+\begin{array}{c||cccc}
+l & 0 & 1 & 2 & 3 \\
+\hline a_{0, l}^{+} & \frac{-3}{12} & \frac{13}{12} & \frac{-23}{12} & \frac{25}{12} \\
+a_{1, l}^{+} & \frac{1}{12} & \frac{-5}{12} & \frac{13}{12} & \frac{3}{12} \\
+a_{2, l}^{+} & \frac{-1}{12} & \frac{7}{12} & \frac{7}{12} & \frac{-1}{12} \\
+a_{3, l}^{+} & \frac{3}{12} & \frac{13}{12} & \frac{-5}{12} & \frac{1}{12}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{ll}
+q_{i+\frac{1}{2}}^{(0-)}  =\frac{1}{3} Q_{i-2}-\frac{7}{6} Q_{i-1}+\frac{11}{6} Q_{i},\quad  q_{i+\frac{1}{2}}^{(0+)}=-\frac{1}{6} Q_{i-1}+\frac{5}{6} Q_{i}+\frac{1}{3} Q_{i+1} \\
+q_{i+\frac{1}{2}}^{(1-)}  =-\frac{1}{6} Q_{i-1}+\frac{5}{6} Q_{i}+\frac{1}{3} Q_{i+1}, \quad  q_{i+\frac{1}{2}}^{(1+)}=\frac{1}{3} Q_{i}+\frac{5}{6} Q_{i+1}-\frac{1}{6} Q_{i+2} \\
+q_{i+\frac{1}{2}}^{(2-)}  =\frac{1}{3} Q_{i}+\frac{5}{6} Q_{i+1}-\frac{1}{6} Q_{i+2}, \quad q_{i-\frac{1}{2}}^{(2+)}=\frac{11}{6} Q_{i+1}-\frac{7}{6} Q_{i+2}+\frac{1}{3} Q_{i+3}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{c}
+I S_{0}=Q_{i-3}\left(547 Q_{i-3}-3882 Q_{i-2}+4642 Q_{i-1}-1854 Q_{i}\right)+ \\
+\quad Q_{i-2}\left(7043 Q_{i-2}-17246 Q_{i-1}+7042 Q_{i}\right)+ \\
+\quad Q_{i-1}\left(11003 Q_{i-1}-9402 Q_{i}\right)+2107 Q_{i}^{2} \\
+I S_{1}=  Q_{i-2}\left(267 Q_{i-2}-1642 Q_{i-1}+1602 Q_{i}-494 Q_{i+1}\right)+ \\
+Q_{i-1}\left(2843 Q_{i-1}-5966 Q_{i}+1922 Q_{i+1}\right)+ \\
+Q_{i}\left(3443 Q_{i}-2522 Q_{i+1}\right)+547 Q_{i+1}^{2}, \\
+I S_{2}=  Q_{i-1}\left(547 Q_{i-1}-2522 Q_{i}+1922 Q_{i+1}-494 Q_{i+2}\right)+ \\
+Q_{i}\left(3443 Q_{i}-5966 Q_{i+1}+1602 Q_{i+2}\right)+ \\
+Q_{i+1}\left(2843 Q_{i+1}-1642 Q_{i+2}\right)+267 Q_{i+2}^{2}, \\
+IS_{3}=  Q_{i}\left(2107 Q_{i}-9402 Q_{i+1}+7042 Q_{i+2}-1854 Q_{i+3}\right)+ \\
+Q_{i+1}\left(11003 Q_{i+1}-17246 Q_{i+2}+4642 Q_{i+3}\right)+ \\
+Q_{i+2}\left(7043 Q_{i+2}-3882 Q_{i+3}\right)+547 Q_{i+3}^{2}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{l}
+\text { with } \gamma_{0}^{-}=\gamma_{3}^{+}=\frac{1}{35}, \gamma_{1}^{-}=\gamma_{2}^{+}=\frac{12}{35}, \gamma_{2}^{-}=\gamma_{1}^{+}=\frac{18}{35}, \gamma_{3}^{-}=\gamma_{0}^{+}=\frac{4}{35}, \epsilon=\Delta x^{2} \\
+\text { and } p=2
+\end{array}
+\end{equation}
+
+\subsection{TENO 5}
+
+\begin{equation}
+\begin{array}{l}
+\hat{f}_{0, i+1 / 2}=\frac{1}{6}\left(-f_{i-1}+5 f_{i}+2 f_{i+1}\right) \\
+\hat{f}_{1, i+1 / 2}=\frac{1}{6}\left(2 f_{i}+5 f_{i+1}-f_{i+2}\right) \\
+\hat{f}_{2, i+1 / 2}=\frac{1}{6}\left(2 f_{i-2}-7 f_{i-1}+11 f_{i}\right)
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{l}
+\hat{f}_{3, i+1 / 2}=\frac{1}{12}\left(3 f_{i}+13 f_{i+1}-5 f_{i+2}+f_{i+3}\right) \\
+\hat{f}_{4, i+1 / 2}=\frac{1}{12}\left(-3 f_{i-3}+13 f_{i-2}-23 f_{i-1}+25 f_{i}\right) \\
+\hat{f}_{5, i+1 / 2}=\frac{1}{60}\left(12 f_{i}+77 f_{i+1}-43 f_{i+2}+17 f_{i+3}-3 f_{i+4}\right)
+\end{array}
+\end{equation}
+
+\subsection{TENO 7}
+
+\begin{equation}
+\begin{aligned}
+\beta_{0,3} &=\frac{1}{4}\left(f_{i-1}-f_{i+1}\right)^{2}+\frac{13}{12}\left(f_{i-1}-2 f_{i}+f_{i+1}\right)^{2} \\
+\beta_{1,3} &=\frac{1}{4}\left(3 f_{i}-4 f_{i+1}+f_{i+2}\right)^{2}+\frac{13}{12}\left(f_{i}-2 f_{i+1}+f_{i+2}\right)^{2} \\
+\beta_{2,3} &=\frac{1}{4}\left(f_{i-2}-4 f_{i-1}+3 f_{i}\right)^{2}+\frac{13}{12}\left(f_{i-2}-2 f_{i-1}+f_{i}\right)^{2} \\
+\beta_{3,4} &=\frac{1}{240}\left[f_{i}\left(2107 f_{i}-9402 f_{i+1}+7042 f_{i+2}-1854 f_{i+3}\right)\right.\\
+&+f_{i+1}\left(11003 f_{i+1}-17246 f_{i+2}+4642 f_{i+3}\right) \\
+&\left.+f_{i+2}\left(7043 f_{i+2}-3882 f_{i+3}\right)+547 f_{i+3} f_{i+3}\right] \\
+\beta_{4,4} &=\frac{1}{240}\left[f_{i-3}\left(547 f_{i-3}-3882 f_{i-2}+4642 f_{i-1}-1854 f_{i}\right)\right.\\
+&+f_{i-2}\left(7043 f_{i-2}-17246 f_{i-1}+7042 f_{i}\right) \\
+&\left.+f_{i-1}\left(11003 f_{i-1}-9402 f_{i}\right)+2107 f_{i} f_{i}\right]
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\gamma_{k}=\left(C+\frac{\tau_{K}}{\beta_{k, r_{k}}+\varepsilon}\right)^{q}, k=0, \ldots, K-3
+\end{equation}
+
+\begin{equation}
+\beta_{k, r_{k}}=\sum_{j=1}^{r-1} \Delta x^{2 j-1} \int_{x_{i-1 / 2}}^{x_{i+1 / 2}}\left(\frac{d^{j}}{d x^{j}} \hat{f}_{k}(x)\right)^{2} d x
+\end{equation}
+
+\begin{equation}
+\tau_{K}=\left|\beta_{K}-\frac{1}{6}\left(\beta_{1,3}+\beta_{2,3}+4 \beta_{0,3}\right)\right|=O\left(\Delta x^{6}\right)
+\end{equation}
+
+\begin{equation}
+\chi_{k}=\frac{\gamma_{k}}{\sum_{k=0}^{K-3} \gamma_{k}}
+\end{equation}
+
+\begin{equation}
+\delta_{k}=\left\{\begin{array}{ll}
+0, & \text { if } \chi_{k}<C_{T} \\
+1, & \text { otherwise }
+\end{array}\right.
+\end{equation}
+
+\begin{figure}[H]
+\begin{center}
+        \includegraphics[width=\textwidth]{shémas de descretisation/castest/photo/tenoweno.PNG}
+\caption{}
+\end{center}
+\end{figure}

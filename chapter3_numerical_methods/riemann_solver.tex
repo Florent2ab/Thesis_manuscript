@@ -1,0 +1,444 @@
+\section{Riemann problem}
+
+On appelle problème de Riemann pour les équations d'Euler monodimensionnelles le problème consistant à chercher une solution des équations avec la condition initiale suivante :
+\begin{equation}
+\frac{\partial \vec{U}}{\partial t}+\frac{\partial \vec{F}}{\partial x}=\overrightarrow{0} \quad ; \quad \vec{U}(x, 0)=\vec{U}^{0}(x)=\left\{\begin{array}{lll}
+\vec{U}_{L} & \text { si } & x<0 \\
+\vec{U}_{R} & \text { si } & x>0
+\end{array}\right.
+\end{equation}
+\subsection{equation noninéarire}
+Dans cette partie nous allonsnous interreeser au prebleme de Riemann pour les equation non lieair ainsi que pour les ss teme n0n lineaire. Nous detailerons les different phenomeme que nous puvons rencontre lors de la resolutions d'n probleme de riemann nonlineaire. L'equation non lineaire que nous allons prendre en exemple et l'équation de burguers:
+\begin{equation}
+\frac{\partial u}{\partial t}+\frac{\partial f(u)}{\partial x}=0 \quad ; \quad f(u)=\frac{u^{2}}{2} \quad ; \quad u(x, 0)=u^{0}(x)
+\end{equation}
+
+\begin{equation}
+u^{0}(x)=\left\{\begin{array}{lll}
+u_{L} & \text { si } & x<0 \\
+u_{R} & \text { si } & x>0
+\end{array}\right.
+\end{equation}
+
+Les conditions initiales sont
+- compressives si $u_{L}>u_{R} \rightarrow$ formation d'un choc expansives $\quad$ si $u_{L}<u_{R} \rightarrow$ formation d'un éventail de détente
+
+\begin{equation}
+\begin{aligned}
+&\text { Cl compressives: }\\
+&u(x, t)=\left\{\begin{array}{lll}
+u_{L} & \text { si } & x / t<S \\
+u_{R} & \text { si } & x / t>S
+\end{array}\right.\\
+&S=\frac{1}{2}\left(u_{L}+u_{R}\right)
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+&\text { CI expansives }\\
+&u(x, t)=\left\{\begin{array}{ccl}
+u_{L} & \text { si } & x / t<u_{L} \\
+x / t & \text { si } & u_{L}<x / t<u_{R} \\
+u_{R} & \text { si } & x / t>u_{R}
+\end{array}\right.
+\end{aligned}
+\end{equation}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{solveur de Rieamman/photo/riemann.PNG}
+\caption{}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+        \includegraphics[width=0.6\textwidth]{solveur de Rieamman/photo/riemann.PNG}
+\caption{}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+        \includegraphics[width=0.6\textwidth]{solveur de Rieamman/photo/riemann.PNG}
+\caption{}
+\end{center}
+\end{figure}
+Ces solutions présentent une similitude en fonction du rapport $\xi=x / t .$ Dans le cas d'un choc (figure $4.4$ ), la discontinuité initiale se propage à vitesse constante $S=\frac{1}{2}\left(u_{L}+u_{R}\right)$ définie par la condition de Rankine-Hugoniot. Dans le cas de la détente (figure 4.5), la solution est une droite reliant le pied de l'éventail avançant à vitesse $u_{L}$ et la tête de l'éventail avançant à vitesse $u_{R}>u_{L}$
+
+
+%La solution possède une propriété d'auto-similitude car elle ne dépend que du rapport x/t.
+%On montre que la solution est constituée par au plus quatre zones dans lesquelles w est
+%constant, séparées par des ondes centrées c'est-à-dire des zones où w est fonction de x/t.
+%Eventuellement le nombre de régions peut être réduit à trois auquel cas la région centrale
+%est une zone de vide notée (V).
+
+%Ces ondes centrées peuvent être de trois types :
+%• Des faisceaux de détente isentropique notés (D) dans lesquels w(x, t) est continue.
+%• Des discontinuités de contact à travers lesquelles la pression et la vitesse sont continues et seule la densité est discontinue. On appelle ces discontinuités lignes de glissement notées (L).
+%• Des discontinuités de type ondes de choc notées (C) à travers lesquelles w(x, t) est
+%discontinue.
+%Suivant les valeurs du rapport pL
+%pR
+%et de la diérence de vitesse uL − uR, il existe cinq
+%congurations possibles notées (de gauche à droite) DLC, CLC, CLD, DLD et DVD.
+%Certains schémas numériques reposent sur la résolution d'un problème de Riemann à
+%chaque interface de calcul, c'est-à-dire la détermination de la solution à chaque interface
+%16
+%de calcul à partir des états gauche et droit.
+
+\subsection{system equation noninéarire}
+
+Dans le cas général d'un système non-linéaire de $m$ équations, l'état initial discontinu peut-être à l'origine :
+de détentes, i.e. d'ondes simples centrées à l'origine pour les champs VNL (équation $(2.82)$ et figure $2.10$ gauche $),$ dont les caractéristiques divergent $\left(\lambda^{(i)}\left(\vec{U}_{L}\right)<\lambda^{(i)}\left(\vec{U}_{R}\right)\right)$ et dont les $i$ -invariants de Riemann faibles sont donnés par $(2.73)$. de discontinuités de contact pour les champs LD, dont les caractéristiques sont des droites parallèles de pente $\lambda^{(i)}\left(\vec{U}_{L}\right)=\lambda^{(i)}\left(\vec{U}_{R}\right)$ (figure $2.11$ droite $)$ qui est la vitesse de propagation de la discontinuité satisfaisant les relations de Rankine-Hugoniot $(2.85)$. Les $i$ -invariants de Riemann faibles vérifient également $(2.73)$ à travers la discontinuité de contact. de chocs pour les champs VNL si $\lambda^{(i)}\left(\vec{U}_{L}\right)>\lambda^{(i)}\left(\vec{U}_{R}\right) .$ Dans ce cas, la vitesse $\mathrm{du}$ choc doit vérifier les relations de Rankine-Hugoniot $(2.85)$ et la condition entropique
+$$
+\lambda^{(i)}\left(\vec{U}_{L}\right)>S^{(i)}>\lambda^{(i)}\left(\vec{U}_{R}\right)
+$$
+Chacune de ces solutions d'ondes élémentaires présente une similitude en fonction $\mathrm{du}$ rapport $\xi=x / t$. Il en est donc de même pour la solution du problème de Riemann en général, qui est constitué de $\vec{U}_{L}$ à gauche de l'onde la plus lente, de $(m-1)$ états intermédiaires séparés par l'une quelconque de ces ondes élémentaires, et de $\vec{U}_{R}$ à droite de l'onde la plus rapide.
+
+\subsection{RUSANOV}
+
+Davis made some observations regarding the relationship between the chosen wave speeds and some well-known numerical methods. Suppose that for a given Riemann problem we can identify a positive speed $S^{+}$. Then by choosing $S_{L}=-S^{+}$ and $S_{R}=S^{+}$ in the HLL flux (10.20) one obtains a Rusanov flux [418]
+$$
+\mathbf{F}_{i+1 / 2}=\frac{1}{2}\left(\mathbf{F}_{L}+\mathbf{F}_{R}\right)-\frac{1}{2} S^{+}\left(\mathbf{U}_{R}-\mathbf{U}_{L}\right)
+$$
+As to the choice of the speed $S^{+},$ Davis [150] considered
+$$
+S^{+}=\max \left\{\left|u_{L}-a_{L}\right|,\left|u_{R}-a_{R}\right|,\left|u_{L}+a_{L}\right|,\left|u_{R}+a_{R}\right|\right\}
+$$
+Actually, the above speed is bounded by
+$$
+S^{+}=\max \left\{\left|u_{L}\right|+a_{L},\left|u_{R}\right|+a_{R}\right\}
+$$
+This choice is likely to produce a more robust scheme and is also simpler than Davis's choice.
+
+Another possible choice is $S^{+}=S_{\max }^{n},$ the maximum wave speed present at the appropriate time found by imposing the Courant stability condition; see Sect. 6.3 .2 of Chap. $6 .$ This speed is related to the time step $\Delta t$ and the grid spacing $\Delta x$ via
+$$
+S_{\max }^{n}=\frac{C_{c f l} \Delta x}{\Delta t}
+$$
+where $C_{c f l}$ is the Courant number coefficient, usually chosen (empirically) to be $C_{c f l} \approx 0.9,$ for a scheme of linear stability limit of unity. For $C_{c f l}=1$ one has $S^{+}=\frac{\Delta x}{\Delta t},$ which results in the Lax-Friedrichs numerical flux
+$$
+F_{i+1 / 2}=\frac{1}{2}\left(F_{L}+F_{R}\right)-\frac{1}{2} \frac{\Delta x}{\Delta t}\left(U_{R}-U_{L}\right)
+$$
+
+\subsection{HLLC}
+
+La simplicité du schéma HLL est due la représentation a 2 ondes de la solution du problème de Riemann local, qui ne prend pas en considération les ondes LD, de type discontinuité de contact. Ces dernières sont donc mal représentées dans les solutions numériques (voir figure 8.13, section 8.4). Pour y remédier, Toro et al $^{6}$ introduisent une $3^{\text {ème }}$ onde de vitesse $S^{*}$ dans structure du problème (figure 8.7).
+FiGure 8.7 - Structure a 3 ondes et 4 états constants du schéma HLLC.
+On sépare en deux contributions l'intégrale au membre de gauche de (8.32) :
+En posant
+$$
+\vec{U}_{L}^{*}=\frac{1}{T\left(S^{*}-S_{L}\right)} \int_{T S_{L}}^{T S^{*}} \vec{U}(x, T) d x \quad ; \quad \vec{U}_{R}^{*}=\frac{1}{T\left(S_{R}-S^{*}\right)} \int_{T S^{*}}^{T S_{R}} \vec{U}(x, T) d x
+$$
+la relation de consistence (8.31) devient
+$$
+\left(\frac{S^{*}-S_{L}}{S_{R}-S_{L}}\right) \vec{U}_{L}^{*}+\left(\frac{S_{R}-S^{*}}{S_{R}-S_{L}}\right) \vec{U}_{R}=\vec{U}^{H L L}
+$$
+et les conditions Rankine-Hugoniot (8.35)(8.36) au travers des 3 ondes sont maintenant
+$$
+\begin{aligned}
+\vec{F}_{L}^{*} &=\vec{F}_{L}+S_{L}\left(\vec{U}_{L}^{*}-\vec{U}_{L}\right) \\
+\vec{F}_{R} &=\vec{F}_{L}^{*}+S^{*}\left(\vec{U}_{R}^{*}-\vec{U}_{L}^{*}\right) \\
+\vec{F}_{R}^{*} &=\vec{F}_{R}+S_{R}\left(\vec{U}_{R}^{*}-\vec{U}_{R}\right)
+\end{aligned}
+$$
+On vérifie aisément qu'en injectant (8.42) et (8.44) dans $(8.43),$ on retrouve $(8.41) .$ On a
+problème de Riemann a conduit aux relations (4.16), et il est tout à fait justifié de prendre $S^{*}=u^{*},$ que l'on suppose connu et qu'on déterminera plus tard. On a donc:
+ro
+M. Speares W., 1994, Restomtion of the contact surface in the HLL-Riemann solver. Shock Waves, vol. $4,$ pp. $25-34$
+
+On récrit (8.42) en passant au membre de droite les grandeurs connues :
+$$
+S_{L} \vec{U}_{L}^{*}-\vec{F}_{L}^{*}=S_{L} \vec{U}_{L}-\vec{F}_{L}=\vec{Q}_{L} \text { connu }
+$$
+La relation (3.39) permet d'écrire (8.46) sous la forme
+$$
+\left(S_{L}-u^{*}\right) \vec{U}_{L}^{*}=p^{*} \vec{D}^{*}+\left(S_{L}-u_{L}\right) \vec{U}_{L}-p_{L} \vec{D}_{L}
+$$
+Détaillons maintenant les deux premières composantes de (8.42)
+$$
+\left\{\begin{aligned}
+\rho_{L}^{*} u^{*} &=\rho_{L} u_{L} \quad+S_{L}\left(\rho_{L}^{*}-\rho_{L}\right) \\
+\rho_{L}^{*} u^{* 2}+p^{*} &=\rho_{L} u_{L}^{2}+p_{L}+S_{L}\left(\rho_{L}^{*} u^{*}-\rho_{L} u_{L}\right)
+\end{aligned}\right.
+$$
+On déduit de la première:
+$$
+\rho_{L}^{*}\left(u^{*}-S_{L}\right)=\rho_{L}\left(u_{L}-S_{L}\right)
+$$
+que l'on substitue dans la seconde pour obtenir
+$$
+p^{*}=p_{L}+\rho_{L}\left(S_{L}-u_{L}\right)\left(u^{*}-u_{L}\right)
+$$
+que l'on injecte dans (8.48) , ce qui détermine complètement l'écat $\vec{U}_{L}^{*}$. En en détaillant les composantes, on trouve
+$$
+\vec{U}_{L}=\rho_{L}\left(\frac{S_{L}-u_{L}}{S_{L}-u^{*}}\right) \mid \begin{array}{l}
+1 \\
+u^{*} \\
+E_{L}+\left(u^{*}-u_{L}\right)\left[u^{*}+\frac{p_{L}}{\rho_{L}\left(S_{L}-u_{L}\right)}\right]
+\end{array}
+$$
+où $u^{*}=S^{*}$. En procédent de même a partir de (8.44) , on obtient
+$$
+\vec{U}_{R}=\rho_{L}\left(\frac{S_{R}-u_{R}}{S_{R}-u^{*}}\right) \mid \begin{array}{l}
+1 \\
+u^{*} \\
+E_{R}+\left(u^{*}-u_{R}\right)\left[u^{*}+\frac{p_{R}}{\rho_{R}\left(S_{R}-u_{R}\right)}\right]
+\end{array}
+$$
+Au final, le flux numérique à l'interface $i+1 / 2$ est
+$$
+\vec{F}_{i+1 / 2}^{H L L C}=\left\{\begin{array}{ll}
+\vec{F}_{L} & \text { si } 0 \leq S_{L} \\
+\vec{F}_{L}^{*}=\vec{F}_{L}+S_{L}\left(\vec{U}_{L}^{*}-\vec{U}_{L}\right) & \text { si } S_{L} \leq 0 \leq S^{*} \\
+\vec{F}_{R}^{*}=\vec{F}_{R}+S_{R}\left(\vec{U}_{R}^{*}-\vec{U}_{R}\right) & \text { si } S^{*} \leq 0 \leq S_{R} \\
+\vec{F}_{R} & \text { si } S_{R} \leq 0
+\end{array}\right.
+$$
+où l'état $L$ est celui de la cellule $I_{i}$ et l'écat $R$ celui de la cellule $I_{i+1}$.
+En écrivant (8.50) coté $R$, avec les relations (8.45) , on obtient l'estimation de la vitesse $S^{*}:$
+$$
+S^{*}=\frac{p_{R}-p_{L}+\rho_{L} u_{L}\left(S_{L}-u_{L}\right)-\rho_{R} u_{R}\left(S_{R}-u_{R}\right)}{\rho_{L}\left(S_{L}-u_{L}\right)-\rho_{R}\left(S_{R}-u_{R}\right)}
+$$
+Les vitesses $S_{L}$ et $S_{R}$ sont estimées de la même façon que pour le schéma HLL.
+
+\subsection{HLL}
+
+We are concerned with solving numerically the general Initial Boundary Value Problem (IBVP)
+$$
+\left.\begin{array}{l}
+\text { PDEs: } \mathbf{U}_{t}+\mathbf{F}(\mathbf{U})_{x}=\mathbf{0} \\
+\text { ICs }: \mathbf{U}(x, 0)=\mathbf{U}^{(0)}(x), \\
+\text { BCs }: \mathbf{U}(0, t)=\mathbf{U}_{1}(t), \mathbf{U}(L, t)=\mathbf{U}_{\mathrm{r}}(t),
+\end{array}\right\}
+$$
+in a domain $0 \leq x \leq L,$ with appropriate boundary conditions. We use the explicit conservative formula
+$$
+\mathbf{U}_{i}^{n+1}=\mathbf{U}_{i}^{n}-\frac{\Delta t}{\Delta x}\left[\mathbf{F}_{i+\frac{1}{2}}-\mathbf{F}_{i-\frac{1}{2}}\right]
+$$
+with the numerical flux $\mathbf{F}_{i+\frac{1}{2}}$ yet to be defined.
+10.2.1 The Godunov Flux
+In Chap. 6 we defined the Godunov intercell numerical flux as
+$$
+\mathbf{F}_{i+\frac{1}{2}}=\mathbf{F}\left(\mathbf{U}_{i+\frac{1}{2}}(0)\right)
+$$
+in which $\mathbf{U}_{i+\frac{1}{2}}(0)$ is the exact similarity solution $\mathbf{U}_{i+\frac{1}{2}}(x / t)$ of the Riemann problem
+$$
+\left.\begin{array}{l}
+\mathbf{U}_{t}+\mathbf{F}(\mathbf{U})_{x}=\mathbf{0} \\
+\mathbf{U}(x, 0)=\left\{\begin{array}{ll}
+\mathbf{U}_{\mathrm{L}} & \text { if } x<0 \\
+\mathbf{U}_{\mathrm{R}} & \text { if } x>0
+\end{array}\right.
+\end{array}\right\}
+$$
+evaluated at $x / t=0 .$ Fig. 10.1 shows the structure of the exact solution of the Riemann problem for the $x$ -split, three dimensional Euler equations, for which the vectors of conserved variables and fluxes are
+$$
+\mathbf{U}=\left[\begin{array}{c}
+\rho \\
+\rho u \\
+\rho v \\
+\rho w \\
+E
+\end{array}\right], \quad \mathbf{F}=\left[\begin{array}{c}
+\rho u \\
+\rho u^{2}+p \\
+\rho u v \\
+\rho u w \\
+u(E+p)
+\end{array}\right]
+$$
+
+The value $x / t=0$ for the Godunov flux corresponds to the $t$ -axis. See Chaps. 4 and 6 for details. The piece-wise constant initial data, in terms of primitive variables, is
+$$
+\mathbf{W}_{L}=\left[\begin{array}{c}
+\rho_{L} \\
+u_{L} \\
+v_{L} \\
+w_{L} \\
+p_{L}
+\end{array}\right], \quad \mathbf{W}_{R}=\left[\begin{array}{c}
+\rho_{R} \\
+u_{R} \\
+v_{R} \\
+w_{R} \\
+p_{R}
+\end{array}\right]
+$$
+In Chap. 9 we provided approximations to the state $\mathbf{U}_{i+\frac{1}{2}}(x / t)$ and obtained a corresponding approximate Godunov method by evaluating the physical flux function $\mathbf{F}$ at this approximate state; see $(10.3) .$ The purpose of this chapter is to find direct approximations to the flux function $\mathbf{F}_{i+\frac{1}{2}}$ following the novel approach proposed by Harten, Lax and van Leer [238].
+10.2.2 Integral Relations
+Consider Fig. $10.2,$ in which the whole of the wave structure arising from the exact solution of the Riemann problem is contained in the control volume $\left[x_{L}, x_{R}\right] \times[0, T],$ that is
+$$
+x_{L} \leq T S_{L}, \quad x_{R} \geq T S_{R}
+$$
+where $S_{L}$ and $S_{R}$ are the fastest signal velocities perturbing the initial data states $\mathbf{U}_{L}$ and $\mathbf{U}_{R}$ respectively, and $T$ is a chosen time. The integral form of the conservation laws in $(10.4),$ in the control volume $\left[x_{L}, x_{R}\right] \times[0, T]$ reads
+$$
+\int_{x_{L}}^{x_{R}} \mathbf{U}(x, T) d x=\int_{x_{L}}^{x_{R}} \mathbf{U}(x, 0) d x+\int_{0}^{T} \mathbf{F}\left(\mathbf{U}\left(x_{L}, t\right)\right) d t-\int_{0}^{T} \mathbf{F}\left(\mathbf{U}\left(x_{R}, t\right)\right) d t
+$$
+
+See Sect. 2.4 .1 of Chap. 2 for details on integral forms of conservation laws. Evaluation of the right-hand side of this expression gives
+$$
+\int_{x_{L}}^{x_{R}} \mathbf{U}(x, T) d x=x_{R} \mathbf{U}_{R}-x_{L} \mathbf{U}_{L}+T\left(\mathbf{F}_{L}-\mathbf{F}_{R}\right)
+$$
+where $\mathbf{F}_{L}=\mathbf{F}\left(\mathbf{U}_{L}\right)$ and $\mathbf{F}_{R}=\mathbf{F}\left(\mathbf{U}_{R}\right) .$ We call the integral relation (10.9)
+the consistency condition. Now we split the integral on the left-hand side of (10.8) into three integrals, namely
+$$
+\int_{x_{L}}^{x_{R}} \mathbf{U}(x, T) d x=\int_{x_{L}}^{T S_{L}} \mathbf{U}(x, T) d x+\int_{T S_{L}}^{T S_{R}} \mathbf{U}(x, T) d x+\int_{T S_{R}}^{x_{R}} \mathbf{U}(x, T) d x
+$$
+and evaluate the first and third terms on the right-hand side. We obtain
+$$
+\int_{x_{L}}^{x_{R}} \mathbf{U}(x, T) d x=\int_{T S_{L}}^{T S_{R}} \mathbf{U}(x, T) d x+\left(T S_{L}-x_{L}\right) \mathbf{U}_{L}+\left(x_{R}-T S_{R}\right) \mathbf{U}_{R}
+$$
+Comparing (10.10) with (10.9) gives
+Fig. 10.2. Control volume $\left[x_{L}, x_{R}\right] \times[0, T]$ on $x-t$ plane. $S_{L}$ and $S_{R}$ are the fastest signal velocities arising from the solution of the Riemann problem.
+$$
+\int_{T S_{L}}^{T S_{R}} \mathbf{U}(x, T) d x=T\left(S_{R} \mathbf{U}_{R}-S_{L} \mathbf{U}_{L}+\mathbf{F}_{L}-\mathbf{F}_{R}\right)
+$$
+
+$$
+\int_{T S_{L}}^{T S_{R}} \mathbf{U}(x, T) d x=T\left(S_{R} \mathbf{U}_{R}-S_{L} \mathbf{U}_{L}+\mathbf{F}_{L}-\mathbf{F}_{R}\right)
+$$
+On division through by the length $T\left(S_{R}-S_{L}\right),$ which is the width of the wave system of the solution of the Riemann problem between the slowest and fastest signals at time $T,$ we have
+$$
+\frac{1}{T\left(S_{R}-S_{L}\right)} \int_{T S_{L}}^{T S_{R}} \mathbf{U}(x, T) d x=\frac{S_{R} \mathbf{U}_{R}-S_{L} \mathbf{U}_{L}+F_{L}-F_{R}}{S_{R}-S_{L}}
+$$
+Thus, the integral average of the exact solution of the Riemann problem between the slowest and fastest signals at time $T$ is a known constant, provided
+$\begin{array}{ll}320 & 10 \text { The HLL and HLLC Riemann Solvers }\end{array}$
+that the signal speeds $S_{L}$ and $S_{R}$ are known; such constant is the right-hand side of (10.12) and we denote it by
+$$
+\mathbf{U}^{h l l}=\frac{S_{R} \mathbf{U}_{R}-S_{L} \mathbf{U}_{L}+F_{L}-F_{R}}{S_{R}-S_{L}}
+$$
+We now apply the integral form of the conservation laws to the left portion of Fig. $10.2,$ that is the control volume $\left[x_{L}, 0\right] \times[0, T] .$ We obtain
+$$
+\int_{T S_{L}}^{0} \mathbf{U}(x, T) d x=-T S_{L} \mathbf{U}_{L}+T\left(\mathbf{F}_{L}-\mathbf{F}_{0 L}\right)
+$$
+where $\mathbf{F}_{0 L}$ is the flux $\mathbf{F}(\mathbf{U})$ along the $t$ -axis. Solving for $\mathbf{F}_{0 L}$ we find
+$$
+\mathbf{F}_{0 L}=\mathbf{F}_{L}-S_{L} \mathbf{U}_{L}-\frac{1}{T} \int_{T S_{L}}^{0} \mathbf{U}(x, T) d x
+$$
+
+Evaluation of the integral form of the conservation laws on the control volume $\left[0, x_{R}\right] \times[0, T]$ yields
+$$
+\mathbf{F}_{0 R}=\mathbf{F}_{R}-S_{R} \mathbf{U}_{R}+\frac{1}{T} \int_{0}^{T S_{R}} \mathbf{U}(x, T) d x
+$$
+The reader can easily verify that the equality
+$$
+\mathbf{F}_{0 L}=\mathbf{F}_{0 R}
+$$
+results in the consistency condition $(10.9) .$ All relations so far are exact, as we are assuming the exact solution of the Riemann problem.
+10.3 The HLL Approximate Riemann Solver
+Harten, Lax and van Leer [244] put forward the following approximate Riemann solver
+$$
+\tilde{\mathbf{U}}(x, t)=\left\{\begin{array}{ll}
+\mathbf{U}_{L} & \text { if } \quad \frac{x}{t} \leq S_{L} \\
+\mathbf{U}^{h l l} & \text { if } \quad S_{L} \leq \frac{x}{t} \leq S_{R} \\
+\mathbf{U}_{R} & \text { if } \quad \frac{x}{t} \geq S_{R}
+\end{array}\right.
+$$
+where $\mathbf{U}^{h l l}$ is the constant state vector given by (10.13) and the speeds $S_{L}$ and $S_{R}$ are assumed to be known. Fig. 10.3 shows the structure of this approximate solution of the Riemann problem, called the HLL Riemann solver. Note that this approximation consists of just three constant states separated by two waves. The Star Region consists of a single constant state; all intermediate states separated by intermediate waves are lumped into the single state $\mathbf{U}^{h l l}$. The corresponding flux $\mathbf{F}^{h l l}$ along the $t$ -axis is found from the relations (10.15) or $(10.16),$ with the exact integrand replaced by the approximate solution (10.17). Note that we do not take $\mathbf{F}^{h l l}=\mathbf{F}\left(\mathbf{U}^{h l l}\right) .$ The non-trivial case of interest is the subsonic case $S_{L} \leq 0 \leq S_{R}$. Substitution of the integrand in (10.15) or (10.16) by $U^{h l l}$ in (10.13) gives
+$$
+\mathbf{F}^{h u l}=\mathbf{F}_{L}+S_{L}\left(\mathbf{U}^{h t t}-\mathbf{U}_{L}\right)
+$$
+0
+$$
+\mathbf{F}^{h u}=\mathbf{F}_{R}+S_{R}\left(\mathbf{U}^{h l}-\mathbf{U}_{R}\right)
+$$
+Note that relations (10.18) and (10.19) are also obtained from applying Rankine-Hugoniot conditions acrass the left and right waves respectively; see Sect. 2.4 .2 of Chap. 2 and Sect. 3.1 .3 of Chap. 3 for details on the RankineHugoniot conditions. Use of (10.13) in (10.18) or (10.19) gives the HLL flux
+$$
+\mathbf{F}^{h u}=\frac{S_{R} \mathbf{F}_{L}-S_{L} \mathbf{F}_{R}+S_{L} S_{R}\left(\mathbf{U}_{R}-\mathbf{U}_{L}\right)}{S_{R}-S_{L}}
+$$
+The corresponding HLL intercell flux for the approximate Godunov method is then given by
+$$
+\mathbf{F}_{i+\frac{1}{2}}^{h u t}=\left\{\begin{array}{cl}
+\mathbf{F}_{L} & \text { if } \quad 0 \leq S_{L} \\
+\frac{S_{R} \mathbf{F}_{L}-S_{L} \mathbf{F}_{R}+S_{L} S_{R}\left(\mathbf{U}_{R}-\mathbf{U}_{L}\right)}{S_{R}-S_{L}}, & \text { if } S_{L} \leq 0 \leq S_{R} \\
+\mathbf{F}_{R} & \text { if } 0 \geq S_{R}
+\end{array}\right.
+$$
+Given an algorithm to compute the speeds $S_{L}$ and $S_{R}$ we have an approximate intercell flux ( 10.21 ) to be used in the conservative formula ( 10.2 ) to produce an approximate Godunov method. Procedures to estimate the wave speeds $S_{L}$ and $S_{R}$ are given in Sect. $10.5 .$ Harten, Lax and van Leer [244] showed that the Godunov scheme (10.2),(10.21) , if convergent, converges to the weak solution of the conservation laws. In fact they proved that the converged solution is also the physical, entropy satisfying, solution of the conservation laws. Their results actually apply to a larger class of approximate Riemann solvers. One of the requirements is consistency with the integral form of the conservation laws.
+$\begin{array}{ll}322 & 10 \text { The HLL and HLLC Riemann Solvers }\end{array}$
+That is, an approximate solution $\overline{\mathbf{U}}(x, t)$ is consistent with the integral form of the conservation laws if, when substituted for the exact solution $\mathrm{U}(x, t)$ in the consistency condition (10.9), the right-hand side remains unaltered. A shortcoming of the HLL scheme is exposed by contact discontinuities, shear waves and material interfaces, or any type of intermediate waves. For the Euler equations these waves are associated with the multiple eigenvalue $\lambda_{2}=\lambda_{3}=\lambda_{4}=u$. See Fig. 10.1. Note that in the integral (10.12), all that matters is the average across the wave structure, without regard for the spatial variations of the solution of the Riemann problem in the $S$ tar Region. As pointed out by Harten, Lax and van Leer themselves [244] , this defect of the HLL scheme may be corrected by restoring the missing waves. Accordingly, Toro, Spruce and Speares [541], [542] proposed the so called HLLC scheme, where $\mathrm{C}$ stands for Contact. In this scheme the missing middle waves are put back into the structure of the approximate Riemann solver.
+
+
+\subsection{AUSMUP}
+
+2.3.2. $A U S M^{+}-u p$
+AUSM $^{+}$ -up, the latest version of AUSM by Liou [13], is briefly described. As in SLAU, the numerical flux is expressed as in Eq. $(2.3 a)$ and $(2.3 b)$, but (a) pressure flux is given by
+68
+K. Kitramura, E. Shima/Journal of Compurational Physics $245(2013) 62-83$
+$$
+\begin{array}{ll}
+\tilde{p}=\left.f_{p}^{+}\right|_{z} p_{L}+\left.f_{p}^{-}\right|_{z} p_{R}+p_{u} & \\
+\left.f_{p}^{\pm}\right|_{z}=\left\{\begin{array}{ll}
+\frac{1}{2}(1 \pm \operatorname{sign}(M)), & \text{ if }|M| \geqslant 1 \\
+\frac{1}{4}(M \pm 1)^{2}(2 \mp M) \pm \alpha M\left(M^{2}-1\right)^{2}, & \text { otherwise }
+\end{array}\right. \\
+p_{u}=-K_{u} \beta_{+} \beta_{-}\left(\rho_{L}+\rho_{R}\right)\left(f_{a} c_{1 / 2}\right)\left(V_{n}^{-}-V_{n}^{+}\right)
+\end{array}
+$$
+where $c_{1 / 2}$ is calculated as
+$$
+\begin{array}{l}
+c_{1 / 2}=\min \left(\tilde{c}_{l}, \tilde{c}_{R}\right), \quad \tilde{c}_{L}=c^{-2} / \max \left(c^{*}, V_{n}^{+}\right), \quad \tilde{c}_{R}=c^{* 2} / \max \left(c^{*},-V_{n}^{-}\right) \\
+c^{* 2}=\frac{2(\gamma-1)}{(\gamma+1)} H
+\end{array}
+$$
+The full description of (b) mass flux and tunable parameters such as $K_{u}$ are provided in Appendix. Furthermore, AUSM $^{+}$ -up requires another user-specified value, that is, uniform Mach number $M_{\infty}$.
+
+For reference, AUSM $^{+}[24]$, a predecessor of AUSM $^{+}$ -up, is also reviewed. With Eqs. $(2.3 a)$ and $(2.3 b)$,
+$$
+\begin{array}{l}
+\tilde{p}=\left.f_{p}^{+}\right|_{\alpha} p_{L}+\left.f_{p}^{-}\right|_{z} p_{R} \\
+\left.f_{p}^{\pm}\right|_{z}=\left\{\begin{array}{ll}
+\frac{1}{2}(1 \pm \operatorname {sign}(M)), & \text { if }|M| \geqslant 1 \\
+\frac{1}{4}(M \pm 1)^{2}(2 \mp M) \pm \alpha M\left(M^{2}-1\right)^{2}, & \text { otherwise }
+\end{array}\right.
+\end{array}
+$$
+where $\alpha=3 / 16$, and $c_{1 / 2}$ is given by Eq. $(2.5 \mathrm{~g})$ as in LDFSS2001. Thus, differences from AUSM $^{+}$ -up lie in the definition of speed of sound, Eq. ( $2.5 \mathrm{~g}$ ), and elimination of some parameters such as $p_{u}$. Note that this scheme is not an all-speed scheme, so exhibits severe numerical errors at low speeds [13,26].
+
+
+\subsection{SLAU}
+
+2.3.1. SLAU SLAU scheme developed by Shima and Kitamura [25], one of AUSM-family schemes, is briefly explained first. The cellinterface flux $\mathbf{F}_{1 / 2}$ is calculated as:
+$$
+\begin{array}{l}
+\mathbf{F}_{1 / 2}=\frac{\dot{m}+|\dot{m}|}{2} \Psi^{+}+\frac{\dot{m}-|\dot{m}|}{2} \Psi^{-}+\tilde{p} \mathbf{N} \\
+\Psi=(1, u, v, w, H)^{T}, \quad \mathbf{N}=\left(0, n_{x}, n_{y}, n_{z}, 0\right)^{\top}
+\end{array}
+$$
+where "+" and "-" denote the left (L) and right (R) states at the cell-interface, respectively (Fig. 2). Then, (a) pressure flux is
+$$
+\begin{array}{l}
+\bar{p}=\frac{p_{l}+p_{R}}{2}+\frac{\left.f_{p}^{+}\right|_{x-0}-\left.f_{p}^{-}\right|_{x-0}}{2}\left(p_{L}-p_{R}\right)+(1-\chi)\left(\left.f_{p}^{+}\right|_{z-0}+\left.f_{p}^{-}\right|_{x-0}-1\right) \frac{p_{l}+p_{R}}{2} \\
+\chi=(1-\hat{M})^{2} \\
+\hat{M}=\min \left(1.0, \frac{1}{c_{1 / 2}} \sqrt{\frac{u_{L}^{2}+v_{L}^{2}+w_{L}^{2}+u_{R}^{2}+v_{R}^{2}+w_{R}^{2}}{2}}\right) \\
+\left.f_{p}^{\pm}\right|_{x-0}=\left\{\begin{array}{ll}
+\frac{1}{2}(1 \pm \operatorname{sign}(M)), & \text { if }|M| \geqslant 1 \\
+\frac{1}{4}(M \pm 1)^{2}(2 \mp M), & \text { otherwise }
+\end{array}\right. \\
+M=\frac{V_{n}}{C_{1 / 2}}=\frac{u n_{x}+v n_{y}+w n_{z}}{c_{1 / 2}} \\
+c_{1 / 2}=\bar{c}=\frac{c_{L}+c_{R}}{2}
+\end{array}
+$$
+and (b) mass flux is
+$$
+\dot{m}=\frac{1}{2}\left\{\rho_{l}\left(V_{n L}+\left|\bar{V}_{n}\right|^{+}\right)+\rho_{R}\left(V_{n R}-\left|\bar{V}_{n}\right|^{-}\right)-\frac{\chi}{C_{1 / 2}} \Delta p\right\}
+$$
+$$
+\begin{array}{l}
+\left|\bar{V}_{n}\right|^{+}=(1-g)\left|\bar{V}_{\mathrm{H}}\right|+g\left|V_{\mathrm{nL}}\right|, \quad\left|\bar{V}_{n}\right|^{-}=(1-g)\left|\bar{V}_{n}\right|+g\left|V_{n R}\right| \\
+\left|\bar{V}_{n}\right|=\frac{\rho_{L}\left|V_{\mathrm{n}}\right|+\rho_{R}\left|V_{n R}\right|}{\rho_{L}+\rho_{R}} \\
+g=-\max \left[\min \left(M_{L}, 0\right),-1\right] \cdot \min \left[\max \left(M_{R}, 0\right), 1\right] \quad \in[0,1]
+\end{array}
+$$
+Note in Eq. $(2.3 \mathrm{~h})$ that the interface speed of sound $c_{1 / 2}$ is defined as arithmetic average of $c_{L}$ and $c_{R}$. This scheme relies upon no prescribed parameters, such as cutoff Mach number. This feature differentiates the scheme from other well-known allspeed schemes, and is desirable for flows having no uniform Mach numbers, e.g., internal flows.
+
+\subsection{SLAU2}
+
+$$
+\tilde{p}=\frac{p_{\mathrm{L}}+p_{R}}{2}+\frac{f_{p}^{+}-f_{p}^{-}}{2}\left(p_{L}-p_{R}\right)+\frac{1}{c_{1 / 2}} \sqrt{\frac{u_{L}^{2}+v_{l}^{2}+w_{L}^{2}+u_{R}^{2}+v_{R}^{2}+w_{R}^{2}}{2}}\left(f_{p}^{+}+f_{p}^{-}-1\right) \frac{p_{l}+p_{R}}{2}
+$$
+Considering possible extension to real fluids [30] , the above expression is improved further:
+$$
+\tilde{p}=\frac{p_{L}+p_{R}}{2}+\frac{f_{p}^{+}-f_{p}^{-}}{2}\left(p_{l}-p_{R}\right)+\sqrt{\frac{u_{l}^{2}+v_{l}^{2}+w_{l}^{2}+u_{R}^{2}+v_{R}^{2}+w_{R}^{2}}{2}}\left(f_{p}^{+}+f_{p}^{-}-1\right) \bar{\rho} c_{1 / 2}
+$$
+With this new pressure flux, a new flux function named "SLAU2" has been derived.

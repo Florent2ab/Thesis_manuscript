@@ -1,0 +1,180 @@
+\section {Hyperbolicite}
+
+Dans cette partie nous allons presenter et definir les system déquations hperbolique.
+ce chapitre repose sur plusieurs ouvrage connus : []. le systeme d'equation qui nous interesse en particulier s'ecrit en 1D sous la forme suivante:
+
+\begin{equation}
+\frac{\partial \vec{U}}{\partial t}+\frac{\partial \vec{F}}{\partial x}=\overrightarrow{0}; \quad \vec{U}=\left( \begin{array}{l}
+u_{1}(x, t) \\
+u_{2}(x, t) \\
+\vdots \\
+u_{m}(x, t)
+\end{array}\right) \quad ; \quad \vec{F}(\vec{U})=\left( \begin{array}{l}
+f_{1}\left(u_{1}, u_{2}, \ldots, u_{m}\right) \\
+f_{2}\left(u_{1}, u_{2}, \ldots, u_{m}\right) \\
+\vdots \\
+f_{m}\left(u_{1}, u_{2}, \ldots, u_{m}\right)
+\end{array}\right)
+\end{equation}
+La solution d'un systeme hyperbolique depends des contitions initials duproblemes que l'on definit de facon general comme:
+\begin{equation}
+\begin{array}{r}
+\vec{U}_{0}=\vec{U}(\mathbf{x}, t=0), \mathbf{x} \in \Omega \\
+\left.\vec{U}\right|_{\partial \Omega}=\vec{g}(\mathbf{x}), \quad \forall t \in[0, T], \mathbf{x} \in \partial \Omega
+\end{array}
+\end{equation}
+En combinant eq1 et eq2, eq3 on obtient un problème de condition initial.\\
+Si aucune condition n'est imposé au bord du domaine on a juste () et le probleme est purement initial aussi appeller problemede cauchy.
+
+%a changer de format pour la jacobienne
+On appelle matrice jacobienne du système (2.39) la matrice des dérivées partielles des flux par rapport aux inconnues
+
+$$
+A(\vec{U})=\frac{\partial \vec{F}}{\partial \vec{U}} \quad ; \quad a_{i j}=\frac{\partial f_{i}}{\partial u_{j}}
+$$
+En posant
+$$
+\frac{\partial \vec{F}}{\partial x}=\frac{\partial \vec{F}}{\partial \vec{U}} \frac{\partial \vec{U}}{\partial x}
+$$
+on peut écrire le système ( 2.39 ) sous forme non-conservative :
+$$
+\frac{\partial \vec{U}}{\partial t}+A(\vec{U}) \frac{\partial \vec{U}}{\partial x}=\overrightarrow{0}
+$$
+Si $a_{i j}=$ Cste, le système est linéaire à coefficients constants
+- Si $a_{i j} \equiv a_{i j}(x, t),$ le système est linéaire à coefficients variables Dans le cas général $A \equiv A(\vec{U}),$ le système est dit quasi-linéaire. C'est en fait un système d'EDP non-linéaires.
+
+Le système est hyperbolique $^{6}$ si la matrice $A$ est diagonalisable, avec $m$ valeurs propres réelles $\lambda^{(i)}(\vec{U}), i=1, \ldots, m, \lambda^{(1)}<\lambda^{(2)}<\cdots<\lambda^{(m)}$ solutions du polynôme caractéristique
+$$
+\operatorname{det}(A-\lambda I)=0
+$$
+et un jeu de vecteurs propres droits $\vec{R}^{(i)}(\vec{U})$ (colonne) et gauches $\vec{L}^{(i)}(\vec{U})$ (ligne) tels que
+
+\begin{equation}
+A \overrightarrow{R^{(i)}=\lambda^{(i)} \vec{R}^{(i)}} \quad: \quad\left[\begin{array}{ccc}
+a_{11} & \ldots & a_{1 m} \\
+\vdots & \ddots & \vdots \\
+a_{m 1} & \ldots & a_{m m}
+\end{array}\right]\left[\begin{array}{c}
+r_{1}^{(i)} \\
+\vdots \\
+r_{m}^{(i)}
+\end{array}\right]=\lambda^{(i)}\left[\begin{array}{c}
+r_{1}^{(i)} \\
+\vdots \\
+r_{m}^{(i)}
+\end{array}\right]
+\end{equation}
+
+\begin{equation}
+\underbrace{\vec{L}^{(i)} A=\lambda^{(i)} \vec{L}^{(i)}}:\left[l_{1}^{(i)} \ldots l_{m}^{(i)}\right]\left[\begin{array}{ccc}
+a_{11} & \ldots & a_{1 m} \\
+\vdots & \ddots & \vdots \\
+a_{m 1} & \ldots & a_{m m}
+\end{array}\right]=\lambda^{(i)}\left[l_{1}^{(i)} \ldots l_{m}^{(i)}\right]
+\end{equation}
+
+Les vecteurs propres ne sont pas uniques. Pour une valeur propre $\lambda^{(i)}$ donnée, on peut les normaliser de sorte que
+$$
+l_{p}^{(i)} r_{q}^{(i)}=\delta_{p q} \quad ; \quad i=1, \ldots, m
+$$
+Si on assemble les vecteurs propres droits comme les colonnes d'une matrice $R$ et les vecteurs propres gauches comme les lignes d'une matrice $L$
+$$
+R=\left[\begin{array}{cccc}
+r_{1}^{(1)} & r_{1}^{(2)} & r_{1}^{(m)} \\
+\vdots & \vdots & \vdots & \vdots \\
+r_{m}^{(1)} & r_{m}^{(2)} & r_{m}^{(m)}
+\end{array}\right] \quad ; \quad L=R^{-1}=\left[\begin{array}{ccc}
+l_{1}^{(1)} & \ldots & l_{m}^{(1)} \\
+l_{1}^{(2)} & \ldots & l_{m}^{(2)} \\
+& \ldots & \\
+l_{1}^{(m)} & \ldots & l_{m}^{(m)}
+\end{array}\right]
+$$
+et que l'on forme la matrice diagonale des valeurs propres
+$$
+\Lambda=\left[\begin{array}{cccc}
+\lambda^{(1)} & 0 & \ldots & 0 \\
+0 & \lambda^{(2)} & & 0 \\
+\vdots & & \ddots & \vdots \\
+0 & 0 & \ldots & \lambda^{(m)}
+\end{array}\right]
+$$
+on a les relations matricielles suivantes :
+$$ A=R \Lambda L; \quad \Lambda=LAR$$
+
+et (2.47) s'écrit aussi :
+$$L R=R L=I$$
+%Multiplions à gauche le système (2.43) par un vecteur propre gauche $\vec{L}^{(i)}$. On obtient avec (2.46) l'équation scalaire
+%$$
+%\vec{L}^{(i)}\left(\frac{\partial \vec{U}}{\partial t}+\lambda^{(i)}(\vec{U}) \frac{\partial \vec{U}}{\partial x}\right)=0
+%$$
+%qui montre que sur la courbe caractéristique $\Gamma^{(i)}$ définie par la pente locale $\lambda^{(i)}(\vec{U}),$ on a
+%$$
+%\left.\vec{L}^{(i)} d \vec{U}\right|_{\Gamma^{(i)}}=0 \quad ; \quad \Gamma^{(i)}:\left.\frac{d x}{d t}\right|_{\Gamma^{(i)}}=\lambda^{(i)}(\vec{U})
+%$$
+On définit le vecteur des variables caractéristiques $\vec{W}$ associées aux vecteurs propres $L$ et $R$
+$$
+d \vec{W}=L d \vec{U} \quad ; \quad d \vec{U}=R d \vec{W}
+$$
+$$
+d w_{i}=\vec{L}^{(i)} d \vec{U}=\sum_{j=1}^{m} l_{j}^{(i)} d u_{j} \quad ; \quad d u_{i}=\sum_{j=1}^{m} r_{i}^{(j)} d w_{j}
+$$
+pour lesquelles le système (2.43) est diagonal :
+$$
+\begin{array}{l}
+L \frac{\partial \vec{U}}{\partial t}+L A \frac{\partial \vec{U}}{\partial x}=\overrightarrow{0} \\
+\frac{\partial \vec{W}}{\partial t}+L A R \frac{\partial \vec{W}}{\partial x}=\overrightarrow{0} \\
+\frac{\partial \vec{W}}{\partial t}+\Lambda \frac{\partial \vec{W}}{\partial x}=\overrightarrow{0}
+\end{array}
+$$
+Chaque équation de (2.57) est indépendante des autres et a la forme de l'équation de conservation scalaire (2.11):
+$$
+\frac{\partial w_{i}}{\partial t}+\lambda^{(i)}(\vec{U}) \frac{\partial w_{i}}{\partial x}=0 \quad ; \quad i=1, \ldots, m
+$$
+
+%La composante $w_{i}$ est constante dans le plan $\{x, t\}$ le long de la caractéristique $\Gamma^{(i)} .$ C'est l'invariant de Riemann fort associé à la valeur propre $\lambda^{(i)} .$ Mais les vitesses caractéristiques $\lambda^{(i)}$ sont couplées car elles dépendent de l'inconnue $\vec{U}$ et, contrairement à $(2.13),$ les caractéristiques $\Gamma^{(i)}$ ne sont en général plus des droites dans le plan $\{x, t\}$, sauf dans le cas où la solution est une onde simple.
+
+\section{chanmp caracteristique.}
+La théorie mathématique des systèmes d'équations hyperboliques est ardue. On en donne ci-après quelques éléments utiles pour la suite. Pour d'avantage de détails, voir [1].
+2.2 .2 Champs caractéristiques
+A chaque $\lambda^{(i)}$ correspond un champ caractéristique, le $i$ -champ caractéristique associé au vecteur propre droit $\vec{R}^{(i)}$. Soit $\vec{\nabla} \lambda^{(i)}(\vec{U})$ le vecteur gradient de $\lambda^{(i)}$ par rapport à $\vec{U}$ :
+$$
+\vec{\nabla} \lambda^{(i)}(\vec{U})=\left(\frac{\partial \lambda^{(i)}}{\partial u_{1}}, \frac{\partial \lambda^{(i)}}{\partial u_{2}}, \ldots, \frac{\partial \lambda^{(i)}}{\partial u_{m}}\right)^{T}
+$$
+DÉFINITION 1: Le $i^{\text {ème }}$ -champ caractéristique est dit vraiment non-linéaire (VNL) si
+$$
+\vec{\nabla} \lambda^{(i)}(\vec{U}) \cdot \vec{R}^{(i)}(\vec{U}) \neq 0 \quad ; \quad \forall \vec{U} \in \mathbb{R}^{m}
+$$
+
+$$
+d w_{i}=\vec{L}^{(i)} d \vec{U}=\sum_{j=1}^{m} l_{j}^{(i)} d u_{j} \quad ; \quad d u_{i}=\sum_{j=1}^{m} r_{i}^{(j)} d w_{j}
+$$
+pour lesquelles le système (2.43) est diagonal :
+$$
+\begin{array}{l}
+L \frac{\partial \vec{U}}{\partial t}+L A \frac{\partial \vec{U}}{\partial x}=\overrightarrow{0} \\
+\frac{\partial \vec{W}}{\partial t}+L A R \frac{\partial \vec{W}}{\partial x}=\overrightarrow{0} \\
+\frac{\partial \vec{W}}{\partial t}+\Lambda \frac{\partial \vec{W}}{\partial x}=\overrightarrow{0}
+\end{array}
+$$
+Chaque équation de (2.57) est indépendante des autres et a la forme de l'équation de conservation scalaire (2.11):
+$$
+\frac{\partial w_{i}}{\partial t}+\lambda^{(i)}(\vec{U}) \frac{\partial w_{i}}{\partial x}=0 \quad ; \quad i=1, \ldots, m
+$$
+La composante $w_{i}$ est constante dans le plan $\{x, t\}$ le long de la caractéristique $\Gamma^{(i)} .$ C'est l'invariant de Riemann fort associé à la valeur propre $\lambda^{(i)} .$ Mais les vitesses caractéristiques $\lambda^{(i)}$ sont couplées car elles dépendent de l'inconnue $\vec{U}$ et, contrairement à $(2.13),$ les caractéristiques $\Gamma^{(i)}$ ne sont en général plus des droites dans le plan $\{x, t\}$, sauf dans le cas où la solution est une onde simple.
+
+La théorie mathématique des systèmes d'équations hyperboliques est ardue. On en donne ci-après quelques éléments utiles pour la suite. Pour d'avantage de détails, voir [1].
+2.2 .2 Champs caractéristiques
+A chaque $\lambda^{(i)}$ correspond un champ caractéristique, le $i$ -champ caractéristique associé au vecteur propre droit $\vec{R}^{(i)}$. Soit $\vec{\nabla} \lambda^{(i)}(\vec{U})$ le vecteur gradient de $\lambda^{(i)}$ par rapport à $\vec{U}$ :
+$$
+\vec{\nabla} \lambda^{(i)}(\vec{U})=\left(\frac{\partial \lambda^{(i)}}{\partial u_{1}}, \frac{\partial \lambda^{(i)}}{\partial u_{2}}, \ldots, \frac{\partial \lambda^{(i)}}{\partial u_{m}}\right)^{T}
+$$
+DÉFINITION 1: Le $i^{\text {ème }}$ -champ caractéristique est dit vraiment non-linéaire (VNL) si
+$$
+\vec{\nabla} \lambda^{(i)}(\vec{U}) \cdot \vec{R}^{(i)}(\vec{U}) \neq 0 \quad ; \quad \forall \vec{U} \in \mathbb{R}^{m}
+$$
+Il est dit linéairement dégénéré (LD) si au contraire,
+$$
+\vec{\nabla} \lambda^{(i)}(\vec{U}) \cdot \vec{R}^{(i)}(\vec{U})=0 \quad ; \quad \forall \vec{U} \in \mathbb{R}^{m}
+$$
+La définition d'un champ VNL étend au système (2.43) la notion de flux convexe ou concave pour une équation scalaire. En effet, le vecteur $\vec{\nabla} \lambda^{(i)}(\vec{U})$ représente la dérivée seconde du flux dans la base caractéristique. Un $i$ -champ VNL est donc soit convexe (comme l'équation de Burgers), soit concave. En revanche, un $i$ -champ LD a un comportement linéaire, comme (1.16).

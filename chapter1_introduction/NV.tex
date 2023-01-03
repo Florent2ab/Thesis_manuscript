@@ -1,0 +1,99 @@
+\section{Equations de dynamique des fluides}
+
+Comprendre le comportement des océans, de l'atmosphère et l'écoulement de l'air autour d'un avion ou d'une voiture nécessite de résoudre les équations de Navier-Stokes.
+
+Les équations de Navier-Stokes sont des équations aux dérivées partielles non linéaires qui sont très largement utilisées en hydrodynamique. Elles tirent leur nom de leurs découvreurs au XIXe siècle, le mathématicien et ingénieur français Henri Navier et le physicien et mathématicien britannique George Stokes
+
+Elles décrivent l'évolution dans le temps et dans l'espace du champ de vecteur vitesse des fluides « newtoniens » considérés comme continus. Les ingénieurs les utilisent en aérodynamique pour modéliser le comportement des voitures, des avions à grande vitesse, des navete spatial.
+
+
+\subsection {Navier-Stokes}
+Les équations de Navier-Stokes se formulent à l’aide de bilan de flux de masse, de bilan de flux de quantité de mouvement et de bilan de flux d’énergie du fluide. Pour déterminer l’état d’un milieu fluide, il est nécessaire de connaître en chaque point du domaine : la masse volumique (en kg.m−3), les composantes de la vitesse notées Ui (en m.s−1), la pression P (en Pa), le tenseur des contraintes ij (en N.m−2), les composantes des forces volumiques Fi (en N), la température T (en K), le vecteur densité de flux de chaleur q (en J.m−2.s−1) et l’énergie interne e (en J.kg−1).
+À
+
+Les équations de Navier-Stokes sont des relations pour la conservation de la masse, de la quantité de mouvement et de l'énergie. En coordonnées cartésiennes, pour une géométrie tridimensionnelle, elles s'écrivent :
+
+
+
+\begin{equation}
+    \mathbf{U}_t + \mathbf{F}_x + \mathbf{G}_y + \mathbf{H}_z = \mathbf{E}_x^{v,x} + \mathbf{E}_y^{v,y} + \mathbf{E}_z^{v,z} + \mathbf{S},
+    \label{eq:cons_ns}
+\end{equation}
+
+where the subscripts indicate differentiation, $\mathbf{U}$ is the vector of conservative dimensionless variables and $\mathbf{F}$ ($\mathbf{E}^{v,x}$), $\mathbf{G}$ ($\mathbf{E}^{v,y}$) and $\mathbf{H}$ ($\mathbf{E}^{v,z}$) represent the convective or inviscid (diffusive or viscous) fluxes in $x-$, $y-$ and $z-$direction respectively and $\mathbf{S}$ represents a volumic source term.
+Those vectors are defined as such:
+
+\begin{equation}
+    \begin{array}{l}
+        \mathbf{U} = \left[\begin{array}{c}\rho \\ \rho u \\ \rho v \\ \rho w \\ \rho E\end{array}\right], ~~
+        \mathbf{F} = \left[\begin{array}{c}\rho u \\ \rho u^2 + p \\ \rho u v \\ \rho u w \\ \rho u E + p u\end{array}\right], ~~
+        \mathbf{G} = \left[\begin{array}{c}\rho v \\ \rho v u \\ \rho v^2 + p \\ \rho v w \\ \rho v E + p v\end{array}\right], ~~
+        \mathbf{H} = \left[\begin{array}{c}\rho w \\ \rho w u \\ \rho w v \\ \rho w^2 + p \\ \rho w E + p w\end{array}\right], \\[4em]
+        \mathbf{E}^{v,x} = \left[\begin{array}{c}0 \\ \tau_{xx} \\ \tau_{yx} \\ \tau_{zx} \\ \tau_{xx} u + \tau_{xy} v +\tau_{xz} w - q_x\end{array}\right], ~~
+        \mathbf{E}^{v,y} = \left[\begin{array}{c}0 \\ \tau_{xy} \\ \tau_{yy} \\ \tau_{zy} \\ \tau_{xy} u + \tau_{yy} v + \tau_{yz} w - q_y\end{array}\right], \\[4em]
+        \mathbf{E}^{v,z} = \left[\begin{array}{c}0 \\ \tau_{xz} \\ \tau_{yz} \\ \tau_{zz} \\ \tau_{zx} u + \tau_{zy} v + \tau_{zz} w - q_z\end{array}\right].
+    \end{array}
+    \label{eq:cons_ns_vectors}
+\end{equation}
+
+In the above dimensionless expressions, $t$ denotes the time and $x$, $y$ and $z$ are the Cartesian coordinates.
+$\rho$ denotes density, $u$, $v$ and $w$ denote the $x-$, $y-$ and $z-$direction velocity components respectively, $E$ denotes the specific total energy and $p$ denotes the static pressure.
+With the simple perfect gas is considered and therefore the specific total energy can be related to the other variables using:
+
+\begin{equation}
+    E = \dfrac{1}{\gamma - 1} \dfrac{p}{\rho} + \dfrac{1}{2}\left( u^2 + v^2 \right),
+    \label{eq:perfect_gas_energy}
+\end{equation}
+
+where $\gamma$ is the ratio of specific heats and for the perfect gaz hypothesis $\gamma = 1.4$ in the rest of this thesis.
+
+$\mathbf{\tau}$ is the viscous stress tensor.
+
+\begin{equation}
+    \tau_{i,j} = 2\mu S_{i,j}
+    \label{eq:stres_tensor}
+\end{equation}
+
+$S_{i,j}$ deformations tensor defined by:
+
+\begin{equation}
+    S_{i,j} = \frac{1}{2}\left(\frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i} - \frac{2}{3} \frac{\partial u_k}{\partial x_k}\delta_{i,j}\right)
+    \label{eq:stres_tensor_deformation}
+\end{equation}
+and $\mathbf{q}$ the heat flux vector.
+
+$\mu$ is the dynamic viscosity compute with the Sutherland law.
+
+\begin{equation}
+    \mu(T) = \mu_{ref}\left(\frac{T}{T_{ref}}\right)^{3/2} + \frac{T_{ref}+S}{T+S}, \quad with \quad S = 110.4 K.
+    \label{eq:mu_sutherland}
+\end{equation}
+
+\begin{equation}
+    q = -\lambda\nabla T
+    \label{eq:stres_tensor}
+\end{equation}
+
+With $\nabla T$ are the gradient of temperature, $\lambda = C_p\mu/P_r$ the thermic conductivity, $C_p$ specific gaz constant and $P_r$ the Prandl number with $P_r = 0.72 $for laminar flow and $P_r = 0.9$ for turbulent flow.
+\subsection {Euler}
+
+Le système des équations d’Euler représente la partie “non-visqueuse” des équations de
+la mécanique des fluides, les équations de Navier-Stokes. La difficulté de résoudre numériquement les équations de Navier-Stokes compressibles est donc liée à celle de résoudre la partie Euler hyperbolique. These equation are summarize below:
+
+\begin{equation}
+    \mathbf{U}_t + \mathbf{F}_x + \mathbf{G}_y + \mathbf{H}_z = \mathbf{S},
+    \label{eq:cons_ns}
+\end{equation}
+
+where the subscripts indicate differentiation, $\mathbf{U}$ is the vector of conservative dimensionless variables and $\mathbf{F}$ ($\mathbf{E}^{v,x}$), $\mathbf{G}$ ($\mathbf{E}^{v,y}$) and $\mathbf{H}$ ($\mathbf{E}^{v,z}$) represent the convective or inviscid (diffusive or viscous) fluxes in $x-$, $y-$ and $z-$direction respectively and $\mathbf{S}$ represents a volumic source term.
+Those vectors are defined as such:
+
+\begin{equation}
+    \begin{array}{l}
+        \mathbf{U} = \left[\begin{array}{c}\rho \\ \rho u \\ \rho v \\ \rho w \\ \rho E\end{array}\right], ~~
+        \mathbf{F} = \left[\begin{array}{c}\rho u \\ \rho u^2 + p \\ \rho u v \\ \rho u w \\ \rho u E + p u\end{array}\right], ~~
+        \mathbf{G} = \left[\begin{array}{c}\rho v \\ \rho v u \\ \rho v^2 + p \\ \rho v w \\ \rho v E + p v\end{array}\right], ~~
+        \mathbf{H} = \left[\begin{array}{c}\rho w \\ \rho w u \\ \rho w v \\ \rho w^2 + p \\ \rho w E + p w\end{array}\right], \\[4em]
+    \end{array}
+    \label{eq:cons_ns_vectors}
+\end{equation}

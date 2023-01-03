@@ -1,0 +1,515 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: bib.bib
+Warning--entry type for "Tabeling2002" isn't style-file defined
+--line 2889 of file bib.bib
+Repeated entry---line 3042 of file bib.bib
+ : @misc{data
+ :           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3049 of file bib.bib
+ : @inproceedings{bridel_ldav19
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3056 of file bib.bib
+ : @techreport{baez2006
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3063 of file bib.bib
+ : @techreport{fefferman2000
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3071 of file bib.bib
+ : @article{YanMSRNHW21
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3085 of file bib.bib
+ : @inproceedings{LohfinkG20
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3094 of file bib.bib
+ : @article{JaremaKW16
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3103 of file bib.bib
+ : @article{wang2016
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3111 of file bib.bib
+ : @incollection{ScheuermannT05
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3120 of file bib.bib
+ : @article{PobitzerPFSKTMH11
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3134 of file bib.bib
+ : @incollection{LarameeHZP07
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3144 of file bib.bib
+ : @article{BujackYHGW20
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3156 of file bib.bib
+ : @inproceedings{GarthT06
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3164 of file bib.bib
+ : @incollection{flowIntro21
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3174 of file bib.bib
+ : @article{pont_vis21
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3311 of file bib.bib
+ : @inproceedings{ttk19
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3334 of file bib.bib
+ : @article{YanWMGW20
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3357 of file bib.bib
+ : @article{vidal_vis19
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3372 of file bib.bib
+ : @article{SridharamurthyM20
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3401 of file bib.bib
+ : @article{athawale_tvcg19
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3420 of file bib.bib
+ : @inproceedings{dipha
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3508 of file bib.bib
+ : @article{kuhn60
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3517 of file bib.bib
+ : @article{freudenthal42
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3603 of file bib.bib
+ : @inproceedings{MaadasamyDN12
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3696 of file bib.bib
+ : @article{forman98
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3704 of file bib.bib
+ : @inproceedings{BremerEHP03
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3714 of file bib.bib
+ : @inproceedings{EdelsbrunnerHZ01
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3723 of file bib.bib
+ : @inproceedings{EdelsbrunnerHNP03
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3742 of file bib.bib
+ : @inproceedings{AcharyaN15
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3767 of file bib.bib
+ : @inproceedings{CohenSteinerEH05
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3776 of file bib.bib
+ : @article{ShivashankarN12
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3821 of file bib.bib
+ : @inproceedings{Parsa12
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3847 of file bib.bib
+ : @article{DoraiswamyN13
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3892 of file bib.bib
+ : @inproceedings{CarrWSA16
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3948 of file bib.bib
+ : @article{gyulassy_vis18
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3958 of file bib.bib
+ : @article{robins_pami11
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3968 of file bib.bib
+ : @article{gueunet_tpds19
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3978 of file bib.bib
+ : @inproceedings{gueunet_egpgv19
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4012 of file bib.bib
+ : @inproceedings{tarasov98
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4033 of file bib.bib
+ : @inproceedings{carr04
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4042 of file bib.bib
+ : @article{Malgorzata19
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4049 of file bib.bib
+ : @article{topoAngler
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4059 of file bib.bib
+ : @inproceedings{beiBrain18
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4089 of file bib.bib
+ : @article{edelsbrunner03
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4096 of file bib.bib
+ : @article{edelsbrunner90
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4113 of file bib.bib
+ : @article{heine16
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4121 of file bib.bib
+ : @article{laney_vis06
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4130 of file bib.bib
+ : @article{bremer_tvcg11
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4139 of file bib.bib
+ : @article{gyulassy_ev14
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4147 of file bib.bib
+ : @article{gyulassy_vis07
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4160 of file bib.bib
+ : @article{gyulassy_vis15
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4169 of file bib.bib
+ : @inproceedings{favelier16
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4176 of file bib.bib
+ : @article{kasten_tvcg11
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4184 of file bib.bib
+ : @article{chemistry_vis14
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4192 of file bib.bib
+ : @article{harshChemistry
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4201 of file bib.bib
+ : @article{pascucci07
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4208 of file bib.bib
+ : @article{biasotti08
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4215 of file bib.bib
+ : @article{tierny_vis09
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4241 of file bib.bib
+ : @article {Defl15
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4273 of file bib.bib
+ : @article{edelsbrunner02
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4313 of file bib.bib
+ : @article{sousbie11
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4321 of file bib.bib
+ : @article{shivashankar2016felix
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4331 of file bib.bib
+ : @article{banchoff70
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4338 of file bib.bib
+ : @inproceedings{carr00
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4352 of file bib.bib
+ : @article{ttk17
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4361 of file bib.bib
+ : @book{edelsbrunner09
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4462 of file bib.bib
+ : @article{monge81
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4493 of file bib.bib
+ : @manual{Kitware:2003
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4570 of file bib.bib
+ : @article{Turner2014
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4645 of file bib.bib
+ : @inproceedings{lacombe2018
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4652 of file bib.bib
+ : @article{Munkres1957
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4666 of file bib.bib
+ : @article{Kerber2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4673 of file bib.bib
+ : @article{Bertsekas81
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4687 of file bib.bib
+ : @article{Kantorovich
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4730 of file bib.bib
+ : @article{Hummel2013
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4747 of file bib.bib
+ : @article{Ferstl2016
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4765 of file bib.bib
+ : @article{favelier2018
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4905 of file bib.bib
+ : @article{otto1
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4911 of file bib.bib
+ : @article{otto2
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4918 of file bib.bib
+ : @article{petz
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5112 of file bib.bib
+ : @article{bridel2021immersed
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5213 of file bib.bib
+ : @book{white2006viscous
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5221 of file bib.bib
+ : @book{toro2013riemann
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5228 of file bib.bib
+ : @article{mittal2005immersed
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5238 of file bib.bib
+ : @article{chi2017improved
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5249 of file bib.bib
+ : @article{jiang1996efficient
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5379 of file bib.bib
+ : @article{san2015evaluation
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5389 of file bib.bib
+ : @article{fu2019very
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5399 of file bib.bib
+ : @article{fu2018new
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5409 of file bib.bib
+ : @article{peng2021efficient
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5419 of file bib.bib
+ : @article{fu2017targeted
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5429 of file bib.bib
+ : @article{fu2019low
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5449 of file bib.bib
+ : @article{liu1994weighted
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5460 of file bib.bib
+ : @article{henrick2005mapped
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5511 of file bib.bib
+ : @article{borges2008improved
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5534 of file bib.bib
+ : @article{liou2006sequel
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5545 of file bib.bib
+ : @article{kitamura2013towards
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5565 of file bib.bib
+ : @article{roe1981approximate
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5576 of file bib.bib
+ : @article{toro1994restoration
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5587 of file bib.bib
+ : @article{harten1983upstream
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5598 of file bib.bib
+ : @book{masatsuka2013
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5614 of file bib.bib
+ : @book{trangenstein2007numerical
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5621 of file bib.bib
+ : @book{leveque2002finite
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5670 of file bib.bib
+ : @article{liou1996sequel
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5681 of file bib.bib
+ : @article{hu2011scale
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5692 of file bib.bib
+ : @article{hu2010adaptive
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5721 of file bib.bib
+ : @article{fu2016family
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5731 of file bib.bib
+ : @article{qu2014study
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5742 of file bib.bib
+ : @inproceedings{shima2009new
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5856 of file bib.bib
+ : @report{Tabeling2002
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5872 of file bib.bib
+ : @article{Boffetta2011
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5911 of file bib.bib
+ : @article{Kraichnan1967
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5935 of file bib.bib
+ : @article{Kraichnan1980
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5946 of file bib.bib
+ : @article{Maltrud1991
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5955 of file bib.bib
+ : @article{lilly1989two
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5965 of file bib.bib
+ : @article{rand1971objective
+ :                           ,
+I'm skipping whatever remains of this entry
+Warning--empty publisher in LarameeHZP07
+Warning--empty publisher in ScheuermannT05
+You've used 142 entries,
+            2118 wiz_defined-function locations,
+            1174 strings with 25772 characters,
+and the built_in function-call counts, 43512 in all, are:
+= -- 3963
+> -- 2731
+< -- 7
++ -- 1097
+- -- 934
+* -- 2890
+:= -- 7780
+add.period$ -- 431
+call.type$ -- 142
+change.case$ -- 885
+chr.to.int$ -- 0
+cite$ -- 144
+duplicate$ -- 1612
+empty$ -- 3076
+format.name$ -- 934
+if$ -- 8714
+int.to.chr$ -- 0
+int.to.str$ -- 142
+missing$ -- 146
+newline$ -- 713
+num.names$ -- 282
+pop$ -- 1001
+preamble$ -- 1
+purify$ -- 751
+quote$ -- 0
+skip$ -- 1043
+stack$ -- 0
+substring$ -- 1391
+swap$ -- 203
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 550
+warning$ -- 2
+while$ -- 335
+width$ -- 145
+write$ -- 1460
+(There were 116 error messages)

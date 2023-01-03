@@ -1,0 +1,806 @@
+\begin{thebibliography}{100}
+
+\bibitem{AcharyaN15}
+Aditya Acharya and Vijay Natarajan.
+\newblock A parallel and memory efficient algorithm for constructing the
+  contour tree.
+\newblock In {\em IEEE PV}, 2015.
+
+\bibitem{beiBrain18}
+Keri Anderson, Jeffrey Anderson, Sourabh Palande, and Bei Wang.
+\newblock Topological data analysis of functional {MRI} connectivity in time
+  and space domains.
+\newblock In {\em MICCAI Workshop on Connectomics in NeuroImaging}, 2018.
+
+\bibitem{athawale_tvcg19}
+Tushar~M. Athawale, Dan Maljovec, Chris~R. Johnson, Valerio Pascucci, and Bei
+  Wang.
+\newblock Uncertainty visualization of 2d morse complex ensembles using
+  statistical summary maps.
+\newblock {\em CoRR}, abs/1912.06341, 2019.
+
+\bibitem{Aymer1991}
+D.~Aymer, T.~Alziary, L.~D. Luca, and C.~Carlomagno.
+\newblock Experimental study of the flow around a double ellipsoid
+  configuration.
+\newblock In {\em Hypersonic Flows for Reentry Problems}, pages 335--357.
+  Springer, Berlin, Heidelberg, 1991.
+
+\bibitem{baez2006}
+John~C. Baez.
+\newblock {Open Questions in Physics}.
+\newblock Technical report, UC Riverside, Department of Mathematics, 2006.
+
+\bibitem{BaiWDL21}
+Kai Bai, Chunhao Wang, Mathieu Desbrun, and Xiaopei Liu.
+\newblock Predicting high-resolution turbulence details in space and time.
+\newblock {\em {ACM} Trans. Graph.}, 2021.
+
+\bibitem{banchoff70}
+T.~F. Banchoff.
+\newblock Critical points and curvature for embedded polyhedral surfaces.
+\newblock {\em The American Mathematical Monthly}, 1970.
+
+\bibitem{dipha}
+Ulrich Bauer, Michael Kerber, and Jan Reininghaus.
+\newblock Distributed computation of persistent homology.
+\newblock In {\em Algo. Eng. and Exp.}, 2014.
+
+\bibitem{Bertsekas81}
+Dimitri~P. Bertsekas.
+\newblock A new algorithm for the assignment problem.
+\newblock {\em Mathematical Programming}, 1981.
+
+\bibitem{harshChemistry}
+Harsh Bhatia, Attila~G. Gyulassy, Vincenzo Lordi, John~E. Pask, Valerio
+  Pascucci, and Peer-Timo Bremer.
+\newblock Topoms: Comprehensive topological exploration for molecular and
+  condensed-matter systems.
+\newblock {\em J. of Comp. Chem.}, 2018.
+
+\bibitem{biasotti08}
+S.~Biasotti, D.~Giorgio, M.~Spagnuolo, and B.~Falcidieno.
+\newblock Reeb graphs for shape analysis and applications.
+\newblock {\em TCS}, 2008.
+
+\bibitem{ttk19}
+Talha Bin~Masood, Joseph Budin, Martin Falk, Guillaume Favelier, Christoph
+  Garth, Charles Gueunet, Pierre Guillou, Lutz Hofmann, Petar Hristov, Adhitya
+  Kamakshidasan, Christopher Kappe, Pavol Klacansky, Patrick Laurin, Joshua
+  Levine, Jonas Lukasczyk, Daisuke Sakurai, Maxime Soler, Peter Steneteg,
+  Julien Tierny, Will Usher, Jules Vidal, and Michal Wozniak.
+\newblock {An Overview of the Topology ToolKit}.
+\newblock In {\em TopoInVis}, 2019.
+
+\bibitem{topoAngler}
+Alexander Bock, Harish Doraiswamy, Adam Summers, and Cl{\'{a}}udio~T. Silva.
+\newblock {TopoAngler: Interactive Topology-Based Extraction of Fishes}.
+\newblock {\em IEEE TVCG}, 2018.
+
+\bibitem{Boffetta2011}
+Guido Boffetta and Robert~E. Ecke.
+\newblock Two-dimensional turbulence.
+\newblock {\em Annual Review of Fluid Mechanics}, 2011.
+
+\bibitem{borges2008improved}
+Rafael Borges, Monique Carmona, Bruno Costa, and Wai~Sun Don.
+\newblock An improved weighted essentially non-oscillatory scheme for
+  hyperbolic conservation laws.
+\newblock {\em Journal of Computational Physics}, 2008.
+
+\bibitem{boussinesq1877essai}
+Joseph Boussinesq.
+\newblock {\em Essai sur la th{\'e}orie des eaux courantes}.
+\newblock Impr. nationale, 1877.
+
+\bibitem{BremerEHP03}
+Peer{-}Timo Bremer, Herbert Edelsbrunner, Bernd Hamann, and Valerio Pascucci.
+\newblock {A Multi-Resolution Data Structure for 2-Dimensional Morse
+  Functions}.
+\newblock In {\em Proc. of IEEE VIS}, 2003.
+
+\bibitem{bremer_tvcg11}
+P.T. Bremer, G.~Weber, J.~Tierny, V.~Pascucci, M.~Day, and J.~Bell.
+\newblock Interactive exploration and analysis of large scale simulations using
+  topology-based data segmentation.
+\newblock {\em IEEE TVCG}, 2011.
+
+\bibitem{BRIDELBERTOMEU2021}
+Thibault Bridel-Bertomeu.
+\newblock Immersed boundary conditions for hypersonic flows using eno-like
+  least-square reconstruction.
+\newblock {\em Computers \& Fluids}, 215:104794, 2021.
+
+\bibitem{bridel2021immersed}
+Thibault Bridel-Bertomeu.
+\newblock Immersed boundary conditions for hypersonic flows using eno-like
+  least-square reconstruction.
+\newblock {\em Comp. \& Flu.}, 2021.
+
+\bibitem{bridel_ldav19}
+Thibault Bridel-Bertomeu, Benjamin Fovet, Julien Tierny, and Fabien Vivodtzev.
+\newblock {Topological Analysis of High Velocity Turbulent Flow}.
+\newblock In {\em IEEE LDAV}, 2019.
+
+\bibitem{BujackYHGW20}
+Roxana Bujack, Lin Yan, Ingrid Hotz, Christoph Garth, and Bei Wang.
+\newblock State of the art in time-dependent flow topology: Interpreting
+  physical meaningfulness through mathematical properties.
+\newblock {\em CGF}, 2020.
+
+\bibitem{carr00}
+H.~Carr, J.~Snoeyink, and U.~Axen.
+\newblock Computing contour trees in all dimensions.
+\newblock In {\em Symp. on Dis. Alg.}, 2000.
+
+\bibitem{carr04}
+Hamish~A. Carr, Jack Snoeyink, and Michiel van~de Panne.
+\newblock {Simplifying Flexible Isosurfaces Using Local Geometric Measures}.
+\newblock In {\em IEEE VIS}, 2004.
+
+\bibitem{CarrWSA16}
+Hamish~A. Carr, Gunther~H. Weber, Christopher~M. Sewell, and James~P. Ahrens.
+\newblock {Parallel peak pruning for scalable {SMP} contour tree computation}.
+\newblock In {\em LDAV}, 2016.
+
+\bibitem{chi2017improved}
+Cheng Chi, Bok~Jik Lee, and Hong~G Im.
+\newblock An improved ghost-cell immersed boundary method for compressible flow
+  simulations.
+\newblock {\em International Journal for Numerical Methods in Fluids},
+  83(2):132--148, 2017.
+
+\bibitem{CohenSteinerEH05}
+David Cohen{-}Steiner, Herbert Edelsbrunner, and John Harer.
+\newblock Stability of persistence diagrams.
+\newblock In {\em SoCG}, 2005.
+
+\bibitem{Defl15}
+Leila De~Floriani, Ulderico Fugacci, Federico Iuricich, and Paola Magillo.
+\newblock Morse complexes for shape segmentation and homological analysis:
+  discrete models and algorithms.
+\newblock {\em CGF}, 2015.
+
+\bibitem{diosady2015case}
+L~Diosady and S~Murman.
+\newblock Case 3.3: Taylor green vortex evolution.
+\newblock In {\em Case Summary for 3rd International Workshop on Higher-Order
+  CFD Methods}, 2015.
+
+\bibitem{DoraiswamyN13}
+Harish Doraiswamy and Vijay Natarajan.
+\newblock Computing reeb graphs as a union of contour trees.
+\newblock {\em IEEE TVCG}, 2013.
+
+\bibitem{ducros1998wall}
+F~Ducros, F~Nicoud, and Thierry Poinsot.
+\newblock Wall-adapting local eddy-viscosity models for simulations in complex
+  geometries.
+\newblock {\em Numerical Methods for Fluid Dynamics VI}, pages 293--299, 1998.
+
+\bibitem{edelsbrunner09}
+H.~Edelsbrunner and J.~Harer.
+\newblock {\em Computational Topology: An Introduction}.
+\newblock American Mathematical Society, 2009.
+
+\bibitem{edelsbrunner03}
+H.~Edelsbrunner, J.~Harer, and A.~Zomorodian.
+\newblock Hierarchical {Morse-Smale} complexes for piecewise linear
+  2-manfiolds.
+\newblock {\em DCG}, 2003.
+
+\bibitem{EdelsbrunnerHNP03}
+Herbert Edelsbrunner, John Harer, Vijay Natarajan, and Valerio Pascucci.
+\newblock Morse-smale complexes for piecewise linear 3-manifolds.
+\newblock In {\em SoCG}, 2003.
+
+\bibitem{EdelsbrunnerHZ01}
+Herbert Edelsbrunner, John Harer, and Afra Zomorodian.
+\newblock Hierarchical morse complexes for piecewise linear 2-manifolds.
+\newblock In {\em SoCG}, 2001.
+
+\bibitem{edelsbrunner02}
+Herbert Edelsbrunner, David Letscher, and Afra Zomorodian.
+\newblock Topological persistence and simplification.
+\newblock {\em DCG}, 2002.
+
+\bibitem{edelsbrunner90}
+Herbert Edelsbrunner and Ernst~P Mucke.
+\newblock Simulation of simplicity: a technique to cope with degenerate cases
+  in geometric algorithms.
+\newblock {\em ACM ToG}, 1990.
+
+\bibitem{favelier16}
+G.~Favelier, C.~Gueunet, and J.~Tierny.
+\newblock Visualizing ensembles of viscous fingers.
+\newblock In {\em IEEE SciVis Contest}, 2016.
+
+\bibitem{favelier2018}
+Guillaume Favelier, Noura Faraj, Brian Summa, and Julien Tierny.
+\newblock {Persistence Atlas for Critical Point Variability in Ensembles}.
+\newblock {\em IEEE TVCG}, 2018.
+
+\bibitem{fefferman2000}
+Charles~L. Fefferman.
+\newblock {Existence and Smoothness of the Navier-Stokes Equation}.
+\newblock Technical report, Clay Mathematics Institute, 2000.
+\newblock \url{https://www.claymath.org/sites/default/files/navierstokes.pdf}.
+
+\bibitem{Ferstl2016}
+F.~Ferstl, K.~Bürger, and R.~Westermann.
+\newblock Streamline variability plots for characterizing the uncertainty in
+  vector field ensembles.
+\newblock {\em IEEE TVCG}, 2016.
+
+\bibitem{forman98}
+Robin Forman.
+\newblock {A User's Guide to Discrete Morse Theory}.
+\newblock {\em AM}, 1998.
+
+\bibitem{francez1982}
+Nissim Francez and Michael Rodeh.
+\newblock Achieving distributed termination without freezing.
+\newblock {\em IEEE Transactions on Software Engineering}, SE-8:287--292, 1982.
+
+\bibitem{fu2019low}
+Lin Fu.
+\newblock A low-dissipation finite-volume method based on a new teno
+  shock-capturing scheme.
+\newblock {\em Computer Physics Communications}, 2019.
+
+\bibitem{fu2019very}
+Lin Fu.
+\newblock A very-high-order teno scheme for all-speed gas dynamics and
+  turbulence.
+\newblock {\em Computer Physics Communications}, 244:117--131, 2019.
+
+\bibitem{fu2016family}
+Lin Fu, Xiangyu~Y Hu, and Nikolaus~A Adams.
+\newblock A family of high-order targeted eno schemes for compressible-fluid
+  simulations.
+\newblock {\em Journal of Computational Physics}, 305:333--359, 2016.
+
+\bibitem{fu2017targeted}
+Lin Fu, Xiangyu~Y Hu, and Nikolaus~A Adams.
+\newblock Targeted eno schemes with tailored resolution property for hyperbolic
+  conservation laws.
+\newblock {\em Journal of Computational Physics}, 349:97--121, 2017.
+
+\bibitem{fu2018new}
+Lin Fu, Xiangyu~Y Hu, and Nikolaus~A Adams.
+\newblock A new class of adaptive high-order targeted eno schemes for
+  hyperbolic conservation laws.
+\newblock {\em Journal of Computational Physics}, 374:724--751, 2018.
+
+\bibitem{Garnier2009}
+E.~Garnier, N.~Adams, and P.~Sagaut.
+\newblock {\em Large Eddy Simulation for Compressible Flows}.
+\newblock Springer, 2009.
+
+\bibitem{GarthT06}
+Christoph Garth and Xavier Tricoche.
+\newblock Topology- and feature-based flow visualization: Methods and
+  applications.
+\newblock In {\em VLDUDS}, 2006.
+
+\bibitem{giangaspero2015case}
+Giorgio Giangaspero, Edwin van~der Weide, MH~Carpenter, and K~Mattsson.
+\newblock Case c3. 3: Taylor-green vortex.
+\newblock In {\em Case Summary for 3rd Int. Workshop on Higher-Order CFD
+  Methods}. NASA, 2015.
+
+\bibitem{chemistry_vis14}
+D.~Guenther, R.~Alvarez-Boto, J.~Contreras-Garcia, J.-P. Piquemal, and
+  J.~Tierny.
+\newblock Characterizing molecular interactions in chemical systems.
+\newblock {\em IEEE TVCG}, 2014.
+
+\bibitem{gueunet_tpds19}
+Charles Gueunet, Pierre Fortin, Julien Jomier, and Julien Tierny.
+\newblock {Task-Based Augmented Contour Trees with Fibonacci Heaps}.
+\newblock {\em {IEEE} TPDS}, 2019.
+
+\bibitem{gueunet_egpgv19}
+Charles Gueunet, Pierre Fortin, Julien Jomier, and Julien Tierny.
+\newblock {Task-based Augmented Reeb Graphs with Dynamic ST-Trees}.
+\newblock In {\em EGPGV}, 2019.
+
+\bibitem{GuoHPSCH16}
+Hanqi Guo, Wenbin He, Tom Peterka, Han{-}Wei Shen, Scott~M. Collis, and
+  Jonathan~J. Helmus.
+\newblock Finite-time lyapunov exponents and lagrangian coherent structures in
+  uncertain unsteady flows.
+\newblock {\em {IEEE} Trans. Vis. Comput. Graph.}, 2016.
+
+\bibitem{gyulassy_ev14}
+A.~Gyulassy, P.T. Bremer, R.~Grout, H.~Kolla, J.~Chen, and V.~Pascucci.
+\newblock Stability of dissipation elements: A case study in combustion.
+\newblock {\em CGF}, 2014.
+
+\bibitem{gyulassy_vis15}
+A.~Gyulassy, A.~Knoll, K.C. Lau, B.~Wang, P.T. Bremer, M.E. Papka, L.~A.
+  Curtiss, and V.~Pascucci.
+\newblock Interstitial and interlayer ion diffusion geometry extraction in
+  graphitic nanosphere battery materials.
+\newblock {\em IEEE TVCG}, 2015.
+
+\bibitem{gyulassy_vis18}
+Attila Gyulassy, Peer{-}Timo Bremer, and Valerio Pascucci.
+\newblock {Shared-Memory Parallel Computation of Morse-Smale Complexes with
+  Improved Accuracy}.
+\newblock {\em IEEE TVCG}, 2018.
+
+\bibitem{gyulassy_vis07}
+Attila Gyulassy, Mark~A. Duchaineau, Vijay Natarajan, Valerio Pascucci, Eduardo
+  Bringa, Andrew Higginbotham, and Bernd Hamann.
+\newblock Topologically clean distance fields.
+\newblock {\em IEEE TVCG}, 2007.
+
+\bibitem{flowIntro21}
+Tobias Günther and Irene Baeza~Rojo.
+\newblock {Introduction} to {Vector} {Field} {Topology}.
+\newblock In {\em TopoInVis}. Springer, 2021.
+
+\bibitem{freudenthal42}
+{H. Freudenthal}.
+\newblock {Simplizialzerlegungen von beschrankter Flachheit}.
+\newblock {\em {Annals of Mathematics}}, {43}:580--582, 1942.
+
+\bibitem{haines1994point}
+Eric Haines.
+\newblock Point in polygon strategies.
+\newblock {\em Graphics Gems}, 4:24--46, 1994.
+
+\bibitem{filip2}
+K.~Hanser, O.~Klein, B.~Rieck, B.~Wiebe, T.~Selz, M.~Piatkowski, A.~Sagristà,
+  B.~Zheng, M.~Lukácová, G.~Craig, H.~Leitte, and F.~Sadlo.
+\newblock {Visualization of Parameter Sensitivity of 2D Time-Dependent Flow}.
+\newblock In {\em {Proc. of International Symposium on Visual Computing}},
+  2018.
+
+\bibitem{harten1983upstream}
+Amiram Harten, Peter~D Lax, and Bram~van Leer.
+\newblock On upstream differencing and godunov-type schemes for hyperbolic
+  conservation laws.
+\newblock {\em SIAM review}, 25(1):35--61, 1983.
+
+\bibitem{heine16}
+C.~Heine, H.~Leitte, M.~Hlawitschka, F.~Iuricich, L.~De~Floriani,
+  G.~Scheuermann, H.~Hagen, and C.~Garth.
+\newblock A survey of topology-based methods in visualization.
+\newblock {\em CGF}, 2016.
+
+\bibitem{henrick2005mapped}
+Andrew~K Henrick, Tariq~D Aslam, and Joseph~M Powers.
+\newblock Mapped weighted essentially non-oscillatory schemes: achieving
+  optimal order near critical points.
+\newblock {\em Journal of Computational Physics}, 2005.
+
+\bibitem{hu2011scale}
+XY~Hu and Nikolaus~A Adams.
+\newblock Scale separation for implicit large eddy simulation.
+\newblock {\em Journal of Computational Physics}, 2011.
+
+\bibitem{hu2010adaptive}
+XY~Hu, Q~Wang, and Nikolaus~A Adams.
+\newblock An adaptive central-upwind weighted essentially non-oscillatory
+  scheme.
+\newblock {\em J. of Comp. Phys.}, 2010.
+
+\bibitem{Hummel2013}
+M.~Hummel, H.~Obermaier, C.~Garth, and K.~I. Joy.
+\newblock Comparative visual analysis of lagrangian transport in {CFD}
+  ensembles.
+\newblock {\em IEEE TVCG}, 2013.
+
+\bibitem{kuhn60}
+{H.W. Kuhn}.
+\newblock {Some combinatorial lemmas in topology}.
+\newblock {\em {IBM Journal of Research and Development}}, 45:518--524, 1960.
+
+\bibitem{JaremaKW16}
+Mihaela Jarema, Johannes Kehrer, and R{\"{u}}diger Westermann.
+\newblock Comparative visual analysis of transport variability in flow
+  ensembles.
+\newblock {\em J. {WSCG}}, 2016.
+
+\bibitem{jiang1996efficient}
+Guang-Shan Jiang and Chi-Wang Shu.
+\newblock Efficient implementation of weighted eno schemes.
+\newblock {\em Journal of computational physics}, 126(1):202--228, 1996.
+
+\bibitem{Kantorovich}
+Leonid Kantorovich.
+\newblock On the translocation of masses.
+\newblock {\em AS URSS}, 1942.
+
+\bibitem{kasten_tvcg11}
+J.~Kasten, J.~Reininghaus, I.~Hotz, and H.C. Hege.
+\newblock Two-dimensional time-dependent vortex regions based on the
+  acceleration magnitude.
+\newblock {\em IEEE TVCG}, 2011.
+
+\bibitem{Kerber2016}
+Michael Kerber, Dmitriy Morozov, and Arnur Nigmetov.
+\newblock Geometry helps to compare persistence diagrams.
+\newblock {\em ACM J. of Exp. Algo.}, 2016.
+
+\bibitem{khalili2019}
+M~Ehsan Khalili, Martin Larsson, and Bernhard M{\"u}ller.
+\newblock High-order ghost-point immersed boundary method for viscous
+  compressible flows based on summation-by-parts operators.
+\newblock {\em International Journal for Numerical Methods in Fluids},
+  89(7):256--282, 2019.
+
+\bibitem{KimTJG08}
+Theodore Kim, Nils Th{\"{u}}rey, Doug~L. James, and Markus~H. Gross.
+\newblock Wavelet turbulence for fluid simulation.
+\newblock {\em {ACM} Trans. Graph.}, 2008.
+
+\bibitem{kitamura2013towards}
+Keiichi Kitamura and Eiji Shima.
+\newblock Towards shock-stable and accurate hypersonic heating computations: A
+  new pressure flux for ausm-family schemes.
+\newblock {\em Journal of Computational Physics}, 245:62--83, 2013.
+
+\bibitem{kitamura2012carbuncle}
+Keiichi Kitamura, Eiji Shima, and Philip~L Roe.
+\newblock Carbuncle phenomena and other shock anomalies in three dimensions.
+\newblock {\em AIAA journal}, 50(12):2655--2669, 2012.
+
+\bibitem{Kitware:2003}
+Kitware, Inc.
+\newblock {\em The Visualization Toolkit User's Guide}, January 2003.
+
+\bibitem{Kraichnan1967}
+Robert~H. Kraichnan.
+\newblock Inertial ranges in two-dimensional turbulence.
+\newblock {\em Physics of Fluids}, 10:1417--1423, 1967.
+
+\bibitem{Kraichnan1980}
+Robert~H. Kraichnan and D.~Montgomery.
+\newblock Two-dimensional turbulence.
+\newblock {\em Rep. Prog. Phys}, 43:547, 1980.
+
+\bibitem{lacombe2018}
+Th{\'e}o {Lacombe}, Marco {Cuturi}, and Steve {Oudot}.
+\newblock {Large Scale computation of Means and Clusters for Persistence
+  Diagrams using Optimal Transport}.
+\newblock In {\em NIPS}, 2018.
+
+\bibitem{laney_vis06}
+D.~E. Laney, P.T. Bremer, A.~Mascarenhas, P.~Miller, and V.~Pascucci.
+\newblock Understanding the structure of the turbulent mixing layer in
+  hydrodynamic instabilities.
+\newblock {\em IEEE TVCG}, 2006.
+
+\bibitem{LarameeHZP07}
+Robert~S. Laramee, Helwig Hauser, Lingxiao Zhao, and Frits~H. Post.
+\newblock Topology-based flow visualization, the state of the art.
+\newblock In {\em TopoInVis}. 2007.
+
+\bibitem{leveque2002finite}
+Randall~J LeVeque et~al.
+\newblock {\em Finite volume methods for hyperbolic problems}, volume~31.
+\newblock Cambridge university press, 2002.
+
+\bibitem{lilly1989two}
+Douglas~K Lilly.
+\newblock Two-dimensional turbulence generated by energy sources at two scales.
+\newblock {\em Journal of Atmospheric Sciences}, 1989.
+
+\bibitem{liou1996sequel}
+Meng-Sing Liou.
+\newblock A sequel to ausm: Ausm+.
+\newblock {\em J. Comp. Phys.}, 1996.
+
+\bibitem{liou2006sequel}
+Meng-Sing Liou.
+\newblock A sequel to ausm, part ii: Ausm+-up for all speeds.
+\newblock {\em J. Comp. Phys.}, 2006.
+
+\bibitem{liu1994weighted}
+Xu-g Liu, Stanley Osher, and Tony Chan.
+\newblock Weighted essentially non-oscillatory schemes.
+\newblock {\em Journal of computational physics}, 115(1):200--212, 1994.
+
+\bibitem{LohfinkG20}
+Anna~Pia Lohfink and Christoph Garth.
+\newblock Visitation graphs: Interactive ensemble visualization with visitation
+  maps.
+\newblock In {\em iPMVM}, 2020.
+
+\bibitem{MaadasamyDN12}
+Senthilnathan Maadasamy, Harish Doraiswamy, and Vijay Natarajan.
+\newblock {A hybrid parallel algorithm for computing and tracking level set
+  topology}.
+\newblock In {\em Proc. of HiPC}, 2012.
+
+\bibitem{MacLean2014}
+M.~MacLean, M.~Holden, and A.~Dufrene.
+\newblock Comparison between cfd and measurements for real-gas effects on
+  laminar shock wave boundary layer interaction.
+\newblock In {\em AIAA Aviation, Atlanta GA}, 2014.
+
+\bibitem{maier2021su2}
+Walter~T Maier, Jacob~T Needels, Catarina Garbacz, F{\'a}bio Morgado, Juan~J
+  Alonso, and Marco Fossati.
+\newblock Su2-nemo: An open-source framework for high-mach nonequilibrium
+  multi-species flows.
+\newblock {\em Aerospace}, 8(7):193, 2021.
+
+\bibitem{Maltrud1991}
+M.~Maltrud and G.~Vallis.
+\newblock Energy spectra and coherent structures in forced two-dimensional and
+  $\beta$-planeturbulence.
+\newblock {\em J. Flu. Mech.}, 1991.
+
+\bibitem{masatsuka2013}
+Katate Masatsuka.
+\newblock {\em I do Like CFD, vol. 1}, volume~1.
+\newblock Lulu. com, 2013.
+
+\bibitem{mittal2005immersed}
+Rajat Mittal and Gianluca Iaccarino.
+\newblock Immersed boundary methods.
+\newblock {\em Annu. Rev. Fluid Mech.}, 37:239--261, 2005.
+
+\bibitem{monge81}
+Gaspard Monge.
+\newblock M\'emoire sur la th\'eorie des d\'eblais et des remblais.
+\newblock {\em Acad\'emie Royale des Sciences de Paris}, 1781.
+
+\bibitem{Munkres1957}
+James Munkres.
+\newblock Algorithms for the assignment and transportation problems.
+\newblock {\em J. of the Society for Industrial and Applied Mathematics}, 1957.
+
+\bibitem{data}
+Florent Nauleau, Fabien Vivodtzev, Thibault Bridel-Bertomeu, Heloise
+  Beaugendre, and Julien Tierny.
+\newblock {Benchmark Ensemble Data}.
+\newblock
+  \url{https://drive.google.com/drive/folders/1CAxn4SkkU-u5cQD2bdPn4NNxwQMP7oa7?usp=sharing},
+  2022.
+
+\bibitem{Malgorzata19}
+Malgorzata Olejniczak, Andr\'e Severo~Pereira Gomes, and Julien Tierny.
+\newblock {A Topological Data Analysis Perspective on Non-Covalent Interactions
+  in Relativistic Calculations}.
+\newblock {\em International Journal of Quantum Chemistry}, 2019.
+
+\bibitem{otto1}
+M.~Otto, T.~Germer, H.-C. Hege, and H.~Theisel.
+\newblock Uncertain 2{D} vector field topology.
+\newblock {\em CGF}, 2010.
+
+\bibitem{otto2}
+M.~Otto, T.~Germer, and H.~Theisel.
+\newblock Uncertain topology of 3{D} vector fields.
+\newblock {\em IEEE PV}, 2011.
+
+\bibitem{parsa12}
+Salman Parsa.
+\newblock {A deterministic \emph{o(m log m)} time algorithm for the reeb
+  graph}.
+\newblock In {\em SoCG}, 2012.
+
+\bibitem{pascucci07}
+V~Pascucci, G~Scorzelli, P~T Bremer, and A~Mascarenhas.
+\newblock Robust on-line computation of {R}eeb graphs: simplicity and speed.
+\newblock {\em ACM ToG}, 2007.
+
+\bibitem{peng2021efficient}
+Jun Peng, Shengping Liu, Shiyao Li, Ke~Zhang, and Yiqing Shen.
+\newblock An efficient targeted eno scheme with local adaptive dissipation for
+  compressible flow simulation.
+\newblock {\em Journal of Computational Physics}, 425:109902, 2021.
+
+\bibitem{petz}
+Christoph Petz, Kai P{\"o}thkow, and Hans-Christian Hege.
+\newblock Probabilistic local features in uncertain vector fields with spatial
+  correlation.
+\newblock {\em CGF}, 2012.
+
+\bibitem{PobitzerPFSKTMH11}
+Armin Pobitzer, Ronald Peikert, Raphael Fuchs, Benjamin Schindler, Alexander
+  Kuhn, Holger Theisel, Kresimir Matkovic, and Helwig Hauser.
+\newblock The state of the art in topology-based visualization of unsteady
+  flow.
+\newblock {\em CGF}, 2011.
+
+\bibitem{pont_vis21}
+Mathieu Pont, Jules Vidal, Julie Delon, and Julien Tierny.
+\newblock {Wasserstein Distances, Geodesics and Barycenters of Merge Trees}.
+\newblock {\em IEEE TVCG}, 2021.
+
+\bibitem{qu2021review}
+Feng Qu, Di~Sun, Qingsong Liu, and Junqiang Bai.
+\newblock A review of riemann solvers for hypersonic flows.
+\newblock {\em Archives of Computational Methods in Engineering}, pages 1--30,
+  2021.
+
+\bibitem{qu2014study}
+Feng Qu, Chao Yan, Jian Yu, and Di~Sun.
+\newblock A study of parameter-free shock capturing upwind schemes on low
+  speeds’ issues.
+\newblock {\em C. T. S.}, 2014.
+
+\bibitem{qu2018}
+Yegao Qu, Ruchao Shi, and Romesh~C Batra.
+\newblock An immersed boundary formulation for simulating high-speed
+  compressible viscous flows with moving solids.
+\newblock {\em Journal of Computational Physics}, 354:672--691, 2018.
+
+\bibitem{rand1971objective}
+William~M Rand.
+\newblock Objective criteria for the evaluation of clustering methods.
+\newblock {\em Journal of the American Statistical association}, 1971.
+
+\bibitem{robins_pami11}
+Vanessa Robins, Peter~John Wood, and Adrian~P. Sheppard.
+\newblock {Theory and Algorithms for Constructing Discrete Morse Complexes from
+  Grayscale Digital Images}.
+\newblock {\em {IEEE} Trans. Pattern Anal. Mach. Intell.}, 2011.
+
+\bibitem{Roe1981approximate}
+Philip~L Roe.
+\newblock Approximate riemann solvers, parameter vectors, and difference
+  schemes.
+\newblock {\em Journal of computational physics}, 1981.
+
+\bibitem{san2015evaluation}
+Omer San and Kursat Kara.
+\newblock Evaluation of riemann flux solvers for weno reconstruction schemes:
+  Kelvin--helmholtz instability.
+\newblock {\em C. \& F.}, 2015.
+
+\bibitem{ScheuermannT05}
+Gerik Scheuermann and Xavier Tricoche.
+\newblock Topological methods for flow visualization.
+\newblock In {\em The Visualization Handbook}, pages 341--356. 2005.
+
+\bibitem{filip3}
+Michael Schlemmer, Manuel Heringer, Florian Morr, Ingrid Hotz, Martin
+  Hering{-}Bertram, Christoph Garth, Wolfgang Kollmann, Bernd Hamann, and Hans
+  Hagen.
+\newblock {Moment Invariants for the Analysis of 2D Flow Fields}.
+\newblock {\em IEEE TVCG}, 2007.
+
+\bibitem{schneider2012}
+D~Schneider, J~Fuhrmann, W~Reich, and G~Scheuermann.
+\newblock {A variance based FTLE-like method for unsteady uncertain vector
+  fields}.
+\newblock In {\em TopoInVis}, 2012.
+
+\bibitem{schneider2002geometric}
+Philip Schneider and David~H Eberly.
+\newblock {\em Geometric tools for computer graphics}.
+\newblock Elsevier, 2002.
+
+\bibitem{shima2009new}
+Eiji Shima and Keiichi Kitamura.
+\newblock On new simple low-dissipation scheme of ausm-family for all speeds.
+\newblock In {\em AIAA Aerospace Sciences}, 2009.
+
+\bibitem{ShivashankarN12}
+Nithin Shivashankar and Vijay Natarajan.
+\newblock {Parallel Computation of 3D Morse-Smale Complexes}.
+\newblock {\em CGF}, 2012.
+
+\bibitem{shivashankar2016felix}
+Nithin Shivashankar, Pratyush Pranav, Vijay Natarajan, Rien van~de Weygaert,
+  EG~Patrick Bos, and Steven Rieder.
+\newblock Felix: A topology based framework for visual exploration of cosmic
+  filaments.
+\newblock {\em IEEE TVCG}, 2016.
+
+\bibitem{sousbie11}
+T.~Sousbie.
+\newblock The persistent cosmic web and its filamentary structure: Theory and
+  implementations.
+\newblock {\em Royal Astronomical Society}, 2011.
+
+\bibitem{SridharamurthyM20}
+Raghavendra Sridharamurthy, Talha~Bin Masood, Adhitya Kamakshidasan, and Vijay
+  Natarajan.
+\newblock Edit distance between merge trees.
+\newblock {\em IEEE TVCG}, 2020.
+
+\bibitem{Tabeling2002}
+Patrick Tabeling.
+\newblock Two-dimensional turbulence: a physicist approach, 2002.
+
+\bibitem{tarasov98}
+S.~Tarasov and M.~Vyali.
+\newblock Construction of contour trees in 3d in o(n log n) steps.
+\newblock In {\em SoCG}, 1998.
+
+\bibitem{ttk17}
+Julien Tierny, Guillaume Favelier, Joshua~A. Levine, Charles Gueunet, and
+  Michael Michaux.
+\newblock The {T}opology {T}ool{K}it.
+\newblock {\em IEEE TVCG}, 2017.
+\newblock \url{https://topology-tool-kit.github.io/}.
+
+\bibitem{tierny_vis09}
+Julien Tierny, Attila Gyulassy, Eddie Simon, and Valerio Pascucci.
+\newblock Loop surgery for volumetric meshes: Reeb graphs reduced to contour
+  trees.
+\newblock {\em IEEE TVCG}, 2009.
+
+\bibitem{toro2013riemann}
+Eleuterio~F Toro.
+\newblock {\em Riemann solvers and numerical methods for fluid dynamics: a
+  practical introduction}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{toro1994restoration}
+Eleuterio~F Toro, Michael Spruce, and William Speares.
+\newblock Restoration of the contact surface in the hll-riemann solver.
+\newblock {\em Shock waves}, 4(1):25--34, 1994.
+
+\bibitem{trangenstein2007numerical}
+John~A Trangenstein.
+\newblock {\em Numerical Solution of Hyperbolic Partial Differential
+  Equations.}
+\newblock Cambridge University Press, 2007.
+
+\bibitem{Turner2014}
+Katharine {Turner}, Yuriy {Mileyko}, Sayan {Mukherjee}, and John {Harer}.
+\newblock {Fr\'echet Means for Distributions of Persistence Diagrams}.
+\newblock {\em DCG}, 2014.
+
+\bibitem{vidal_vis19}
+Jules Vidal, Joseph Budin, and Julien Tierny.
+\newblock {Progressive Wasserstein Barycenters of Persistence Diagrams}.
+\newblock {\em IEEE TVCG}, 2019.
+
+\bibitem{wang2016}
+W~Wang, W~Wang, and S~Li.
+\newblock From numerics to combinatorics: a survey of topological methods for
+  vector field visualization.
+\newblock {\em Journal of Visualization}, 2016.
+
+\bibitem{white2006viscous}
+Frank~M White and Isla Corfield.
+\newblock {\em Viscous fluid flow}, volume~3.
+\newblock McGraw-Hill New York, 2006.
+
+\bibitem{YanMSRNHW21}
+Lin Yan, Talha~Bin Masood, Raghavendra Sridharamurthy, Farhan Rasheed, Vijay
+  Natarajan, Ingrid Hotz, and Bei Wang.
+\newblock Scalar field comparison with topological descriptors: Properties and
+  applications for scientific visualization.
+\newblock {\em CGF}, 2021.
+
+\bibitem{YanWMGW20}
+Lin Yan, Yusu Wang, Elizabeth Munch, Ellen Gasparovic, and Bei Wang.
+\newblock A structural average of labeled merge trees for uncertainty
+  visualization.
+\newblock {\em IEEE TVCG}, 2019.
+
+\bibitem{yousefzadeh2019}
+Mehrdad Yousefzadeh and Ilenia Battiato.
+\newblock High order ghost-cell immersed boundary method for generalized
+  boundary conditions.
+\newblock {\em International Journal of Heat and Mass Transfer}, 137:585--598,
+  2019.
+
+\bibitem{ZhangLSSQ14}
+Meng Zhang, Shiguang Liu, Hanqiu Sun, Weixin Si, and Yinling Qian.
+\newblock Hybrid vortex model for efficiently simulating turbulent smoke.
+\newblock In {\em ACM VRCAI}, 2014.
+
+\bibitem{zhang2019}
+Yang Zhang, Xinglong Fang, Jianfeng Zou, Xing Shi, Zhenhai Ma, and Yao Zheng.
+\newblock Numerical simulations of shock/obstacle interactions using an
+  improved ghost-cell immersed boundary method.
+\newblock {\em Computers \& Fluids}, 182:128--143, 2019.
+
+\bibitem{filip1}
+B.~Zheng, B.~Rieck, H.~Leitte, and F.~Sadlo.
+\newblock {Visualization of Equivalence in 2D Bivariate Fields}.
+\newblock {\em CGF}, 2019.
+
+\end{thebibliography}

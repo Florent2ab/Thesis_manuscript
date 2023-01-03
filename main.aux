@@ -1,0 +1,516 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{@@@}{\chapterbegin }
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Mécanique des fluides numérique}{3}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Mécanique des fluides numérique}{3}{chapter.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Mécanique des fluides numérique}{3}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces IXV spatial navette by esa}}{3}{figure.1.1}\protected@file@percent }
+\newlabel{chap1}{{1.1}{3}{IXV spatial navette by esa}{figure.1.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}introduction}{4}{section.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces IXV spatial navette by esa}}{4}{figure.1.2}\protected@file@percent }
+\newlabel{IXV}{{1.2}{4}{IXV spatial navette by esa}{figure.1.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Equations de dynamique des fluides}{5}{section.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}Navier-Stokes}{5}{subsection.1.2.1}\protected@file@percent }
+\newlabel{eq:cons_ns}{{1.1}{5}{Navier-Stokes}{equation.1.2.1}{}}
+\newlabel{eq:cons_ns_vectors}{{1.2}{6}{Navier-Stokes}{equation.1.2.2}{}}
+\newlabel{eq:perfect_gas_energy}{{1.3}{6}{Navier-Stokes}{equation.1.2.3}{}}
+\newlabel{eq:stres_tensor}{{1.4}{6}{Navier-Stokes}{equation.1.2.4}{}}
+\newlabel{eq:stres_tensor_deformation}{{1.5}{6}{Navier-Stokes}{equation.1.2.5}{}}
+\newlabel{eq:mu_sutherland}{{1.6}{6}{Navier-Stokes}{equation.1.2.6}{}}
+\newlabel{eq:stres_tensor}{{1.7}{6}{Navier-Stokes}{equation.1.2.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Euler}{7}{subsection.1.2.2}\protected@file@percent }
+\newlabel{eq:cons_ns}{{1.8}{7}{Euler}{equation.1.2.8}{}}
+\newlabel{eq:cons_ns_vectors}{{1.9}{7}{Euler}{equation.1.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Simulation RANS}{7}{subsection.1.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces IXV spatial navette by esa}}{8}{figure.1.3}\protected@file@percent }
+\newlabel{rans}{{1.3}{8}{IXV spatial navette by esa}{figure.1.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}methode numerique}{8}{section.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Simulation Numérique Directe}{9}{subsection.1.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Simulation des Grandes Échelles}{9}{subsection.1.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces IXV spatial navette by esa}}{10}{figure.1.4}\protected@file@percent }
+\newlabel{les}{{1.4}{10}{IXV spatial navette by esa}{figure.1.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Conclusion}{10}{section.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Méthode numérique du code Hyperion en 2D}{12}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Méthode numérique du code Hyperion en 2D}{12}{chapter.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Méthode numérique du code Hyperion en 2D}{12}{chapter.2}\protected@file@percent }
+\citation{leveque2002finite}
+\citation{BRIDELBERTOMEU2021}
+\citation{toro2013riemann}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.1}Cartesian fluid domain discretization}{13}{subsection.2.0.1}\protected@file@percent }
+\newlabel{ssec:cartesian}{{2.0.1}{13}{Cartesian fluid domain discretization}{subsection.2.0.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Mixed finite-volume/finite-difference numerical scheme}{13}{section*.1}\protected@file@percent }
+\newlabel{sssec:num_scheme}{{2.0.1}{13}{Mixed finite-volume/finite-difference numerical scheme}{section*.1}{}}
+\newlabel{eq:fvm_discretization}{{2.1}{13}{Mixed finite-volume/finite-difference numerical scheme}{equation.2.0.1}{}}
+\newlabel{eq:num_approx_flux}{{2.2}{13}{Mixed finite-volume/finite-difference numerical scheme}{equation.2.0.2}{}}
+\citation{liu1994weighted,jiang1996efficient,hu2010adaptive,henrick2005mapped}
+\citation{fu2016family,hu2011scale}
+\citation{fu2016family,fu2017targeted,fu2018new,fu2019low,fu2019very}
+\newlabel{eq:para_operator_2}{{2.4}{14}{Mixed finite-volume/finite-difference numerical scheme}{equation.2.0.4}{}}
+\newlabel{eq:para_operator_4}{{2.5}{14}{Mixed finite-volume/finite-difference numerical scheme}{equation.2.0.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Reconstruction schemes}{14}{section*.2}\protected@file@percent }
+\newlabel{sssec:interpolations}{{2.0.1}{14}{Reconstruction schemes}{section*.2}{}}
+\newlabel{eq:teno5}{{2.6}{14}{Reconstruction schemes}{equation.2.0.6}{}}
+\citation{toro2013riemann,qu2021review}
+\newlabel{eq:teno5_smooth}{{2.7}{15}{Reconstruction schemes}{equation.2.0.7}{}}
+\newlabel{eq:teno5_betas}{{2.8}{15}{Reconstruction schemes}{equation.2.0.8}{}}
+\newlabel{eq:teno5_tau}{{2.9}{15}{Reconstruction schemes}{equation.2.0.9}{}}
+\newlabel{eq:teno5_chi}{{2.10}{15}{Reconstruction schemes}{equation.2.0.10}{}}
+\newlabel{eq:teno5_delta}{{2.11}{15}{Reconstruction schemes}{equation.2.0.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Approximate Riemann solvers}{15}{section*.3}\protected@file@percent }
+\newlabel{sssec:ars}{{2.0.1}{15}{Approximate Riemann solvers}{section*.3}{}}
+\citation{maier2021su2}
+\citation{kitamura2012carbuncle}
+\citation{liou1996sequel,liou2006sequel}
+\citation{mittal2005immersed}
+\citation{khalili2019,qu2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces  Illustration of the ghost cells layer (blue cells) around the Cartesian grid in HYPERION. The numbering of the cells is also shown. Note that the three-dimensional Cartesian meshes are handled in the same fashion, with index $i$ in the $X$ direction evolving the fastest, followed by $j$ in the $Y$ direction, then $k$ in the $Z$ direction. }}{16}{figure.2.1}\protected@file@percent }
+\newlabel{fig:ghost_cells}{{2.1}{16}{Illustration of the ghost cells layer (blue cells) around the Cartesian grid in HYPERION. The numbering of the cells is also shown. Note that the three-dimensional Cartesian meshes are handled in the same fashion, with index $i$ in the $X$ direction evolving the fastest, followed by $j$ in the $Y$ direction, then $k$ in the $Z$ direction}{figure.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.0.2}Sharp immersed boundary conditions}{16}{subsection.2.0.2}\protected@file@percent }
+\newlabel{ssec:ibc}{{2.0.2}{16}{Sharp immersed boundary conditions}{subsection.2.0.2}{}}
+\citation{mittal2005immersed,chi2017improved,khalili2019,qu2018,yousefzadeh2019,zhang2019}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Immersed boundary method workflow - diagrams are shown in two dimensions but the extension to three dimensions in straightforward. (a) Introduction of a tesselated object in the Cartesian mesh. (b) Detection of the immersed cells (red), $\emph  {i.e.}$ solid cells, at initialization. (c) Detection of the immersed boundary cells (blue), $\emph  {i.e.}$ solid cells with at least one fluid neighbor within the extent of the stencil, at initialization. (d) Detection of the nearest facet to each immersed boundary cell, at initialization (e) Creation of the image points in the direction normal to the nearest facet for each immersed boundary cell, at initialization. (f) Illustration of the neighborhood (yellow) where fluid cells are queried for information to interpolate the values of the fields at the image points, at each iteration of the fluid solver. (g) Illustration of the linear extrapolation from the image points to the immersed boundary cells to fill the values allowing for the enforcement of the boundary condition at the wall of the immersed object, at each iteration of the fluid solver.}}{17}{figure.2.2}\protected@file@percent }
+\newlabel{fig:ibm_workflow}{{2.2}{17}{Immersed boundary method workflow - diagrams are shown in two dimensions but the extension to three dimensions in straightforward. (a) Introduction of a tesselated object in the Cartesian mesh. (b) Detection of the immersed cells (red), $\emph {i.e.}$ solid cells, at initialization. (c) Detection of the immersed boundary cells (blue), $\emph {i.e.}$ solid cells with at least one fluid neighbor within the extent of the stencil, at initialization. (d) Detection of the nearest facet to each immersed boundary cell, at initialization (e) Creation of the image points in the direction normal to the nearest facet for each immersed boundary cell, at initialization. (f) Illustration of the neighborhood (yellow) where fluid cells are queried for information to interpolate the values of the fields at the image points, at each iteration of the fluid solver. (g) Illustration of the linear extrapolation from the image points to the immersed boundary cells to fill the values allowing for the enforcement of the boundary condition at the wall of the immersed object, at each iteration of the fluid solver}{figure.2.2}{}}
+\citation{BRIDELBERTOMEU2021}
+\citation{BRIDELBERTOMEU2021}
+\citation{haines1994point,mittal2005immersed}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}A FAST RASTERIZATION ALGORITHM TO DETECT IMMERSED CELLS}{18}{section.2.1}\protected@file@percent }
+\newlabel{sec:rasterization}{{2.1}{18}{A FAST RASTERIZATION ALGORITHM TO DETECT IMMERSED CELLS}{section.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Illustration of the tesselation of a two-dimensional curve and of the simple ray-casting algorithm for the identification of immersed cells.}}{18}{figure.2.3}\protected@file@percent }
+\newlabel{fig:ray_casting_simple}{{2.3}{18}{Illustration of the tesselation of a two-dimensional curve and of the simple ray-casting algorithm for the identification of immersed cells}{figure.2.3}{}}
+\citation{schneider2002geometric}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Discretization of the immersed objects necessary (a) for the simple ray-casting algorithm and (b) for the new \emph  {point classification} algorithm. The three-dimensional tetrahedralization required by the new algorithm has to be generated beforehand and is not handled by HYPERION.}}{20}{figure.2.4}\protected@file@percent }
+\newlabel{fig:object_discretization}{{2.4}{20}{Discretization of the immersed objects necessary (a) for the simple ray-casting algorithm and (b) for the new \emph {point classification} algorithm. The three-dimensional tetrahedralization required by the new algorithm has to be generated beforehand and is not handled by HYPERION}{figure.2.4}{}}
+\citation{schneider2002geometric}
+\citation{BRIDELBERTOMEU2021}
+\citation{BRIDELBERTOMEU2021}
+\citation{BRIDELBERTOMEU2021}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}MIGRATABLE TASKS FOR THE MASSIVE PARALLELIZATION OF THE RECONSTRUCTION ALGORITHM}{23}{section.2.2}\protected@file@percent }
+\newlabel{sec:migratable_tasks}{{2.2}{23}{MIGRATABLE TASKS FOR THE MASSIVE PARALLELIZATION OF THE RECONSTRUCTION ALGORITHM}{section.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Illustration of the Cartesian partitioning of the Cartesian mesh in HYPERION. The overlapping halos (of size 1 in this case) ensuring communications between neighboring processes are also represented. Note that the numbering of the MPI processes is done the same way as the numbering of the fluid cells.}}{24}{figure.2.5}\protected@file@percent }
+\newlabel{fig:mpi_halos}{{2.5}{24}{Illustration of the Cartesian partitioning of the Cartesian mesh in HYPERION. The overlapping halos (of size 1 in this case) ensuring communications between neighboring processes are also represented. Note that the numbering of the MPI processes is done the same way as the numbering of the fluid cells}{figure.2.5}{}}
+\citation{BRIDELBERTOMEU2021}
+\citation{francez1982}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) Zoom on the neighborhood of an immersed boundary cell image and the corresponding surrounding cells numbering for the spiral walk. (b) Illustration of the spiral walk task in the migratable task algorithm and of the influence of partitioning thereupon - the halos are omitted as the algorithm does not make use of them.}}{25}{figure.2.6}\protected@file@percent }
+\newlabel{fig:migratable_task}{{2.6}{25}{(a) Zoom on the neighborhood of an immersed boundary cell image and the corresponding surrounding cells numbering for the spiral walk. (b) Illustration of the spiral walk task in the migratable task algorithm and of the influence of partitioning thereupon - the halos are omitted as the algorithm does not make use of them}{figure.2.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Speed up achieved for distributed parallelism with HYPERION and the migratable task algorithm - ideal speed-up (dashed line) versus actual speed-up (blue dots). Data collected for a single immersed body using AMD Rome processors.}}{27}{figure.2.7}\protected@file@percent }
+\newlabel{fig:speed_up}{{2.7}{27}{Speed up achieved for distributed parallelism with HYPERION and the migratable task algorithm - ideal speed-up (dashed line) versus actual speed-up (blue dots). Data collected for a single immersed body using AMD Rome processors}{figure.2.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}TOWARDS HIGH-FIDELITY SIMULATIONS}{27}{section.2.3}\protected@file@percent }
+\newlabel{sec:high_fidelity}{{2.3}{27}{TOWARDS HIGH-FIDELITY SIMULATIONS}{section.2.3}{}}
+\citation{Garnier2009}
+\citation{boussinesq1877essai}
+\citation{ducros1998wall}
+\citation{diosady2015case}
+\newlabel{eq:les_momentum_eqns}{{2.14}{28}{TOWARDS HIGH-FIDELITY SIMULATIONS}{equation.2.3.14}{}}
+\newlabel{eq:sigma_smile}{{2.15}{28}{TOWARDS HIGH-FIDELITY SIMULATIONS}{equation.2.3.15}{}}
+\newlabel{eq:boussinesq_les}{{2.16}{28}{TOWARDS HIGH-FIDELITY SIMULATIONS}{equation.2.3.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Taylor-Green Vortex}{28}{subsection.2.3.1}\protected@file@percent }
+\newlabel{ssec:test_tgv}{{2.3.1}{28}{Taylor-Green Vortex}{subsection.2.3.1}{}}
+\citation{diosady2015case}
+\newlabel{eq:kinetic_eqn}{{2.18}{29}{Taylor-Green Vortex}{equation.2.3.18}{}}
+\newlabel{eq:enstrophy}{{2.19}{29}{Taylor-Green Vortex}{equation.2.3.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Snapshots of the state of the Taylor-Green vortex after (a) $1$ characteristic time and (b) $20$ characteristic times on the $64^3$ mesh. Isocontours of enstrophy are represented, colored by the magnitude of velocity.}}{29}{figure.2.8}\protected@file@percent }
+\newlabel{fig:TGV_view}{{2.8}{29}{Snapshots of the state of the Taylor-Green vortex after (a) $1$ characteristic time and (b) $20$ characteristic times on the $64^3$ mesh. Isocontours of enstrophy are represented, colored by the magnitude of velocity}{figure.2.8}{}}
+\citation{diosady2015case}
+\citation{giangaspero2015case}
+\citation{diosady2015case}
+\citation{giangaspero2015case}
+\citation{diosady2015case}
+\citation{giangaspero2015case}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Comparison of the temporal evolution of (a) the kinetic energy (see equation\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:kinetic_eqn}\unskip \@@italiccorr )}}) and (b) the enstrophy (see equation\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {eq:enstrophy}\unskip \@@italiccorr )}}) against the $512^3$ spectral computation from \cite  {diosady2015case} (black line) and the high-order computations from \cite  {giangaspero2015case} (symbols).}}{30}{figure.2.9}\protected@file@percent }
+\newlabel{fig:TGV_comparison}{{2.9}{30}{Comparison of the temporal evolution of (a) the kinetic energy (see equation~\eqref {eq:kinetic_eqn}) and (b) the enstrophy (see equation~\eqref {eq:enstrophy}) against the $512^3$ spectral computation from \cite {diosady2015case} (black line) and the high-order computations from \cite {giangaspero2015case} (symbols)}{figure.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Double cone}{30}{subsection.2.3.2}\protected@file@percent }
+\newlabel{ssec:test_double_cone}{{2.3.2}{30}{Double cone}{subsection.2.3.2}{}}
+\citation{MacLean2014}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Geometrical details of the double-cone configuration.}}{31}{figure.2.10}\protected@file@percent }
+\newlabel{fig:double_cone_geom}{{2.10}{31}{Geometrical details of the double-cone configuration}{figure.2.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Numerical Schlieren imaging of the flow around the double cone configuration. The inset zooms in on the lambda-shock pattern found after the recirculation region at the change of wall angle.}}{31}{figure.2.11}\protected@file@percent }
+\newlabel{fig:double_cone_schlieren}{{2.11}{31}{Numerical Schlieren imaging of the flow around the double cone configuration. The inset zooms in on the lambda-shock pattern found after the recirculation region at the change of wall angle}{figure.2.11}{}}
+\citation{MacLean2014}
+\citation{MacLean2014}
+\citation{Aymer1991}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces (a) Pressure coefficient and (b) heat flux obtained at the wall of the double cone. Comparison between the results obtained presently on the coarse and fine meshes (orange and blue line, respectively) and the reference solution from MacLean \emph  {et al.} \cite  {MacLean2014} (black line).}}{32}{figure.2.12}\protected@file@percent }
+\newlabel{fig:double_cone_comp}{{2.12}{32}{(a) Pressure coefficient and (b) heat flux obtained at the wall of the double cone. Comparison between the results obtained presently on the coarse and fine meshes (orange and blue line, respectively) and the reference solution from MacLean \emph {et al.} \cite {MacLean2014} (black line)}{figure.2.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.3}Flow study around a double ellipsoid configuration}{32}{subsection.2.3.3}\protected@file@percent }
+\newlabel{ssec:test_ellipsoid}{{2.3.3}{32}{Flow study around a double ellipsoid configuration}{subsection.2.3.3}{}}
+\newlabel{eq:double_ellipsoid_eqns}{{2.20}{32}{Flow study around a double ellipsoid configuration}{equation.2.3.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Geometrical details of the double ellipsoid configuration.}}{32}{figure.2.13}\protected@file@percent }
+\newlabel{fig:ellipse_geom}{{2.13}{32}{Geometrical details of the double ellipsoid configuration}{figure.2.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces Illustration of the flow around the double ellipsoid immersed object with a $30^{\circ }$ angle of attack. The walls of the visualization domain are colored using the numerical Schlieren imaging technique, and the wake of the double ellipsoid is shown using isocontours of Q-criterion, colored by the magnitude of the vorticity. }}{33}{figure.2.14}\protected@file@percent }
+\newlabel{fig:ellipse_3D}{{2.14}{33}{Illustration of the flow around the double ellipsoid immersed object with a $30^{\circ }$ angle of attack. The walls of the visualization domain are colored using the numerical Schlieren imaging technique, and the wake of the double ellipsoid is shown using isocontours of Q-criterion, colored by the magnitude of the vorticity}{figure.2.14}{}}
+\citation{Aymer1991}
+\citation{Aymer1991}
+\citation{BRIDELBERTOMEU2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces (a) Pressure coefficient on both the pressure and the suction sides and (b) Stanton number on the pressure side of the double ellipsoid. Comparison between the present computations (green and blue lines) and the experimental reference data (black dots) extracted from \cite  {Aymer1991}.}}{34}{figure.2.15}\protected@file@percent }
+\newlabel{fig:ellipse_comp}{{2.15}{34}{(a) Pressure coefficient on both the pressure and the suction sides and (b) Stanton number on the pressure side of the double ellipsoid. Comparison between the present computations (green and blue lines) and the experimental reference data (black dots) extracted from \cite {Aymer1991}}{figure.2.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}CONCLUSIONS}{34}{section.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Topologie}{36}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Topologie}{36}{chapter.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Topologie}{36}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces IXV spatial navette by esa}}{36}{figure.3.1}\protected@file@percent }
+\newlabel{11}{{3.1}{36}{IXV spatial navette by esa}{figure.3.1}{}}
+\citation{baez2006}
+\citation{fefferman2000}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces  Data Analysis protocols applied on an ensemble dataset of a Kelvin-Helmholtz instability. (a) The 180 members of the ensemble obtained with variations of timesteps, interpolation schemes, orders, resolutions and Riemann solvers (\autoref  {tab_parameters}). (b) The top cluster represents the time separation of $t_0$ and $t_1$ for the flows $S_1$ and $S_2$ with the Wasserstein distance and the bottom cluster with the $L_2$-norm. Red lines show the timestep separation with our clustering method whereas the sphere colors are the ground truth, illustrating the limitation of the $L_2$-norm. (c) \textit  {Persistence curve protocol}: Differences between integrals of persistence curves (gray area) of the enstrophy computed with a SLAU2 solver, an order 7 TENO scheme and a resolution of $1024\times 1024$ for various configurations ($S_1$ at $t_0$, $S_2$ and $S_3$ at $t_1$). These integral differences exhibit the appearance of vortices (critical points) as the time increases. (d) \textit  {Outlier distance protocol}: Wasserstein distance matrix for 5 configurations $S_1(t_0,HLLC)$, $S_2(t_1,Roe)$, $S_3(t_1,HLLC)$, $S_4(t_2,Roe)$, $S_5(t_2,HLLC)$ computed with an order 7 WENO-Z interpolation scheme at $512\times 512$. The sum of each row the configuration maximizing this distance between solvers and timesteps, here $S_1$. (e) \textit  {Unsupervised classification}: Wasserstein distance matrix for the previous configurations with an order 7 WENO-Z interpolation scheme at $256\times 256$. The clustering based on the Wasserstein distance and colored according to the Kmeans clustering method successfully segments the time steps.}}{38}{figure.3.2}\protected@file@percent }
+\newlabel{fig_teaser}{{3.2}{38}{Data Analysis protocols applied on an ensemble dataset of a Kelvin-Helmholtz instability. (a) The 180 members of the ensemble obtained with variations of timesteps, interpolation schemes, orders, resolutions and Riemann solvers (\autoref {tab_parameters}). (b) The top cluster represents the time separation of $t_0$ and $t_1$ for the flows $S_1$ and $S_2$ with the Wasserstein distance and the bottom cluster with the $L_2$-norm. Red lines show the timestep separation with our clustering method whereas the sphere colors are the ground truth, illustrating the limitation of the $L_2$-norm. (c) \textit {Persistence curve protocol}: Differences between integrals of persistence curves (gray area) of the enstrophy computed with a SLAU2 solver, an order 7 TENO scheme and a resolution of $1024\times 1024$ for various configurations ($S_1$ at $t_0$, $S_2$ and $S_3$ at $t_1$). These integral differences exhibit the appearance of vortices (critical points) as the time increases. (d) \textit {Outlier distance protocol}: Wasserstein distance matrix for 5 configurations $S_1(t_0,HLLC)$, $S_2(t_1,Roe)$, $S_3(t_1,HLLC)$, $S_4(t_2,Roe)$, $S_5(t_2,HLLC)$ computed with an order 7 WENO-Z interpolation scheme at $512\times 512$. The sum of each row the configuration maximizing this distance between solvers and timesteps, here $S_1$. (e) \textit {Unsupervised classification}: Wasserstein distance matrix for the previous configurations with an order 7 WENO-Z interpolation scheme at $256\times 256$. The clustering based on the Wasserstein distance and colored according to the Kmeans clustering method successfully segments the time steps}{figure.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{38}{section.3.1}\protected@file@percent }
+\citation{edelsbrunner09}
+\citation{heine16}
+\citation{laney_vis06,bremer_tvcg11,gyulassy_ev14}
+\citation{gyulassy_vis07,gyulassy_vis15,favelier16}
+\citation{carr04,topoAngler,beiBrain18}
+\citation{chemistry_vis14,harshChemistry,Malgorzata19}
+\citation{sousbie11,shivashankar2016felix}
+\citation{kasten_tvcg11,bridel_ldav19}
+\citation{edelsbrunner02}
+\citation{Turner2014}
+\citation{vidal_vis19}
+\citation{Kraichnan1967}
+\citation{Kraichnan1980}
+\citation{KimTJG08,ZhangLSSQ14,BaiWDL21}
+\citation{Boffetta2011}
+\citation{Kraichnan1980}
+\citation{Tabeling2002}
+\citation{Kraichnan1967,lilly1989two}
+\citation{lilly1989two,Maltrud1991}
+\citation{san2015evaluation}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Baseline analysis by angle-averaged kinetic energy power spectrum for all solvers (WENO-Z, order $7$, $t_2$, $512\times 512$). }}{40}{figure.3.3}\protected@file@percent }
+\newlabel{energie}{{3.3}{40}{Baseline analysis by angle-averaged kinetic energy power spectrum for all solvers (WENO-Z, order $7$, $t_2$, $512\times 512$)}{figure.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Related work}{40}{subsection.3.1.1}\protected@file@percent }
+\newlabel{sec_relatedWork}{{3.1.1}{40}{Related work}{subsection.3.1.1}{}}
+\citation{edelsbrunner09}
+\citation{heine16}
+\citation{ScheuermannT05,GarthT06,LarameeHZP07,PobitzerPFSKTMH11,wang2016,BujackYHGW20}
+\citation{flowIntro21}
+\citation{petz,otto2,otto1}
+\citation{filip3,schneider2012,Hummel2013,GuoHPSCH16,JaremaKW16,filip2,filip1,LohfinkG20}
+\citation{Ferstl2016}
+\citation{kasten_tvcg11,bridel_ldav19}
+\citation{edelsbrunner02,edelsbrunner09}
+\citation{edelsbrunner09,dipha}
+\citation{biasotti08}
+\citation{pascucci07,tierny_vis09,parsa12,DoraiswamyN13}
+\citation{gueunet_egpgv19}
+\citation{tarasov98,carr00}
+\citation{MaadasamyDN12,AcharyaN15,CarrWSA16,gueunet_tpds19}
+\citation{EdelsbrunnerHZ01,EdelsbrunnerHNP03,BremerEHP03}
+\citation{Defl15}
+\citation{robins_pami11,ShivashankarN12,gyulassy_vis18}
+\citation{forman98}
+\citation{Kantorovich,monge81}
+\citation{edelsbrunner09}
+\citation{edelsbrunner02}
+\citation{YanMSRNHW21}
+\citation{favelier2018}
+\citation{athawale_tvcg19}
+\citation{Turner2014,lacombe2018,vidal_vis19}
+\citation{vidal_vis19}
+\citation{YanWMGW20,pont_vis21}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Contributions}{42}{subsection.3.1.2}\protected@file@percent }
+\citation{data}
+\citation{ttk17}
+\citation{edelsbrunner09}
+\citation{freudenthal42,kuhn60}
+\citation{ttk17}
+\citation{edelsbrunner90}
+\citation{banchoff70}
+\citation{edelsbrunner90,edelsbrunner03}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Critical points (spheres, white: minima, blue: maxima, other: saddles), persistence diagram (b), persistence curve (c) of a noisy (a) 2D scalar field. The persistence diagram captures the main two hills of the terrain as prominent persistence pairs (large vertical segments), while small oscillations due to noise induce features near the diagonal.}}{43}{figure.3.4}\protected@file@percent }
+\newlabel{fig_toyTopology}{{3.4}{43}{Critical points (spheres, white: minima, blue: maxima, other: saddles), persistence diagram (b), persistence curve (c) of a noisy (a) 2D scalar field. The persistence diagram captures the main two hills of the terrain as prominent persistence pairs (large vertical segments), while small oscillations due to noise induce features near the diagonal}{figure.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Topological data analysis}{43}{subsection.3.1.3}\protected@file@percent }
+\newlabel{sec_topology}{{3.1.3}{43}{Topological data analysis}{subsection.3.1.3}{}}
+\citation{carr04}
+\citation{edelsbrunner02}
+\citation{edelsbrunner09}
+\citation{edelsbrunner09}
+\citation{edelsbrunner09}
+\citation{edelsbrunner02}
+\citation{CohenSteinerEH05,Turner2014,Kerber2016}
+\citation{SridharamurthyM20,pont_vis21}
+\citation{Munkres1957}
+\citation{Bertsekas81}
+\citation{ttk17,ttk19}
+\citation{vidal_vis19}
+\citation{Kerber2016,vidal_vis19,ttk19}
+\citation{Turner2014,vidal_vis19}
+\citation{masatsuka2013}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Background}{45}{section.3.2}\protected@file@percent }
+\newlabel{sec_background}{{3.2}{45}{Background}{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Numerical simulation}{45}{subsection.3.2.1}\protected@file@percent }
+\newlabel{sec_simulation}{{3.2.1}{45}{Numerical simulation}{subsection.3.2.1}{}}
+\newlabel{sec_solvers}{{3.2.1}{45}{Numerical simulation}{subsection.3.2.1}{}}
+\citation{bridel2021immersed}
+\citation{leveque2002finite,trangenstein2007numerical,toro2013riemann}
+\citation{san2015evaluation}
+\citation{toro2013riemann}
+\citation{liu1994weighted}
+\citation{jiang1996efficient}
+\citation{hu2010adaptive}
+\citation{henrick2005mapped}
+\citation{borges2008improved}
+\citation{fu2016family}
+\citation{hu2011scale}
+\newlabel{eq:cons_euler}{{3.1}{46}{Numerical simulation}{equation.3.2.1}{}}
+\newlabel{eq:cons_euler_vectors}{{3.2}{46}{Numerical simulation}{equation.3.2.2}{}}
+\newlabel{eq:enstrophy}{{3.3}{46}{Numerical simulation}{equation.3.2.3}{}}
+\newlabel{sec_interpolations}{{3.2.1}{46}{Numerical simulation}{equation.3.2.3}{}}
+\citation{toro2013riemann}
+\citation{toro2013riemann}
+\citation{harten1983upstream}
+\citation{toro1994restoration}
+\citation{Roe1981approximate}
+\citation{qu2014study}
+\citation{liou2006sequel}
+\citation{liou1996sequel}
+\citation{shima2009new}
+\citation{kitamura2013towards}
+\citation{data}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Case Study}{47}{section.3.3}\protected@file@percent }
+\newlabel{sec_caseStudy}{{3.3}{47}{Case Study}{section.3.3}{}}
+\citation{Kitware:2003}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Initialization of the Kelvin-Helmholtz instability (a). This simulation was obtained with the AUSM$^+$-UP solver with a TENO 5 order interpolation at physical times $0.25$(b), $0.75$(c) and $1.25$(d). Red spheres scaled by the persistence represent the maximum critical points. Zoom of the turbulence structures (e).}}{48}{figure.3.5}\protected@file@percent }
+\newlabel{initcase}{{3.5}{48}{Initialization of the Kelvin-Helmholtz instability (a). This simulation was obtained with the AUSM$^+$-UP solver with a TENO 5 order interpolation at physical times $0.25$(b), $0.75$(c) and $1.25$(d). Red spheres scaled by the persistence represent the maximum critical points. Zoom of the turbulence structures (e)}{figure.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Data description}{48}{subsection.3.3.1}\protected@file@percent }
+\citation{ttk17,ttk19}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Parameter space of the HYPERION simulation code leading to a total of 180 members for the ensemble dataset used in this study.}}{49}{table.3.1}\protected@file@percent }
+\newlabel{tab_parameters}{{3.1}{49}{Parameter space of the HYPERION simulation code leading to a total of 180 members for the ensemble dataset used in this study}{table.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Problem statement}{49}{subsection.3.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Persistence curves for two input scalar fields (X-axis: persistence threshold, Y-axis: number of maxima more persistent than X). $S_1$ generated with two Gaussian functions with noise and $S_2$ with 10 Gaussian functions with a stronger noise. Maxima critical points are represented by red spheres scaled by persistence. Vertical line corresponds to (a) small persistence critical points, (b) to high persistence. The grey area is the integral difference between the two curves.}}{50}{figure.3.6}\protected@file@percent }
+\newlabel{fig_gaussian_curve}{{3.6}{50}{Persistence curves for two input scalar fields (X-axis: persistence threshold, Y-axis: number of maxima more persistent than X). $S_1$ generated with two Gaussian functions with noise and $S_2$ with 10 Gaussian functions with a stronger noise. Maxima critical points are represented by red spheres scaled by persistence. Vertical line corresponds to (a) small persistence critical points, (b) to high persistence. The grey area is the integral difference between the two curves}{figure.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}CFD Hypotheses}{50}{subsection.3.3.3}\protected@file@percent }
+\newlabel{sec_hypotheses}{{3.3.3}{50}{CFD Hypotheses}{subsection.3.3.3}{}}
+\newlabel{Hypotheses}{{3.3.3}{50}{CFD Hypotheses}{subsection.3.3.3}{}}
+\citation{peng2021efficient}
+\citation{toro2013riemann}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.4}Baseline analysis}{51}{subsection.3.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Evaluation protocols}{51}{section.3.4}\protected@file@percent }
+\newlabel{sec_protocols}{{3.4}{51}{Evaluation protocols}{section.3.4}{}}
+\citation{san2015evaluation}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Persistence curves}{52}{subsection.3.4.1}\protected@file@percent }
+\newlabel{sec_persistence}{{3.4.1}{52}{Persistence curves}{subsection.3.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Outlier distance profile}{52}{subsection.3.4.2}\protected@file@percent }
+\newlabel{sec_outlier}{{3.4.2}{52}{Outlier distance profile}{subsection.3.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces  Wasserstein distance matrix for five inputs $S_1$, $S_2$, $S_3$,$S_4$, $S_5$ generated respectively with two, five, four and three Gaussians with varying noise. The sum of each matrix line is normalized with respect to the scalar-field that maximizes the distances, here $S_1$. We see that $S_1$ with only two Gaussians is very far from the other datasets.}}{53}{figure.3.7}\protected@file@percent }
+\newlabel{gaussian_distance}{{3.7}{53}{Wasserstein distance matrix for five inputs $S_1$, $S_2$, $S_3$,$S_4$, $S_5$ generated respectively with two, five, four and three Gaussians with varying noise. The sum of each matrix line is normalized with respect to the scalar-field that maximizes the distances, here $S_1$. We see that $S_1$ with only two Gaussians is very far from the other datasets}{figure.3.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces  Wasserstein distance matrix for five inputs $S_1$, $S_2$, $S_3$, $S_4$, $S_5$ generated respectively with two, five, for and three Gaussian functions with different noise levels. Point cloud of the inputs in the Wasserstein distance space colored according to the clusters obtained with the k-means clustering method. We can see that each terrain in a cluster has the same number of Gaussian and level of noise.}}{53}{figure.3.8}\protected@file@percent }
+\newlabel{gaussian_cluster}{{3.8}{53}{Wasserstein distance matrix for five inputs $S_1$, $S_2$, $S_3$, $S_4$, $S_5$ generated respectively with two, five, for and three Gaussian functions with different noise levels. Point cloud of the inputs in the Wasserstein distance space colored according to the clusters obtained with the k-means clustering method. We can see that each terrain in a cluster has the same number of Gaussian and level of noise}{figure.3.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces  Schemes (left) and order (right) studies. Average persistence curves for 5 configurations with variations of : a (WENO-Z,5), c (WENO-Z, 7), f (WENO-Z, 5), h (TENO,5). (b,g) persistence curves at $t_0$ (top), $t_1$ (middle), $t_2$ (bottom). Vertical lines on the curves correspond to critical points of small (left) and high (right) persistence. (d,e) Integral differences (grey area) between average persistence curves for all variations.}}{53}{figure.3.9}\protected@file@percent }
+\newlabel{curv}{{3.9}{53}{Schemes (left) and order (right) studies. Average persistence curves for 5 configurations with variations of : a (WENO-Z,5), c (WENO-Z, 7), f (WENO-Z, 5), h (TENO,5). (b,g) persistence curves at $t_0$ (top), $t_1$ (middle), $t_2$ (bottom). Vertical lines on the curves correspond to critical points of small (left) and high (right) persistence. (d,e) Integral differences (grey area) between average persistence curves for all variations}{figure.3.9}{}}
+\citation{vidal_vis19}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison between the $W_2$ metric (left) and the standard $L_2$-metric (right) for isolating the HLL solver. (a,h) Distance matrix for 20 configurations at $t_2$ at $512 \times 512$. Black frames represent the distance between the TENO 7$_{th}$ order with the HLL (matrix lines marked by $\star $) and the other configurations (b,g). Histograms (c,e) are respectively the percentage average of the sum distance matrix of (a,h). Histograms (d,f) are respectively the percentage of the sum distance for all variations.}}{54}{figure.3.10}\protected@file@percent }
+\newlabel{fig_KHIdistance}{{3.10}{54}{Comparison between the $\wasserstein {2}$ metric (left) and the standard $L_2$-metric (right) for isolating the HLL solver. (a,h) Distance matrix for 20 configurations at $t_2$ at $512 \times 512$. Black frames represent the distance between the TENO 7$_{th}$ order with the HLL (matrix lines marked by $\star $) and the other configurations (b,g). Histograms (c,e) are respectively the percentage average of the sum distance matrix of (a,h). Histograms (d,f) are respectively the percentage of the sum distance for all variations}{figure.3.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Unsupervised classification}{54}{subsection.3.4.3}\protected@file@percent }
+\newlabel{sec_unsupervised}{{3.4.3}{54}{Unsupervised classification}{subsection.3.4.3}{}}
+\citation{rand1971objective}
+\citation{data}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Results}{55}{section.3.5}\protected@file@percent }
+\newlabel{sec_experimentalResults}{{3.5}{55}{Results}{section.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Persistence curve study}{55}{subsection.3.5.1}\protected@file@percent }
+\citation{vidal_vis19}
+\citation{vidal_vis19}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Outlier distance profile study}{56}{subsection.3.5.2}\protected@file@percent }
+\newlabel{sec_KHIdistance}{{3.5.2}{56}{Outlier distance profile study}{subsection.3.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Unsupervised classification study}{56}{subsection.3.5.3}\protected@file@percent }
+\newlabel{sec_khi_cluster}{{3.5.3}{56}{Unsupervised classification study}{subsection.3.5.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison between the clustering on the Wasserstein metric space \cite  {vidal_vis19} (top frame) and a clustering based on the traditional $L_2$ norm (bottom frame) for distinguishing FDS solvers from FTS solvers. Point clouds at $t_0$, $t_1$,$t_2$ with a first order scheme at $256\times 256$. The point cloud is a representation of the five scalar-fields in the distance space colored according to the clusters obtained. The Rand Index are computed with the five configurations $S_1$ (SLAU2), $S_2$ (HLL), $S_3$ (AUSM$^+$-UP), $S_4$ (Roe), $S_5$ (HLLC). (g,h) Average Rand Index for all variations for the high orders (bottom) and the first order (top).}}{57}{figure.3.11}\protected@file@percent }
+\newlabel{fig_khi_cluster}{{3.11}{57}{Comparison between the clustering on the Wasserstein metric space \cite {vidal_vis19} (top frame) and a clustering based on the traditional $L_2$ norm (bottom frame) for distinguishing FDS solvers from FTS solvers. Point clouds at $t_0$, $t_1$,$t_2$ with a first order scheme at $256\times 256$. The point cloud is a representation of the five scalar-fields in the distance space colored according to the clusters obtained. The Rand Index are computed with the five configurations $S_1$ (SLAU2), $S_2$ (HLL), $S_3$ (AUSM$^+$-UP), $S_4$ (Roe), $S_5$ (HLLC). (g,h) Average Rand Index for all variations for the high orders (bottom) and the first order (top)}{figure.3.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Unanticipated insights}{58}{subsection.3.5.4}\protected@file@percent }
+\newlabel{insights}{{3.5.4}{58}{Unanticipated insights}{subsection.3.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.5}Limitations}{58}{subsection.3.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Conclusion}{58}{section.3.6}\protected@file@percent }
+\citation{pont_vis21}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Méthode numérique du code Hyperion en 3D}{60}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Méthode numérique du code Hyperion en 3D}{60}{chapter.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Méthode numérique du code Hyperion en 3D}{60}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Wall model adapted to hypersonic flow and IBM}{61}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lof}{\contentsline {xchapter}{Wall model adapted to hypersonic flow and IBM}{61}{chapter.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Wall model adapted to hypersonic flow and IBM}{61}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces IXV spatial navette by esa}}{61}{figure.5.1}\protected@file@percent }
+\newlabel{11}{{5.1}{61}{IXV spatial navette by esa}{figure.5.1}{}}
+\bibstyle{plain}
+\bibdata{bib.bib}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Comportment d'une couche limlite}{63}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Equation d'une couche Limite et description}{63}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Pourquoi utilisé une loi de paroi}{63}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}introduction à la modelisation de paroi}{63}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Modélisation à la paroi}{63}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}modele algebrique}{63}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}modele TBLE}{63}{subsection.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Modele pour LES}{63}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Limitations LES}{63}{subsection.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Implémentation du modele da paroi dans hyperion}{63}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Modele choisi}{63}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Implémentaion des conditions limites}{63}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Implémentation de la methode avec les sondes}{63}{subsection.5.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Résultats 2D}{63}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Résultat 3D}{63}{section.5.5}\protected@file@percent }
+\bibcite{AcharyaN15}{1}
+\bibcite{beiBrain18}{2}
+\bibcite{athawale_tvcg19}{3}
+\bibcite{Aymer1991}{4}
+\bibcite{baez2006}{5}
+\bibcite{BaiWDL21}{6}
+\bibcite{banchoff70}{7}
+\bibcite{dipha}{8}
+\bibcite{Bertsekas81}{9}
+\bibcite{harshChemistry}{10}
+\@writefile{@@@}{\chapterbegin }
+\bibcite{biasotti08}{11}
+\bibcite{ttk19}{12}
+\bibcite{topoAngler}{13}
+\bibcite{Boffetta2011}{14}
+\bibcite{borges2008improved}{15}
+\bibcite{boussinesq1877essai}{16}
+\bibcite{BremerEHP03}{17}
+\bibcite{bremer_tvcg11}{18}
+\bibcite{BRIDELBERTOMEU2021}{19}
+\bibcite{bridel2021immersed}{20}
+\bibcite{bridel_ldav19}{21}
+\bibcite{BujackYHGW20}{22}
+\bibcite{carr00}{23}
+\bibcite{carr04}{24}
+\bibcite{CarrWSA16}{25}
+\bibcite{chi2017improved}{26}
+\bibcite{CohenSteinerEH05}{27}
+\bibcite{Defl15}{28}
+\bibcite{diosady2015case}{29}
+\bibcite{DoraiswamyN13}{30}
+\bibcite{ducros1998wall}{31}
+\bibcite{edelsbrunner09}{32}
+\bibcite{edelsbrunner03}{33}
+\bibcite{EdelsbrunnerHNP03}{34}
+\bibcite{EdelsbrunnerHZ01}{35}
+\bibcite{edelsbrunner02}{36}
+\bibcite{edelsbrunner90}{37}
+\bibcite{favelier16}{38}
+\bibcite{favelier2018}{39}
+\bibcite{fefferman2000}{40}
+\bibcite{Ferstl2016}{41}
+\bibcite{forman98}{42}
+\bibcite{francez1982}{43}
+\bibcite{fu2019low}{44}
+\bibcite{fu2019very}{45}
+\bibcite{fu2016family}{46}
+\bibcite{fu2017targeted}{47}
+\bibcite{fu2018new}{48}
+\bibcite{Garnier2009}{49}
+\bibcite{GarthT06}{50}
+\bibcite{giangaspero2015case}{51}
+\bibcite{chemistry_vis14}{52}
+\bibcite{gueunet_tpds19}{53}
+\bibcite{gueunet_egpgv19}{54}
+\bibcite{GuoHPSCH16}{55}
+\bibcite{gyulassy_ev14}{56}
+\bibcite{gyulassy_vis15}{57}
+\bibcite{gyulassy_vis18}{58}
+\bibcite{gyulassy_vis07}{59}
+\bibcite{flowIntro21}{60}
+\bibcite{freudenthal42}{61}
+\bibcite{haines1994point}{62}
+\bibcite{filip2}{63}
+\bibcite{harten1983upstream}{64}
+\bibcite{heine16}{65}
+\bibcite{henrick2005mapped}{66}
+\bibcite{hu2011scale}{67}
+\bibcite{hu2010adaptive}{68}
+\bibcite{Hummel2013}{69}
+\bibcite{kuhn60}{70}
+\bibcite{JaremaKW16}{71}
+\bibcite{jiang1996efficient}{72}
+\bibcite{Kantorovich}{73}
+\bibcite{kasten_tvcg11}{74}
+\bibcite{Kerber2016}{75}
+\bibcite{khalili2019}{76}
+\bibcite{KimTJG08}{77}
+\bibcite{kitamura2013towards}{78}
+\bibcite{kitamura2012carbuncle}{79}
+\bibcite{Kitware:2003}{80}
+\bibcite{Kraichnan1967}{81}
+\bibcite{Kraichnan1980}{82}
+\bibcite{lacombe2018}{83}
+\bibcite{laney_vis06}{84}
+\bibcite{LarameeHZP07}{85}
+\bibcite{leveque2002finite}{86}
+\bibcite{lilly1989two}{87}
+\bibcite{liou1996sequel}{88}
+\bibcite{liou2006sequel}{89}
+\bibcite{liu1994weighted}{90}
+\bibcite{LohfinkG20}{91}
+\bibcite{MaadasamyDN12}{92}
+\bibcite{MacLean2014}{93}
+\bibcite{maier2021su2}{94}
+\bibcite{Maltrud1991}{95}
+\bibcite{masatsuka2013}{96}
+\bibcite{mittal2005immersed}{97}
+\bibcite{monge81}{98}
+\bibcite{Munkres1957}{99}
+\bibcite{data}{100}
+\bibcite{Malgorzata19}{101}
+\bibcite{otto1}{102}
+\bibcite{otto2}{103}
+\bibcite{parsa12}{104}
+\bibcite{pascucci07}{105}
+\bibcite{peng2021efficient}{106}
+\bibcite{petz}{107}
+\bibcite{PobitzerPFSKTMH11}{108}
+\bibcite{pont_vis21}{109}
+\bibcite{qu2021review}{110}
+\bibcite{qu2014study}{111}
+\bibcite{qu2018}{112}
+\bibcite{rand1971objective}{113}
+\bibcite{robins_pami11}{114}
+\bibcite{Roe1981approximate}{115}
+\bibcite{san2015evaluation}{116}
+\bibcite{ScheuermannT05}{117}
+\bibcite{filip3}{118}
+\bibcite{schneider2012}{119}
+\bibcite{schneider2002geometric}{120}
+\bibcite{shima2009new}{121}
+\bibcite{ShivashankarN12}{122}
+\bibcite{shivashankar2016felix}{123}
+\bibcite{sousbie11}{124}
+\bibcite{SridharamurthyM20}{125}
+\bibcite{Tabeling2002}{126}
+\bibcite{tarasov98}{127}
+\bibcite{ttk17}{128}
+\bibcite{tierny_vis09}{129}
+\bibcite{toro2013riemann}{130}
+\bibcite{toro1994restoration}{131}
+\bibcite{trangenstein2007numerical}{132}
+\bibcite{Turner2014}{133}
+\bibcite{vidal_vis19}{134}
+\bibcite{wang2016}{135}
+\bibcite{white2006viscous}{136}
+\bibcite{YanMSRNHW21}{137}
+\bibcite{YanWMGW20}{138}
+\bibcite{yousefzadeh2019}{139}
+\bibcite{ZhangLSSQ14}{140}
+\bibcite{zhang2019}{141}
+\bibcite{filip1}{142}
+\global\mtcsecondpartfalse
+\gdef \@abspage@last{74}

@@ -1,0 +1,66 @@
+
+\section{Conclusion}
+In this paper, we have presented an experimental protocol for the comparison of
+numerical methods on a Kelvin-Helmholtz instability using topological analysis.
+An ensemble dataset of 180 members has been computed for this instability by a
+simulation code developed in our institution and running on a supercomputer.
+While traditional approaches based on the kinetic energy (\autoref{energie}) only enable
+to validate the physical conformity of the generated flow,
+% to assess the physical conformity of the generated flow,
+our overall approach provides finer analyses. In particular,
+% Based on the assumptions made in the literature (\autoref{sec_simulation}),
+the
+protocol using the persistence curves (\autoref{sec_persistence}) allowed us to
+observe differences between the TENO and WENO-Z reconstructions. It also
+confirms an independence of the
+reconstruction order (5 or 7) when
+using the TENO scheme allowing
+% speedup
+practical
+computational speedup,
+without loss of precision. The protocol
+based on the Wasserstein distance (\autoref{sec_outlier}) succeeded in
+discriminating the HLL solvers from other configurations, validating the use of
+such a topological analysis to confirm domain field expectations. The last
+protocol, based on recent clustering methods (\autoref{sec_khi_cluster})
+successfully differentiates the topology of computations based on FDS (Flux
+Difference Splitting) and FTS (Flux Type Splitting) solvers.
+Overall, the validation of the hypotheses reported by CFD experts (\autoref{sec_hypotheses}) provides reliable indications for the tuning of a flow simulation, to help CFD users achieve the best balance between computation accuracy and speed.
+%
+%
+% in contrast to traditional approaches (\autoref{energie}), which only validate the physical plausibility of a flow, our framework enabled the validation of the above hypotheses (formalized in \autoref{sec_hypotheses})}
+% In particular, the validation of these hypotheses are a practical contribution towards }
+% Flux Differe
+% (FDS) and FTS solver computations.
+
+
+The results obtained in this experimental study also show
+the viability of topological methods for the representation and comparison of
+Kelvin-Helmholtz
+instabilities.
+%
+% that
+%
+% we can take confidence in the topological treatment for a Kelvin-Helmholtz
+% instability.
+The interesting aspect of these topological protocols is that the
+numerical method comparisons are based on physical differences rather than on
+unreliable, low-level, pointwise measures.
+% quantitative.
+The direction we wish to take now, for our future work, is
+the extension of these protocols to 3D datasets of external hypersonics aerodynamics.
+% However, in order to isolate one phenomenon on 3D data, a
+% threshold study will have to be implemented. It will be necessary to decide
+% which phenomenon we want to observe, such as boundary layer turbulence or
+% vortices generated at the back of the hypersonic vehicle.
+Another direction we
+want to investigate is the evaluation of other tools used in the protocol such
+as new topological distances \cite{pont_vis21} or clustering methods. Finally, this experimental
+study allows us, with confidence, to consider applying these protocols to other
+hydrodynamic turbulent flows studied in our institution in the domain of
+hypersonic vehicle design.
+
+
+% \section{Acknowledgments}
+%future work:
+%benchmark for other topological comparison methods.

@@ -1,0 +1,274 @@
+% \documentclass[journal]{vgtc}                % final (journal style)
+\documentclass{vgtc}         % review (journal style)
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+%\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Please use the ``preprint''  option when producing a preprint version
+%% for sharing your article on an open access repository
+
+%% Please note that the use of figures other than the optional teaser is not permitted on the first page
+%% of the journal version.  Figures should begin on the second page and be
+%% in CMYK or Grey scale format, otherwise, colour shifting may occur
+%% during the printing process.  Papers submitted with figures other than the optional teaser on the
+%% first page will be refused. Also, the teaser figure should only have the
+%% width of the abstract as the template enforces it.
+
+%% These few lines make a distinction between latex and pdflatex calls and they
+%% bring in essential packages for graphics and font handling.
+%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
+%% to provide the the path and extension of a graphics file:
+%% \includegraphics{diamondrule} is completely sufficient.
+%%
+\ifpdf%                                % if we use pdflatex
+  \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
+  \pdfcompresslevel=9                  % PDF Compression
+  \pdfoptionpdfminorversion=7          % create PDF 1.7
+  \ExecuteOptions{pdftex}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg} % for pdflatex we expect .pdf, .png, or .jpg files
+\else%                                 % else we use pure latex
+  \ExecuteOptions{dvips}
+  \usepackage{graphicx}                % allow us to embed graphics files
+  \DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
+\fi%
+\usepackage{multirow}%to make table with many lines
+%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
+\graphicspath{{../figures/}{pictures/}{images/}{./}} % where to search for the images
+\usepackage{float}
+\usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
+\PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
+\usepackage{textcomp}                  % use better special symbols
+\usepackage{mathptmx}                  % use matching math font
+\usepackage{times}                     % we use Times as the main font
+\renewcommand*\ttdefault{txtt}         % a nicer typewriter font
+\usepackage{cite}                      % needed to automatically sort the references
+\usepackage{tabu}                      % only used for the table example
+\usepackage{booktabs}                  % only used for the table example
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{mathtools}
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+%% In preprint mode you may define your own headline. If not, the default IEEE copyright message will appear in preprint mode.
+%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
+
+%% In preprint mode, this adds a link to the version of the paper on IEEEXplore
+%% Uncomment this line when you produce a preprint version of the article 
+%% after the article receives a DOI for the paper from IEEE
+%\ieeedoi{xx.xxxx/TVCG.201x.xxxxxxx}
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{1001}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+%% please declare the paper type of your paper to help reviewers, only shown in review mode
+%% choices:
+%% * algorithm/technique
+%% * application/design study
+%% * evaluation
+%% * system
+%% * theory/model
+\vgtcpapertype{Application}
+
+%% Paper title.
+\title{Topological Analysis of
+% Enstrophy\\in
+Ensembles of Hydrodynamic Turbulent Flows\\
+An Experimental Study}
+
+%% This is how authors are specified in the journal style
+
+%% indicate IEEE Member or Student Member in form indicated below
+\author{Florent Nauleau \\
+\scriptsize CEA \and Fabien Vivodtzev \\
+\scriptsize CEA
+\and Thibault Bridel-Bertomeu\thanks{\{firstname.lastname\}@cea.fr} \\
+\scriptsize CEA
+\and H\'elo\"ise Beaugendre\thanks{\{firstname.lastname\}@math.u-bordeaux.fr}\\
+\scriptsize University of Bordeaux
+\and Julien Tierny\thanks{\{firstname.lastname\}@sorbonne-universite.fr}\\
+\scriptsize CNRS}
+% /Sorbonne}
+% niversit\'e}
+\authorfooter{
+%% insert punctuation at end of each item
+\item
+ Florent Nauleau, Thibault Bridel-Bertomeu and Fabien Vivodtzev are with the
+CEA. E-mail: \{firstname.lastname\}@cea.fr.
+\item
+ H\'elo\"ise Beaugendre is with University of Bordeaux and Bordeaux INP. E-mail:
+firstname.lastname@math.u-bordeaux.fr.
+\item
+Julien Tierny is with Sorbonne Universit\'e and CNRS. E-mail:
+firstname.lastname@sorbonne-universite.fr.
+}
+
+%other entries to be set up for journal
+\shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Global Illumination for Fun and Profit}
+%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
+%% Abstract section.
+\abstract{
+This application paper presents a comprehensive experimental evaluation of the
+suitability of Topological Data Analysis (TDA)
+% topological data representations and their associated analysis
+% tools
+for the quantitative comparison of turbulent flows. Specifically, our
+study documents the usage of the persistence diagram of the maxima of flow
+enstrophy (an established vorticity indicator), for the topological representation of 180 ensemble members, generated
+by a coarse sampling of the parameter space of five numerical solvers.
+We document five main hypotheses reported by domain experts, describing their
+expectations regarding the variability of the flows generated by the distinct
+solver configurations. We contribute three evaluation protocols to assess the
+validation of the above hypotheses by two comparison measures:
+\emph{(i)} a standard distance used in scientific imaging (the $L_2$ norm) and
+\emph{(ii)} an established topological distance between persistence diagrams
+(the $L_2$-Wasserstein metric).
+Extensive experiments on the input ensemble demonstrate
+% overall
+the
+superiority of the topological distance (\emph{ii}) to report as close to each
+other flows which are expected to be similar by domain experts, due to the
+% number and size
+configuration
+of their vortices.
+Overall,
+% w
+% we believe that
+the insights reported by
+our study bring an experimental evidence of the suitability
+of TDA for representing and comparing turbulent flows, thereby providing
+to the fluid dynamics community
+confidence for its usage in future work.
+% by the fluid dynamics community.
+Also, our flow data and evaluation protocols provide to the TDA community an
+application-approved benchmark for the evaluation and design of further
+topological distances.}
+%
+%
+% presents an experimental study about the suitability of
+% topological data representations (and their associated analysis tools), for the
+% interpretation of ensembles of simulated hydrodynamic turbulent flows.
+% In particular, in this application, domain experts wish to compare the quality
+% of a selection of five numerical solvers, under a specific selection of input
+% parameters (domain resolution, interpolation scheme and order, etc).
+%
+% comparative
+%
+% while diagram capture visually the main vortices,
+%
+% the involved simulations are subject to a specific number of
+% parameters (domain resolution, interpolation scheme and order)
+%
+% analysis of
+% ensembles of turbulent flows.
+%
+%
+% This is an abstract.
+% %% draft draft draft
+% Overall, our work provides tangible empirical evidence that the persistence
+% diagram is an informative representation of vortices in turbulent flows and
+% that its associated $L_2$-Wasserstein metric is relevant for the comparison of
+% solver configurations, hence experimentally encouraging a widespread usage of
+% topological methods for the analysis of ensembles of turbulent flow.
+% draft draft draft
+% } % end of abstract
+
+%% Keywords that describe your work. Will show as 'Index Terms' in journal
+%% please capitalize first letter and insert punctuation after last keyword
+% \keywords{Topological data analysis, ensemble data, turbulent flow}
+
+%% ACM Computing Classification System (CCS). 
+%% See <http://www.acm.org/class/1998/> for details.
+%% The ``\CCScat'' command takes four arguments.
+
+% \CCScatlist{ % not used in journal version
+%  \CCScat{K.6.1}{Management of Computing and Information Systems}%
+% {Project and People Management}{Life Cycle};
+%  \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
+% }
+
+%% A teaser figure can be included as follows
+\teaser{
+  \centering
+  \includegraphics[width=\figureShrink\linewidth]{teaser2.jpg}
+  \caption{Topological Data Analysis protocols 
+%   to illustrate the segmentation 
+applied
+  on an ensemble dataset of a Kelvin-Helmholtz instability.
+(a) The 180 members of the ensemble obtained with variations of timesteps, interpolation schemes, orders, resolutions and Riemann solvers (\autoref{tab_parameters}).
+(b) The top cluster represents the time separation of $t_0$ and $t_1$ for the 
+flows $S_1$ and $S_2$ with the Wasserstein distance and the bottom cluster with 
+the $L_2$-norm. Red lines show the timestep separation with our clustering 
+method whereas the sphere colors are the ground truth, illustrating the 
+limitation of the $L_2$-norm. 
+(c) \textit{Persistence curve protocol}: Differences between integrals of persistence curves (gray area) of the enstrophy computed with a SLAU2 solver, an order 7 TENO scheme and a resolution of $1024\times 1024$ for various configurations ($S_1$ at $t_0$, $S_2$ and $S_3$ at $t_1$). These integral differences exhibit the appearance of vortices (critical points) as the time increases.
+(d) \textit{Outlier distance protocol}: Wasserstein distance matrix for 5 configurations $S_1(t_0,HLLC)$, $S_2(t_1,Roe)$, $S_3(t_1,HLLC)$, $S_4(t_2,Roe)$, $S_5(t_2,HLLC)$ computed with an order 7 WENO-Z interpolation scheme at $512\times 512$.
+The sum of each row
+% allows us to identify
+the configuration maximizing this distance between solvers and timesteps, here $S_1$.
+(e) \textit{Unsupervised classification}: Wasserstein distance matrix for the 
+previous configurations with an order 7 WENO-Z interpolation scheme at 
+$256\times 256$. The clustering based on the Wasserstein distance and colored 
+according to the Kmeans clustering method successfully segments the time 
+steps.}
+ %Ensembles dataset of a hydrodynamic turbulence, a Kelvin Helhmotz instability at three different times, computed with two interpolation methods, with high orders, on several grids and for five Riemann solvers(\autoref{tab_parameters}).
+%Maximum critical points are represented by a red sphere scaled by persistence. The two tables of points are the representation of the time separation $t_0$ and $t_1$ (Top: Wassertein distance, Bottom: L2 norm). The red line represents the ground truth of the time step separation and the colored background, the clustering obtained by our methods for the time separation. %We can see that L2 does not obtain the right cluster unlike W2 (S1 and S2). 
+%  (c): Persistence curves for 2 configurations of KHI with the SLAU2 solver, the TENO scheme at order 7 on 1024 mesh for different simulation times ($S_1 and S_3$ : $t_0$, $S_2$ :$t_1$, $S_4$ :$t_2$). We can see that the number of small critical point peers is larger as a function of time than the number of large peers decreases during the simulation. The grey area represents the difference of integral between the curves. 
+% (d): Wassertein distance matrix for five configurations with WENO-Z interpolations at order seven with 512 cells. $S_1$, ,$S_3$, ,$S_5$ generated with the HLLC respectively at time $t_0$, $t_1$, $t_2$. $S_2$, ,$S_4$ generated with the Roe solver respectively at time $t_1$, $t_2$. The sum of each row of the matrix is computed and normalized with respect to the KHI that maximizes the distances, here $S_1$. %We see that the case at $t_0$ is very different from the other simulations.We see that the case at $t_0$ is very different from the other simulations.(e)\textit{unsupervised classification}: Wassertein distance matrix for the 5 same configurations with an order 7 WENO-Z interpolation scheme at $256x256$.Clustering based on the Wassertein distance colored according to the Kmeans clustering method successfully segmenting the time steps.}
+  \label{fig_teaser}
+}
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+
+\vgtcinsertpkg
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\input{notations.tex}
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+\input{introduction.tex}
+\input{background.tex}
+\input{topology.tex}
+\input{caseStudy.tex}
+\input{protocols.tex}
+\input{results.tex}
+\input{conclusion.tex}
+%\input{appendix.tex}
+
+% \cleardoublepage
+\clearpage
+\bibliographystyle{abbrv-doi}
+\bibliography{template}
+\end{document}
+

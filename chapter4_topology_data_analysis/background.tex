@@ -1,0 +1,147 @@
+
+
+
+\section{Background}
+\label{sec_background}
+This section presents the background used in this study in $(i)$ numerical simulation by presenting the equations, the interpolation schemes and the solvers implemented in our simulation code. Then the background in $(ii)$ topological data analysis introduces the main notions used such as critical points, persistence diagrams or the Wasserstein distant metric.
+
+\subsection{Numerical simulation}
+\label{sec_simulation}
+\label{sec_solvers}
+
+In this work, we consider the two-dimensional compressible unsteady Euler equations for inviscid flows \cite{masatsuka2013}:
+% which
+% are solved.
+% The system
+% can be written as \cite{masatsuka2013}:
+\eqSpace
+\begin{equation}
+    \mathbf{U}_t + \mathbf{F}_x + \mathbf{G}_y = 0,
+    \label{eq:cons_euler}
+    \eqSpace
+\end{equation}
+\noindent where the subscripts indicate differentiation, $\mathbf{U}$ is the 
+vector of conservative dimensionless variables and $\mathbf{F}$ and $\mathbf{G}$ 
+represent the inviscid fluxes in $x$ and $y$ direction respectively.
+Those vectors are defined as:
+% follow:
+\eqSpace
+\eqSpace
+\eqSpace
+\begin{equation}
+% \eqSpace
+    \begin{array}{l}
+        \mathbf{U} = \left[\begin{array}{c}\rho \\ \rho u \\ \rho v \\ \rho E\end{array}\right], ~~
+        \mathbf{F} = \left[\begin{array}{c}\rho u \\ \rho u^2 + p\\ \rho u v\\ (\rho E + p)u\end{array}\right], ~~
+        \mathbf{G} = \left[\begin{array}{c}\rho v \\ \rho u v \\ \rho v^2 + p \\ (\rho E + p)v\end{array}\right].
+    \end{array}
+    \label{eq:cons_euler_vectors}
+    \eqSpace
+\end{equation}
+\noindent In the above expressions, $t$ denotes the time and $x$ and $y$ are the Cartesian coordinates.
+$\rho$ denotes density, $u$ and $v$ denote the $x-$ and $y-$
+coordinates of the velocity vector $\mathbf{w}$,
+% direction velocity components, 
+$E$ denotes the specific total energy and $p$ denotes the static pressure.
+The aforementioned mathematical model is described as it is implemented in the in-house code HYPERION (HYPERsonic vehicle design with Immersed bOuNdaries) whose primary capabilities as a massively parallel structured solver using immersed boundary conditions have already been discussed by Bridel-Bertomeu \cite{bridel2021immersed}.
+The present study uses only regular Cartesian grids with constant grid spacings (grid of pixels) in both directions of space, $\Delta x$ and $\Delta y$, and will not rely on any immersed boundary condition during the computations presented later.
+This being said, the finite-volume method \cite{leveque2002finite,trangenstein2007numerical,toro2013riemann} is then employed for space discretization of the compressible Euler equations~\eqref{eq:cons_euler}.
+
+The 2D turbulence investigated in our work
+% at the heart of this study
+is generated using a Kelvin-Helmholtz instability (see \cite{san2015evaluation} for a complete description)
+% of the initialization)
+simulated with high-order low-dissipation  reconstruction schemes of $5^{\text{th}}$- and $7^{\text{th}}$-order (\autoref{tab_parameters}).
+The numerical fluxes between the cells are obtained using a variety of Riemann solvers detail at the end of this section.
+To emulate turbulence in a infinite medium, all boundary conditions are set as periodic.
+One common measure of turbulence in two dimensions that we will rely on is the 
+local enstrophy $\mathcal{E}$, defined locally as the square of the flow vorticity:
+% $\mathbf{w}$:
+% , \emph{i.e:}
+\eqSpace
+\begin{equation}
+% \eqSpace
+    \mathcal{E} = 0.5\left\vert\nabla\times\mathbf{w}\right\vert^2.
+    \label{eq:enstrophy}
+    \eqSpace
+\end{equation}
+
+
+
+When solving numerically the Euler equations  (\autoref{eq:cons_euler}), we 
+start by interpolating the values of the flows at the cell interfaces.
+Then, we have
+% We then have
+to use an approximate Riemann solver
+\cite{toro2013riemann}
+to solve the eponymous problem 
+on those interfaces.
+% In the remaining of this section 
+In the remainder,
+we will expose the different
+% numerical
+methods used to make these two
+calculations.
+
+\noindent
+\textbf{Interpolation schemes.} 
+\label{sec_interpolations}
+One problem in numerically solving the schemes is to be able to capture the strong discontinuities while capturing the small scales of the turbulence. In addition, we want to be as accurate as possible in our interpolation. To do this, researchers and engineers have developed several high-order reconstruction methods. A common scheme for solving compressible flows in the presence of strong discontinuities is the \textit{Weighted Essentially Non-Oscillatory (WENO)} scheme \cite{liu1994weighted}. Several variants of this scheme have been
+introduced,
+% made during the last decades,
+to improve its performances\cite{jiang1996efficient}\cite{hu2010adaptive}\cite{henrick2005mapped}.
+We are particularly interested in two families: the well-known robust but dissipative WENO-Z \cite{borges2008improved} and the TENO (T for \emph{Targeted}) \cite{fu2016family}, which better discriminates scales \cite{hu2011scale}.
+% able to better discriminate between scales \cite{hu2011scale}.
+% We are particularly interested in the WENO-Z \cite{borges2008improved} scheme, commonly used in the literature and able to keep its theoretical order even when solving for nonlinear systems.
+% Unfortunately this scheme is too dissipative and dampens considerably the small scales of the turbulence \cite{zhao2014comparison}\cite{martin2000shock}.
+% A second family of interest is that of the \textit{The Targeted Essentially Non-Oscillatory (TENO)} schemes developed by Liu and al \cite{fu2016family} is a high order scheme that attempts to capture turbulence better than WENO-Z while capturing strong discontinuities (shocks).
+% It uses new ingredients such as a better discrimination between strong discontinuities and small scale turbulence \cite{hu2011scale}.
+%Thus in our simulations, we should see a different number of structures between our two methods.
+
+\noindent
+\textbf{Solvers.}
+We have to solve the Riemann problems at the interfaces between the cells of the mesh.
+One solution is to use an exact Godunov solver \cite{toro2013riemann} which takes into account a large number of nonlinear operations - too expensive however when calculating complex flows. 
+Rather, researchers and engineers are interested in approximate Riemann solvers. The most used approximate solvers can be grouped in three large families: Flux Difference Splitting (FDS), Flux Vector Splitting (FVS) and Flux Type Splitting (FTS) \cite{toro2013riemann}.
+In this section we will focus on two types of solvers in particular, Flux Difference Splitting solvers that work as a finite volume method to solve the Riemann problem and Flux Splitting Riemann solvers that combine the qualities of the other two families by separating kinematic and acoustic scales.
+% This type of solvers capture the strong discontinuities (shock), and calculate accurately the boundary layers.
+
+\noindent
+\textbf{HLL} \textit{(Harten, Lax, and van Leer)} : FDS
+% type
+scheme developed by
+Harten et al. \cite{harten1983upstream}.
+% This scheme
+It does not take into account
+contact discontinuities, i.e. lines crossing two states.
+% (slip line).
+% In the study of turbulent phenomena,
+For turbulent phenomena,
+the interface between vortices will
+therefore be less described.
+
+\noindent
+\textbf{Roe}  and \textbf{HLLC} \textit{(Harten, Lax, and van Leer with Contact)} : FDS type schemes developed by \cite{toro1994restoration}\cite{Roe1981approximate}. These two schemes are robust and thus allow to reproduce the strong discontinuity (shock) and takes into account the discontinuities of contact. Thus, with these schemes, the reconstruction of the vortices represented in our flows, is perform with more accuracy than with the HLL solver.
+
+\noindent
+In its study on low speed Riemann solvers, \cite{qu2014study} notice that the solvers are unable to obtain physical solutions. Therefore, there is a need for approximate Riemann solvers to accurately reconstruct both low and high speed flows. This is why we are interested in two flux type splitting (FTS) solvers, which take into account all velocities to obtain low Mach and high Mach physics solutions.
+
+\noindent
+\textbf{AUSM$^+$-UP} \textit{(Advection Upstream Splitting Method +UP)} : By adding improvements \cite{liou2006sequel} to the AUSM+ \cite{liou1996sequel} solver Liou increases its level of accuracy for all speeds. This new solver takes into account contact discontinuities, reconstructs also strong discontinuities and gives physical solutions for all speeds.
+
+\noindent
+\textbf{SLAU2} \textit{(Simple Low-Dissipation AUSM 2)} :
+% the study conducted on
+the analysis of the dissipation pressure term of the AUSM+ \cite{shima2009new} shows that it is too high for low speeds.  The author decided to control the pressure flux and implemented the SLAU solver.
+This
+% work
+has been extended
+\cite{kitamura2013towards}
+% extends the work on this term
+so that the dissipation becomes proportional to the Mach number. This solver takes into account contact discontinuities, reconstructs also strong discontinuities and gives physical solutions for all speeds.
+
+
+
+
+
+

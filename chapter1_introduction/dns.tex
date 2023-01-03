@@ -1,1 +1,32 @@
-\section {DNS\_LES\_RANS}
+\section{methode numerique}
+Étant donné qu’aucune solution analytique au système d’équations de
+Navier Stokes n’a encore été déterminée à ce jour, la seule opportunité de
+résolution est de recourir à la simulation numérique pour résoudre le sys-
+tème de manière discrète avec une condition initiale et des conditions aux
+limites appropriées.
+Il existe trois grandes familles pour calculer les équations de Navier-Stokes.
+Ces approches permettent une résolution partielle ou complète du spectre d'un écoulement.
+Cette grandeur représente le calcule du phenomene de turbulence. Un spectre totalement résolues permet de calculer toutes les échelles  tourbillonnaires qui constitue un écoulement.
+En résolvant toutes les échelles, il est possible de simuler des écoulements de manières précises en prenant en compte toutes les fluctuations de l'écoulement.
+Cependant, chaque approche à un critére portant sur le maillage qui sera fin ou plus grossier selon l'approche choisie.
+
+\subsection{Simulation Numérique Directe}
+
+Lors d'un calcul Direct Numerical Simulation (DNS), aucun phénomene n'est modéliser et on calcule entierement l'écoulement. Les erreurs numerique seront alors du au methodes numeriques.\\
+Pour une DNS L'ensemble des echelles tourbillonaires sont calculés. Pour comprendre comment calculer l'ensemble des tourbillons il faut se placé dans un contexte de turbulence isotrope$\bf{[ref turbulence isotrope]}$. Cette hypothese est toujours verrifié pour des nombres de Reynold elevé.
+
+En 1941 Kolmogorov definie une echelle $l_{\eta}$ qui caracterise la taille des plus petite stuctures dissipant l'energie cinetique(mecanique) d'un ecoulment pour une turbulence isotrope $\bf{[ref kolmogorov]}$.  Cette échelle est relié à une echelle intégrale $L$ par la relation $\bf{[ref relation]}$
+
+$$
+\frac{L}{l_{\eta}}=R e_{L}^{3 / 4}
+$$
+
+Avec $R_e=\frac{UL}{\nu}$ Le nombre de Reynold, et $L$ la longueur des plus larges structures de l'écoulement.
+Pour un cas de simulation de turbulence isotrope dans une boite de volume  $L^3$ il faudra un nombre de point $N_{DNS}$
+
+$$
+N \simeq R e_{L}^{9 / 4}
+$$
+
+La taille des maillage depends des ressources informatique mis à disposition. Lors de calcul DNS le nombre de point $N_DNS $ necessaire croit rapidement avec des nombre de Reynold élevé. Les DNS sont des calcul realisable pour de faible nombre de Reynold. Dans le contexte de vehicule en rentré atmopherique ou dans un contexte industrielle, les nombres de Reynold sont de l'odre $R_e=>10^{6}$
+Par conséquent, la méthode DNS à un cout en maillage et en calcul beaucoup trop important pour dimmentionner des vehicule spatiaux.

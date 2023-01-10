@@ -1,13 +1,49 @@
 
 \subsection{Simulation des Grandes Échelles}
 
-Une alternative aux deux approches précédentes est la simulation des grandes échelles, appelée Large-Eddy Simulation (LES) en anglais. Contrairement à la DNS qui résout toutes les échelles de turbulence, la LES ne représente que les grandes structures turbulentes. L'approche LES repose sur les hypothèses de similitudes de Kolmogorov [78]. Selon ces hypothèses, les grandes structures turbulentes porteuses d'énergie caractérisent l'écoulement et doivent donc être calculées, alors que le comportement des petites structures turbulentes responsables de la dissipation visqueuse peut être modélisé. En pratique, un filtre passe-bas $G$ est appliqué aux équations de Navier-Stokes pour séparer les échelles de l'écoulement qui sont calculées par les équations de celles qui sont modélisées. Les effets dissipatifs des petites échelles qui ne sont pas résolues par la LES sont pris en compte en utilisant un modèle dit "de sous-maille". Ainsi, comme la LES ne calcule pas toutes les échelles de la turbulence, le nombre de points nécessaire dans le maillage est moins important par rapport à une DNS. Pour une turbulence isotrope dans une boîte de volume égal à $L^{3}$, il varie en fonction du nombre de Reynolds comme $R e_{L}^{3 / 2}$ [6]. La LES permet donc de considérer des écoulements à des nombres de Reynolds plus élevés que la DNS, de l'ordre de $R e_{D}=10^{5}$ pour les jets simples flux [16, 25]. En revanche, compte tenu des ressources de calcul disponibles, la LES reste hors d'atteinte pour les écoulements de jets double-flux installés à $R e_{D}=10^{6}$ considérés dans chapitre 1. Simulations du bruit des jets
+$$
+\frac{\partial\bar{\rho}}{\partial t}+\frac{\partial\bar{\rho}\tilde{u_j}}{\partial x_j}=0
+$$
 
-l'industrie. Les développements numériques réalisés dans cette thèse visent à rendre réalisable la LES pour de tels écoulements.
+\begin{equation}
+    \dfrac{\partial \bar\rho \tilde{u}_i}{\partial t} + \dfrac{\partial \bar\rho \tilde{u}_i\tilde{u}_j}{\partial x_j} + \dfrac{\partial \bar p}{\partial x_i} - \dfrac{\partial \overset{\smile}{\sigma}_{ij}}{\partial x_j} = -\dfrac{\partial \tau_{ij}}{\partial x_j} + \dfrac{\partial}{\partial x_j} \left( \overline{\sigma_{ij}} - \overset{\smile}{\sigma}_{ij}\right),
+    \label{eq:les_momentum_eqns}
+\end{equation}
+
+$$
+ \frac{\partial \bar{\rho} \tilde{E}}{\partial t}+\frac{\partial(\bar{\rho} \tilde{E}+\bar{p}) \tilde{u}_j}{\partial x_j}-\frac{\partial \overset{\smile}{\sigma}_{i j} \tilde{u}_i}{\partial x_j}+\frac{\partial \overset{\smile}{q}_j}{\partial x_j} \\
+ =-\frac{\partial}{\partial x_j}\left[C_p Q_j+\mathcal{J}_j-\mathcal{D}_j-\left(\overline{q_j}-\overset{\smile}{q}_j\right)\right] .
+$$
+where the $\tilde{\cdot}$ overset denotes Favre averaging, the $\bar\cdot$ overset denotes Reynolds averaging, and $\overset{\smile}{\sigma}_{ij}$ depends on the computable rate-of-strain tensor:
+
+\begin{equation}
+    \overset{\smile}{\sigma}_{ij} = \mu(\tilde{T}) \left( 2 \tilde{S}_{ij} - \dfrac{2}{3}\delta_{ij}\tilde{S}_{kk} \right),~~ \tilde{S}_{ij} = \dfrac{1}{2}\left( \dfrac{\partial\tilde{u}_i}{\partial x_j} + \dfrac{\partial \tilde{u}_j}{\partial x_i}\right).
+    \label{eq:sigma_smile}
+\end{equation}
+
+All overset variables are computable whereas we need a closure for the subgrid-scale stress tensor $\tau_{ij}$.
+In HYPERION, we follow a Boussinesq type hypothesis \cite{boussinesq1877essai} that leads to the subgrid-scale stress tensor having the following mathematical form:
+
+\begin{equation}
+    \tau_{ij} - \dfrac{1}{3}\delta_{ij}\tau_{kk} = - 2 \bar\rho \nu_{\text{sgs}} \left( \tilde{S}_{ij} - \dfrac{1}{3} \delta_{ij}\tilde{S}_{kk} \right),
+    \label{eq:boussinesq_les}
+\end{equation}
+
+The SGS temperature flux is defined:
+
+$$Q_j = \bar{\rho}\left(\overset{\sim}{u_j T} -\tilde{u}_j\tilde T\right)$$
+
+The SGS viscous diffusion is defined:
+
+$$D_j = \bar{\tau_{ij}u_j} - \tilde{\tau}_{ij}\tilde{u}_j $$
+
+The SGS turbulent diffusion is defined:
+
+$$j_j = \frac{1}{2}(\bar{\rho}\overset{\sim}{u_i u_j u_j} - \bar{\rho}\tilde{u}_i \tilde{u}_j \tilde{u}_j -\tau_{sgs_{jj}})$$
 
 \begin{figure}[h!]
  \centering
- \includegraphics[width=1.0\linewidth]{chapter1_introduction/pictures/les.png}
+ \includegraphics[width=0.7\linewidth]{chapter1_introduction/pictures/les.png}
  \vspace{-2ex}
  \caption{IXV spatial navette by esa}
   \vspace{2ex}

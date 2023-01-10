@@ -19,7 +19,7 @@
 \usepackage{amsbsy}
 \usepackage{mathtools}
 \usepackage[Conny]{fncychap}
-\usepackage[a4paper,left=3.5cm,right=3.5cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 \usepackage[french]{minitoc}
 \usepackage{fontspec}
 \usepackage{lipsum}
@@ -48,7 +48,12 @@
 
 \large{
 
+\chapter{Introduction}
+
+\input{chapter1_introduction/introduction.tex}
+
 \chapter{Mécanique des fluides numérique}
+
 \begin{figure}[!ht]
  \centering
  \includegraphics[width=1\linewidth]{chapter1_introduction/pictures/picture_chapter.png}
@@ -60,10 +65,10 @@
 \minitoc
 \thispagestyle{empty}
 \newpage
-\input{chapter1_introduction/introduction.tex}
+
 \input{chapter1_introduction/NV.tex}
-\input{chapter1_introduction/Rans.tex}
 \input{chapter1_introduction/dns.tex}
+\input{chapter1_introduction/Rans.tex}
 \input{chapter1_introduction/LES.tex}
 \input{chapter1_introduction/conclusion.tex}
 
